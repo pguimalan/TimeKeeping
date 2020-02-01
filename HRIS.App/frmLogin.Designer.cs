@@ -29,9 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLogin));
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.picClose = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.GroupBox1 = new System.Windows.Forms.GroupBox();
             this.btnOkay = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
@@ -40,46 +37,9 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.txtusername = new System.Windows.Forms.TextBox();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picClose)).BeginInit();
             this.GroupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.PowderBlue;
-            this.panel1.Controls.Add(this.picClose);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(346, 53);
-            this.panel1.TabIndex = 7;
-            // 
-            // picClose
-            // 
-            this.picClose.BackColor = System.Drawing.Color.PowderBlue;
-            this.picClose.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picClose.BackgroundImage")));
-            this.picClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.picClose.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picClose.Location = new System.Drawing.Point(318, 3);
-            this.picClose.Name = "picClose";
-            this.picClose.Size = new System.Drawing.Size(25, 21);
-            this.picClose.TabIndex = 5;
-            this.picClose.TabStop = false;
-            this.picClose.Click += new System.EventHandler(this.picClose_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Elephant", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label1.Location = new System.Drawing.Point(3, 18);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(309, 21);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Human Resource Information System";
             // 
             // GroupBox1
             // 
@@ -91,26 +51,26 @@
             this.GroupBox1.Controls.Add(this.txtPassword);
             this.GroupBox1.Controls.Add(this.txtusername);
             this.GroupBox1.Font = new System.Drawing.Font("Verdana", 8.3F);
-            this.GroupBox1.Location = new System.Drawing.Point(7, 59);
+            this.GroupBox1.Location = new System.Drawing.Point(10, 4);
             this.GroupBox1.Name = "GroupBox1";
-            this.GroupBox1.Size = new System.Drawing.Size(330, 119);
+            this.GroupBox1.Size = new System.Drawing.Size(330, 117);
             this.GroupBox1.TabIndex = 8;
             this.GroupBox1.TabStop = false;
             this.GroupBox1.Text = "Login Information";
             // 
             // btnOkay
             // 
-            this.btnOkay.BackColor = System.Drawing.Color.PowderBlue;
+            this.btnOkay.BackColor = System.Drawing.SystemColors.ControlLight;
             this.btnOkay.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnOkay.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnOkay.FlatAppearance.BorderColor = System.Drawing.SystemColors.Highlight;
             this.btnOkay.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Highlight;
             this.btnOkay.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnOkay.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOkay.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnOkay.ForeColor = System.Drawing.Color.Maroon;
-            this.btnOkay.Location = new System.Drawing.Point(126, 77);
+            this.btnOkay.Location = new System.Drawing.Point(174, 77);
             this.btnOkay.Name = "btnOkay";
-            this.btnOkay.Size = new System.Drawing.Size(93, 31);
+            this.btnOkay.Size = new System.Drawing.Size(69, 27);
             this.btnOkay.TabIndex = 8;
             this.btnOkay.Text = "&Login";
             this.btnOkay.UseVisualStyleBackColor = false;
@@ -118,17 +78,17 @@
             // 
             // btnCancel
             // 
-            this.btnCancel.BackColor = System.Drawing.Color.PowderBlue;
+            this.btnCancel.BackColor = System.Drawing.SystemColors.ControlLight;
             this.btnCancel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnCancel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCancel.FlatAppearance.BorderColor = System.Drawing.SystemColors.Highlight;
             this.btnCancel.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Highlight;
             this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancel.ForeColor = System.Drawing.Color.Maroon;
-            this.btnCancel.Location = new System.Drawing.Point(225, 77);
+            this.btnCancel.Location = new System.Drawing.Point(249, 77);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(96, 31);
+            this.btnCancel.Size = new System.Drawing.Size(72, 27);
             this.btnCancel.TabIndex = 9;
             this.btnCancel.Text = "&Cancel";
             this.btnCancel.UseVisualStyleBackColor = false;
@@ -140,7 +100,7 @@
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.Location = new System.Drawing.Point(6, 20);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(58, 88);
+            this.pictureBox1.Size = new System.Drawing.Size(58, 84);
             this.pictureBox1.TabIndex = 18;
             this.pictureBox1.TabStop = false;
             // 
@@ -183,16 +143,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(346, 185);
+            this.ClientSize = new System.Drawing.Size(346, 128);
             this.Controls.Add(this.GroupBox1);
-            this.Controls.Add(this.panel1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmLogin";
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picClose)).EndInit();
             this.GroupBox1.ResumeLayout(false);
             this.GroupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -202,9 +160,6 @@
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.PictureBox picClose;
-        private System.Windows.Forms.Label label1;
         internal System.Windows.Forms.GroupBox GroupBox1;
         private System.Windows.Forms.Button btnOkay;
         private System.Windows.Forms.Button btnCancel;

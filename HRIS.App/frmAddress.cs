@@ -27,43 +27,24 @@ namespace HRIS.App
             InitializeComponent();
         }
 
-        private void ToolStripButton1_Click(object sender, EventArgs e)
-        {
-            this.Close();
-            frmMain f = new frmMain();
-            f.ShowDialog();
-        }
-
-        private void ToolStripButton4_Click(object sender, EventArgs e)
-        {
-            frmAddress_AE f = new frmAddress_AE();
-            f.ADD_STATE = true;
-            f.button2.Text = "Save";
-            f.ShowDialog();
-            loadvars(f.strSearch);
-        }
-
-        private void ToolStripButton3_Click(object sender, EventArgs e)
-        {
-            frmAddress_AE f = new frmAddress_AE();
-            f.ADD_STATE = true;
-            f.button2.Text = "Update";
-            f.ShowDialog();
-            loadvars(f.strSearch);
-        }
-
         private void loadvars(string txtSearch)
         {
             try
             {
                 List<AddressForSelectModel> list = svc.AddressSelect(txtSearch);
-                dgAddress.Rows.Clear();
-                foreach (var li in list)
-                {
-                    dgAddress.Rows.Add(li.AddressId.ToString(), li.Barangay, li.Municipal_City, li.Province, li.Country, li.ZipCode);
-                }
+                listView1.Items.Clear();
                 if (list.Count >= 100)
                     MessageBox.Show("Search result is limited to 100 records only. Narrow your search for specific results.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                foreach (var li in list)
+                {
+                    ListViewItem lv = new ListViewItem(li.AddressId.ToString());
+                    lv.SubItems.Add(li.Barangay);
+                    lv.SubItems.Add(li.Municipal_City);
+                    lv.SubItems.Add(li.Province);
+                    lv.SubItems.Add(li.Country);
+                    lv.SubItems.Add(li.ZipCode);
+                    listView1.Items.AddRange(new ListViewItem[] { lv });
+                }               
             }
             catch (Exception ex) { MessageBox.Show(ex.Message, "Error"); }
         }
@@ -73,9 +54,54 @@ namespace HRIS.App
             loadvars("");
         }
 
-        private void TextBox1_TextChanged(object sender, EventArgs e)
+        private void bttnAdd_Click(object sender, EventArgs e)
         {
-            loadvars(TextBox1.Text);
+            frmAddress_AE f = new frmAddress_AE();
+            f.ADD_STATE = true;
+            f.bttnSave.Text = "Save Item";
+            f.ShowDialog();
+            loadvars("");
+        }
+
+        private void bttnEdit_Click(object sender, EventArgs e)
+        {
+            if (listView1.SelectedItems.Count < 1)
+            {
+                MessageBox.Show("Pls. Select an Item.", "Select Item", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                frmAddress_AE f = new frmAddress_AE();
+                f.ADD_STATE = false;
+                f.addressForEditModel = new AddressForEditModel
+                {
+                    AddressId = int.Parse(listView1.SelectedItems[0].Text),
+                    Barangay = listView1.SelectedItems[0].SubItems[1].Text,
+                    Municipal_City = listView1.SelectedItems[0].SubItems[2].Text,
+                    Province = listView1.SelectedItems[0].SubItems[3].Text,
+                    Country = listView1.SelectedItems[0].SubItems[4].Text,
+                    ZipCode = listView1.SelectedItems[0].SubItems[5].Text
+                };
+
+                f.bttnSave.Text = "Edit Item";
+                f.ShowDialog();
+                loadvars("");
+            }
+        }
+
+        private void bttnExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void txtSearch_TextChanged(object sender, EventArgs e)
+        {
+            loadvars(txtSearch.Text);
+        }
+
+        private void bttnRefresh_Click(object sender, EventArgs e)
+        {
+            txtSearch.Text = "";
         }
     }
 }

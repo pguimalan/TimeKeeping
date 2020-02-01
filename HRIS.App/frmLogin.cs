@@ -18,11 +18,6 @@ namespace HRIS.App
             InitializeComponent();
         }
 
-        private void picClose_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
         private void btnCancel_Click(object sender, EventArgs e)
         {
             Application.Exit();

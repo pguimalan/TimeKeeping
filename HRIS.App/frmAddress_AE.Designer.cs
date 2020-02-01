@@ -28,7 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAddress_AE));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtProvince = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.txtZipCode = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txtCountry = new System.Windows.Forms.TextBox();
@@ -37,16 +40,15 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtBarangay = new System.Windows.Forms.TextBox();
             this.lblDepartment = new System.Windows.Forms.Label();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.label23 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.bttnSave = new System.Windows.Forms.Button();
+            this.bttnExit = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
-            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.txtProvince);
+            this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.txtZipCode);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.txtCountry);
@@ -55,28 +57,49 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.txtBarangay);
             this.groupBox1.Controls.Add(this.lblDepartment);
-            this.groupBox1.Location = new System.Drawing.Point(12, 66);
+            this.groupBox1.Location = new System.Drawing.Point(7, -1);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(322, 145);
+            this.groupBox1.Size = new System.Drawing.Size(322, 170);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
+            // 
+            // txtProvince
+            // 
+            this.txtProvince.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtProvince.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtProvince.ForeColor = System.Drawing.Color.Maroon;
+            this.txtProvince.Location = new System.Drawing.Point(120, 77);
+            this.txtProvince.Name = "txtProvince";
+            this.txtProvince.Size = new System.Drawing.Size(178, 22);
+            this.txtProvince.TabIndex = 3;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.Navy;
+            this.label4.Location = new System.Drawing.Point(48, 79);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(64, 16);
+            this.label4.TabIndex = 59;
+            this.label4.Text = "Province:";
             // 
             // txtZipCode
             // 
             this.txtZipCode.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtZipCode.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtZipCode.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.txtZipCode.Location = new System.Drawing.Point(120, 101);
+            this.txtZipCode.ForeColor = System.Drawing.Color.Maroon;
+            this.txtZipCode.Location = new System.Drawing.Point(120, 131);
             this.txtZipCode.Name = "txtZipCode";
             this.txtZipCode.Size = new System.Drawing.Size(178, 22);
-            this.txtZipCode.TabIndex = 4;
+            this.txtZipCode.TabIndex = 5;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Navy;
-            this.label3.Location = new System.Drawing.Point(48, 103);
+            this.label3.Location = new System.Drawing.Point(48, 133);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(66, 16);
             this.label3.TabIndex = 57;
@@ -86,18 +109,18 @@
             // 
             this.txtCountry.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtCountry.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCountry.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.txtCountry.Location = new System.Drawing.Point(120, 75);
+            this.txtCountry.ForeColor = System.Drawing.Color.Maroon;
+            this.txtCountry.Location = new System.Drawing.Point(120, 105);
             this.txtCountry.Name = "txtCountry";
             this.txtCountry.Size = new System.Drawing.Size(178, 22);
-            this.txtCountry.TabIndex = 3;
+            this.txtCountry.TabIndex = 4;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Navy;
-            this.label2.Location = new System.Drawing.Point(58, 77);
+            this.label2.Location = new System.Drawing.Point(58, 107);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(56, 16);
             this.label2.TabIndex = 55;
@@ -107,7 +130,7 @@
             // 
             this.txtCity.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtCity.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCity.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.txtCity.ForeColor = System.Drawing.Color.Maroon;
             this.txtCity.Location = new System.Drawing.Point(120, 49);
             this.txtCity.Name = "txtCity";
             this.txtCity.Size = new System.Drawing.Size(178, 22);
@@ -128,7 +151,7 @@
             // 
             this.txtBarangay.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtBarangay.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBarangay.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.txtBarangay.ForeColor = System.Drawing.Color.Maroon;
             this.txtBarangay.Location = new System.Drawing.Point(120, 23);
             this.txtBarangay.Name = "txtBarangay";
             this.txtBarangay.Size = new System.Drawing.Size(178, 22);
@@ -145,65 +168,59 @@
             this.lblDepartment.TabIndex = 51;
             this.lblDepartment.Text = "Barangay:";
             // 
-            // panel4
+            // bttnSave
             // 
-            this.panel4.BackColor = System.Drawing.Color.PowderBlue;
-            this.panel4.Controls.Add(this.label23);
-            this.panel4.Location = new System.Drawing.Point(12, 12);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(322, 48);
-            this.panel4.TabIndex = 38;
+            this.bttnSave.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.bttnSave.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bttnSave.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.bttnSave.Image = ((System.Drawing.Image)(resources.GetObject("bttnSave.Image")));
+            this.bttnSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bttnSave.Location = new System.Drawing.Point(170, 176);
+            this.bttnSave.Margin = new System.Windows.Forms.Padding(4);
+            this.bttnSave.Name = "bttnSave";
+            this.bttnSave.Size = new System.Drawing.Size(82, 30);
+            this.bttnSave.TabIndex = 6;
+            this.bttnSave.Text = "&Save Item";
+            this.bttnSave.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.bttnSave.UseVisualStyleBackColor = false;
+            this.bttnSave.Click += new System.EventHandler(this.bttnSave_Click);
             // 
-            // label23
+            // bttnExit
             // 
-            this.label23.AutoSize = true;
-            this.label23.Font = new System.Drawing.Font("Sitka Banner", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label23.Location = new System.Drawing.Point(3, 0);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(144, 30);
-            this.label23.TabIndex = 1;
-            this.label23.Text = "Address Set-up";
-            // 
-            // button1
-            // 
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.button1.Location = new System.Drawing.Point(259, 217);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 39;
-            this.button1.Text = "Cancel";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // button2
-            // 
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.button2.Location = new System.Drawing.Point(178, 217);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 40;
-            this.button2.Text = "Save";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.bttnExit.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.bttnExit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bttnExit.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.bttnExit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.bttnExit.Image = ((System.Drawing.Image)(resources.GetObject("bttnExit.Image")));
+            this.bttnExit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bttnExit.Location = new System.Drawing.Point(260, 176);
+            this.bttnExit.Margin = new System.Windows.Forms.Padding(4);
+            this.bttnExit.Name = "bttnExit";
+            this.bttnExit.Size = new System.Drawing.Size(69, 30);
+            this.bttnExit.TabIndex = 7;
+            this.bttnExit.Text = "&Cancel";
+            this.bttnExit.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.bttnExit.UseVisualStyleBackColor = false;
+            this.bttnExit.Click += new System.EventHandler(this.bttnExit_Click);
             // 
             // frmAddress_AE
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(346, 249);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.panel4);
+            this.ClientSize = new System.Drawing.Size(335, 213);
+            this.Controls.Add(this.bttnSave);
+            this.Controls.Add(this.bttnExit);
             this.Controls.Add(this.groupBox1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmAddress_AE";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmAddress_AE";
+            this.Text = "Address Set-up";
+            this.Load += new System.EventHandler(this.frmAddress_AE_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -219,9 +236,9 @@
         private System.Windows.Forms.Label label1;
         public System.Windows.Forms.TextBox txtBarangay;
         private System.Windows.Forms.Label lblDepartment;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.Button button1;
-        public System.Windows.Forms.Button button2;
+        public System.Windows.Forms.TextBox txtProvince;
+        private System.Windows.Forms.Label label4;
+        public System.Windows.Forms.Button bttnSave;
+        private System.Windows.Forms.Button bttnExit;
     }
 }

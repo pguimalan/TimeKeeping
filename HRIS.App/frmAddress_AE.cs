@@ -1,4 +1,7 @@
 ﻿using HRIS.App.Helpers;
+using HRIS.Models;
+using HRIS.Services;
+using HRIS.Services.Interface;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,20 +16,27 @@ namespace HRIS.App
 {
     public partial class frmAddress_AE : Form
     {
-        public bool ADD_STATE;
-        public string strSearch { get; set; }
+        public bool ADD_STATE;        
+        public AddressForEditModel addressForEditModel;
+        private readonly IAddressService svc;
+
+        public frmAddress_AE(IAddressService svc)
+        {
+            this.svc = svc;
+        }
+
         public frmAddress_AE()
+            : this(new AddressService())
         {
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            strSearch = "";
+        private void bttnExit_Click(object sender, EventArgs e)
+        {            
             this.Close();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void bttnSave_Click(object sender, EventArgs e)
         {
             int result = 0;
             if (Validation.IsTextEmpty(txtBarangay))
@@ -47,40 +57,53 @@ namespace HRIS.App
             }
             else
             {
-                //if (ADD_STATE == true)
-                //{
-                //    result = service.AddressInsert(new Address
-                //    {
-                //        Barangay = txtBarangay.Text,
-                //        Municipal_City = txtCity.Text,
-                //        Country = txtCountry.Text,
-                //        ZipCode = txtZipCode.Text
-                //    });
-                //    if (result > 1)
-                //    {
-                //        ShowMessage.ShowMessageBox(1);
-                //    }
-                //    else
-                //        ShowMessage.ShowMessageBox(3);
-                //}
-                //else
-                //{
-                //    result = service.AddressUpdate(new Address
-                //    {
-                //        AddressId = addressId,
-                //        Barangay = txtBarangay.Text,
-                //        Municipal_City = txtCity.Text,
-                //        Country = txtCountry.Text,
-                //        ZipCode = txtZipCode.Text
-                //    });
+                if (ADD_STATE == true)
+                {
+                    result = svc.AddressInsert(new AddressForInsertModel
+                    {
+                        Barangay = txtBarangay.Text,
+                        Municipal_City = txtCity.Text,
+                        Country = txtCountry.Text,
+                        Province = txtProvince.Text,
+                        ZipCode = txtZipCode.Text
+                    });
+                    if (result > 1)
+                    {
+                        ShowMessage.ShowMessageBox(1);
+                    }
+                    else
+                        ShowMessage.ShowMessageBox(3);
+                }
+                else
+                {
+                    result = svc.AddressUpdate(new AddressForEditModel
+                    {
+                        AddressId = addressForEditModel.AddressId,
+                        Barangay = txtBarangay.Text,
+                        Municipal_City = txtCity.Text,
+                        Province = txtProvince.Text,
+                        Country = txtCountry.Text,
+                        ZipCode = txtZipCode.Text
+                    });
 
-                //    if (result > 1)
-                //        ShowMessage.ShowMessageBox(1);
-                //    else
-                //        ShowMessage.ShowMessageBox(3);
-                //}
-
+                    if (result > 0)
+                        ShowMessage.ShowMessageBox(1);
+                    else
+                        ShowMessage.ShowMessageBox(3);
+                }                
                 this.Close();
+            }
+        }
+
+        private void frmAddress_AE_Load(object sender, EventArgs e)
+        {
+            if (this.ADD_STATE == false && this.addressForEditModel != null)
+            {
+                txtBarangay.Text = addressForEditModel.Barangay;
+                txtCity.Text = addressForEditModel.Municipal_City;
+                txtProvince.Text = addressForEditModel.Province;
+                txtCountry.Text = addressForEditModel.Country;
+                txtZipCode.Text = addressForEditModel.ZipCode;
             }
         }
     }

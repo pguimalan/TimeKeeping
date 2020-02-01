@@ -155,6 +155,15 @@
         QmCC
 </value>
   </data>
+  <data name="bttnReset.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
+        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAnElEQVQ4T2OgGvj79+9/XPjdl7//9x69
+        9h+qFBOsWb3h/9cfEIXY8KUnP8F43/nX2A0BGYDNZhj+8v0f2IATNz5hN4SQCx6//QM24Orj72B88Mxd
+        VEMIGQDC9179/n/zOQSDDFywYBnCEGIMQMYgL82dvYh8A0BqMQzAFnj4MPVdMAwMwBZQ+DCKASDw8P6r
+        /8TiRw9w5AnSAQMDAHwPrpTstpKMAAAAAElFTkSuQmCC
+</value>
+  </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAkAMDAAAAEACACoDgAAlgAAACAgAAABAAgAqAgAAD4PAAAYGAAAAQAIAMgGAADmFwAAEBAAAAEA

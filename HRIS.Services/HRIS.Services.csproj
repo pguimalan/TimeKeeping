@@ -42,7 +42,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AddressService.cs" />
+    <Compile Include="DepartmentService.cs" />
     <Compile Include="Interface\IAddressService.cs" />
+    <Compile Include="Interface\IDepartmentService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
