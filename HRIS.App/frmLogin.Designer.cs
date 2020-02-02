@@ -51,6 +51,7 @@
             this.GroupBox1.Controls.Add(this.txtPassword);
             this.GroupBox1.Controls.Add(this.txtusername);
             this.GroupBox1.Font = new System.Drawing.Font("Verdana", 8.3F);
+            this.GroupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.GroupBox1.Location = new System.Drawing.Point(10, 4);
             this.GroupBox1.Name = "GroupBox1";
             this.GroupBox1.Size = new System.Drawing.Size(330, 117);
@@ -60,17 +61,17 @@
             // 
             // btnOkay
             // 
-            this.btnOkay.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.btnOkay.BackColor = System.Drawing.Color.Green;
             this.btnOkay.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnOkay.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnOkay.FlatAppearance.BorderColor = System.Drawing.SystemColors.Highlight;
             this.btnOkay.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Highlight;
             this.btnOkay.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnOkay.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnOkay.ForeColor = System.Drawing.Color.Maroon;
+            this.btnOkay.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOkay.ForeColor = System.Drawing.Color.White;
             this.btnOkay.Location = new System.Drawing.Point(174, 77);
             this.btnOkay.Name = "btnOkay";
-            this.btnOkay.Size = new System.Drawing.Size(69, 27);
+            this.btnOkay.Size = new System.Drawing.Size(69, 30);
             this.btnOkay.TabIndex = 8;
             this.btnOkay.Text = "&Login";
             this.btnOkay.UseVisualStyleBackColor = false;
@@ -78,17 +79,17 @@
             // 
             // btnCancel
             // 
-            this.btnCancel.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.btnCancel.BackColor = System.Drawing.Color.Red;
             this.btnCancel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnCancel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCancel.FlatAppearance.BorderColor = System.Drawing.SystemColors.Highlight;
             this.btnCancel.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Highlight;
             this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancel.ForeColor = System.Drawing.Color.Maroon;
+            this.btnCancel.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancel.ForeColor = System.Drawing.Color.White;
             this.btnCancel.Location = new System.Drawing.Point(249, 77);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(72, 27);
+            this.btnCancel.Size = new System.Drawing.Size(72, 30);
             this.btnCancel.TabIndex = 9;
             this.btnCancel.Text = "&Cancel";
             this.btnCancel.UseVisualStyleBackColor = false;
@@ -124,6 +125,7 @@
             // 
             // txtPassword
             // 
+            this.txtPassword.ForeColor = System.Drawing.Color.Maroon;
             this.txtPassword.Location = new System.Drawing.Point(151, 50);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
@@ -133,6 +135,7 @@
             // 
             // txtusername
             // 
+            this.txtusername.ForeColor = System.Drawing.Color.Maroon;
             this.txtusername.Location = new System.Drawing.Point(151, 22);
             this.txtusername.Name = "txtusername";
             this.txtusername.Size = new System.Drawing.Size(170, 21);
@@ -145,7 +148,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(346, 128);
             this.Controls.Add(this.GroupBox1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;

@@ -49,15 +49,27 @@ namespace HRIS.App
             }
         }
 
-        private void toolStripButton1_Click(object sender, EventArgs e)
+        private void toolStripButton3_Click(object sender, EventArgs e)
+        {
+            frmEmployees f = new frmEmployees();
+            f.ShowDialog();
+        }
+
+        private void addressSetupToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmAddress f1 = new frmAddress();
             f1.ShowDialog();
         }
 
-        private void toolStripButton2_Click(object sender, EventArgs e)
+        private void blockListingsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmDepartment f = new frmDepartment();
+            f.ShowDialog();
+        }
+
+        private void contractsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmEmployees f = new frmEmployees();
             f.ShowDialog();
         }
     }

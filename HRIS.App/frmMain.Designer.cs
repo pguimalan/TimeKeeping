@@ -36,22 +36,15 @@
             this.exitApplicationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.maintainanceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addressSetupToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.areaListingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.blockListingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripSeparator();
             this.manageSystemUsersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.motherAgentsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.agentsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.clientInformationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.transactionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contractsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.resetPasswordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton5 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton11 = new System.Windows.Forms.ToolStripButton();
@@ -104,41 +97,26 @@
             // 
             this.maintainanceToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.addressSetupToolStripMenuItem,
-            this.areaListingsToolStripMenuItem,
             this.blockListingsToolStripMenuItem,
-            this.toolStripMenuItem3,
             this.toolStripMenuItem2,
-            this.manageSystemUsersToolStripMenuItem,
-            this.motherAgentsToolStripMenuItem,
-            this.agentsToolStripMenuItem,
-            this.clientInformationToolStripMenuItem});
+            this.manageSystemUsersToolStripMenuItem});
             this.maintainanceToolStripMenuItem.Name = "maintainanceToolStripMenuItem";
-            this.maintainanceToolStripMenuItem.Size = new System.Drawing.Size(91, 20);
-            this.maintainanceToolStripMenuItem.Text = "&Maintainance";
+            this.maintainanceToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
+            this.maintainanceToolStripMenuItem.Text = "Settings";
             // 
             // addressSetupToolStripMenuItem
             // 
             this.addressSetupToolStripMenuItem.Name = "addressSetupToolStripMenuItem";
             this.addressSetupToolStripMenuItem.Size = new System.Drawing.Size(189, 22);
             this.addressSetupToolStripMenuItem.Text = "Address Set-up";
-            // 
-            // areaListingsToolStripMenuItem
-            // 
-            this.areaListingsToolStripMenuItem.Name = "areaListingsToolStripMenuItem";
-            this.areaListingsToolStripMenuItem.Size = new System.Drawing.Size(189, 22);
-            this.areaListingsToolStripMenuItem.Text = "Area Set-up";
+            this.addressSetupToolStripMenuItem.Click += new System.EventHandler(this.addressSetupToolStripMenuItem_Click);
             // 
             // blockListingsToolStripMenuItem
             // 
             this.blockListingsToolStripMenuItem.Name = "blockListingsToolStripMenuItem";
             this.blockListingsToolStripMenuItem.Size = new System.Drawing.Size(189, 22);
-            this.blockListingsToolStripMenuItem.Text = "Block Set-up";
-            // 
-            // toolStripMenuItem3
-            // 
-            this.toolStripMenuItem3.Name = "toolStripMenuItem3";
-            this.toolStripMenuItem3.Size = new System.Drawing.Size(189, 22);
-            this.toolStripMenuItem3.Text = "Lot Set-up";
+            this.blockListingsToolStripMenuItem.Text = "Departments";
+            this.blockListingsToolStripMenuItem.Click += new System.EventHandler(this.blockListingsToolStripMenuItem_Click);
             // 
             // toolStripMenuItem2
             // 
@@ -151,24 +129,6 @@
             this.manageSystemUsersToolStripMenuItem.Size = new System.Drawing.Size(189, 22);
             this.manageSystemUsersToolStripMenuItem.Text = "Manage System Users";
             // 
-            // motherAgentsToolStripMenuItem
-            // 
-            this.motherAgentsToolStripMenuItem.Name = "motherAgentsToolStripMenuItem";
-            this.motherAgentsToolStripMenuItem.Size = new System.Drawing.Size(189, 22);
-            this.motherAgentsToolStripMenuItem.Text = "Mother Agents";
-            // 
-            // agentsToolStripMenuItem
-            // 
-            this.agentsToolStripMenuItem.Name = "agentsToolStripMenuItem";
-            this.agentsToolStripMenuItem.Size = new System.Drawing.Size(189, 22);
-            this.agentsToolStripMenuItem.Text = "Agents";
-            // 
-            // clientInformationToolStripMenuItem
-            // 
-            this.clientInformationToolStripMenuItem.Name = "clientInformationToolStripMenuItem";
-            this.clientInformationToolStripMenuItem.Size = new System.Drawing.Size(189, 22);
-            this.clientInformationToolStripMenuItem.Text = "Client Information";
-            // 
             // transactionsToolStripMenuItem
             // 
             this.transactionsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -180,8 +140,9 @@
             // contractsToolStripMenuItem
             // 
             this.contractsToolStripMenuItem.Name = "contractsToolStripMenuItem";
-            this.contractsToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
-            this.contractsToolStripMenuItem.Text = "Contracts";
+            this.contractsToolStripMenuItem.Size = new System.Drawing.Size(200, 22);
+            this.contractsToolStripMenuItem.Text = "Employee Management";
+            this.contractsToolStripMenuItem.Click += new System.EventHandler(this.contractsToolStripMenuItem_Click);
             // 
             // toolsToolStripMenuItem
             // 
@@ -202,8 +163,6 @@
             this.toolStrip1.ImageScalingSize = new System.Drawing.Size(35, 35);
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripLabel1,
-            this.toolStripButton1,
-            this.toolStripButton2,
             this.toolStripButton3,
             this.toolStripButton5,
             this.toolStripButton11});
@@ -222,26 +181,6 @@
             this.toolStripLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.toolStripLabel1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             // 
-            // toolStripButton1
-            // 
-            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(74, 54);
-            this.toolStripButton1.Text = "Address List";
-            this.toolStripButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
-            // 
-            // toolStripButton2
-            // 
-            this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
-            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.Size = new System.Drawing.Size(79, 54);
-            this.toolStripButton2.Text = "Departments";
-            this.toolStripButton2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.toolStripButton2.Click += new System.EventHandler(this.toolStripButton2_Click);
-            // 
             // toolStripButton3
             // 
             this.toolStripButton3.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton3.Image")));
@@ -250,6 +189,7 @@
             this.toolStripButton3.Size = new System.Drawing.Size(91, 54);
             this.toolStripButton3.Text = "Employee Mgt.";
             this.toolStripButton3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.toolStripButton3.Click += new System.EventHandler(this.toolStripButton3_Click);
             // 
             // toolStripButton5
             // 
@@ -305,22 +245,15 @@
         private System.Windows.Forms.ToolStripMenuItem exitApplicationToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem maintainanceToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem addressSetupToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem areaListingsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem blockListingsToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem3;
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem2;
         private System.Windows.Forms.ToolStripMenuItem manageSystemUsersToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem motherAgentsToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem agentsToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem clientInformationToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem transactionsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem contractsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem toolsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem resetPasswordToolStripMenuItem;
         private System.Windows.Forms.ToolStrip toolStrip1;
         public System.Windows.Forms.ToolStripLabel toolStripLabel1;
-        private System.Windows.Forms.ToolStripButton toolStripButton1;
-        private System.Windows.Forms.ToolStripButton toolStripButton2;
         private System.Windows.Forms.ToolStripButton toolStripButton3;
         private System.Windows.Forms.ToolStripButton toolStripButton5;
         private System.Windows.Forms.ToolStripButton toolStripButton11;

@@ -20,6 +20,16 @@ namespace HRIS.App.Helpers
             return false;
         }
 
+        public static bool IsMaskedTextEmpty(MaskedTextBox txt)
+        {
+            if (txt.Text == string.Empty)
+                return true;
+
+            txt.BackColor = Color.White;
+            txt.ForeColor = Color.Black;
+            return false;
+        }
+
         public static bool IsComboEmpty(ComboBox txt)
         {
             if (txt.Text == string.Empty)
@@ -45,6 +55,21 @@ namespace HRIS.App.Helpers
             txt.BackColor = Color.Yellow;
             txt.ForeColor = Color.Red;
             txt.Focus();
+        }
+
+        public static void FocusMaskedTextBox(MaskedTextBox txt, string sLabel)
+        {
+            MessageBox.Show(sLabel + " is empty. Pls check the field.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            txt.BackColor = Color.Yellow;
+            txt.ForeColor = Color.Red;
+            txt.Focus();
+        }
+
+        public static void NormalTextbox(TextBox txt)
+        {
+            txt.Text = "";
+            txt.BackColor = Color.White;
+            txt.ForeColor = Color.Maroon;
         }
     }
 }

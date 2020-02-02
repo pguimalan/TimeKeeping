@@ -46,9 +46,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AddressRepository.cs" />
+    <Compile Include="AuthRepository.cs" />
     <Compile Include="DataManager.cs" />
     <Compile Include="DepartmentRepository.cs" />
     <Compile Include="Interface\IAddressRepository.cs" />
+    <Compile Include="Interface\IAuthRepository.cs" />
     <Compile Include="Interface\IDepartmentRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

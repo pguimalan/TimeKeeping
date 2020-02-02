@@ -49,6 +49,7 @@ namespace HRIS.App
                     lv.SubItems.Add(li.DepartmentName);
                     listView1.Items.AddRange(new ListViewItem[] { lv });
                 }
+                txtDeptName.Focus();
             }
             catch (Exception ex) { MessageBox.Show(ex.Message, "Error"); }
         }
@@ -99,10 +100,10 @@ namespace HRIS.App
         }
 
         private void bttnReset_Click(object sender, EventArgs e)
-        {
-            txtDeptName.Text = "";
+        {            
             txtDeptName.Focus();
-            txtSearch.Text = "";
+            Validation.NormalTextbox(txtDeptName);
+            Validation.NormalTextbox(txtSearch);
             bttnSave.Text = "Save Item";
             deptId = 0;
         }

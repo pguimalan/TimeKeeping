@@ -51,9 +51,9 @@ namespace HRIS.App
             {
                 Validation.FocusTextBox(txtCountry, "Country");
             }
-            else if (Validation.IsTextEmpty(txtZipCode))
+            else if (Validation.IsMaskedTextEmpty(txtZipCode))
             {
-                Validation.FocusTextBox(txtCountry, "Zip Code");
+                Validation.FocusMaskedTextBox(txtZipCode, "Zip Code");
             }
             else
             {

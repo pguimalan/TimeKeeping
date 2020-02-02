@@ -15,8 +15,10 @@ namespace HRIS.App
 {
     public partial class frmAddress : Form
     {
-        private readonly IAddressService svc;
+        public string strAddressSelected { get; set; }
+        public bool IsSelectAddress;
 
+        private readonly IAddressService svc;
         public frmAddress(IAddressService svc)
         {
             this.svc = svc;
@@ -25,6 +27,7 @@ namespace HRIS.App
         public frmAddress() : this(new AddressService())
         {
             InitializeComponent();
+            IsSelectAddress = false;
         }
 
         private void loadvars(string txtSearch)
@@ -52,6 +55,10 @@ namespace HRIS.App
         private void frmAddress_Load(object sender, EventArgs e)
         {
             loadvars("");
+            if (!IsSelectAddress)
+            {
+                label2.Visible = false;
+            }
         }
 
         private void bttnAdd_Click(object sender, EventArgs e)
@@ -102,6 +109,19 @@ namespace HRIS.App
         private void bttnRefresh_Click(object sender, EventArgs e)
         {
             txtSearch.Text = "";
+        }
+
+        private void listView1_DoubleClick(object sender, EventArgs e)
+        {
+            if (listView1.Items.Count > 0)
+            {
+                strAddressSelected = string.Concat(listView1.SelectedItems[0].SubItems[1].Text.ToString(), ", ", listView1.SelectedItems[0].SubItems[2].Text.ToString(), ", ", listView1.SelectedItems[0].SubItems[3].Text.ToString(), ", ", listView1.SelectedItems[0].SubItems[4].Text.ToString(), " ", listView1.SelectedItems[0].SubItems[5].Text.ToString());
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("No records found.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
         }
     }
 }

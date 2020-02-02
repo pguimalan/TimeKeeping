@@ -1,4 +1,6 @@
 ﻿using HRIS.App.Helpers;
+using HRIS.Services;
+using HRIS.Services.Interface;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,9 +15,18 @@ namespace HRIS.App
 {
     public partial class frmLogin : Form
     {
-        public frmLogin()
+        private readonly IAuthService svc;
+        int counts;
+
+        public frmLogin(IAuthService svc)
+        {
+            this.svc = svc;
+        }
+
+        public frmLogin() : this(new AuthService())
         {
             InitializeComponent();
+            counts = 3;
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
@@ -35,9 +46,32 @@ namespace HRIS.App
 
         void Login(string username, string password)
         {
-            this.Hide();
-            frmMain f = new frmMain();
-            f.ShowDialog();
+            try
+            {
+                bool hasAccess = svc.Login(username, password);
+                if (!hasAccess)
+                {
+                    counts--;
+                    MessageBox.Show("Invalid username or password.", "Access Denied", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    if (counts == 0)
+                    {
+                        MessageBox.Show("You have entered invalid username and password 3 times.", "Exit", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        Application.ExitThread();
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Welcome " + username + "!", "Access Granted", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    frmMain frm = new frmMain();
+
+                    frm.Show();
+                    this.Hide();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Login failed");
+            }
         }
     }
 }

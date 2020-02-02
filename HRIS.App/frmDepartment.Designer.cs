@@ -30,17 +30,17 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDepartment));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.bttnReset = new System.Windows.Forms.Button();
+            this.bttnSave = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtDeptName = new System.Windows.Forms.TextBox();
             this.listView1 = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.lblDepartment = new System.Windows.Forms.Label();
             this.txtSearch = new System.Windows.Forms.TextBox();
-            this.txtDeptName = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.bttnSave = new System.Windows.Forms.Button();
             this.bttnExit = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.bttnReset = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -52,16 +52,69 @@
             this.groupBox1.Controls.Add(this.txtDeptName);
             this.groupBox1.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.Color.Navy;
-            this.groupBox1.Location = new System.Drawing.Point(12, 230);
+            this.groupBox1.Location = new System.Drawing.Point(12, 237);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(245, 100);
             this.groupBox1.TabIndex = 163;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Add New Department";
             // 
+            // bttnReset
+            // 
+            this.bttnReset.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.bttnReset.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bttnReset.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bttnReset.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bttnReset.ForeColor = System.Drawing.Color.White;
+            this.bttnReset.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bttnReset.Location = new System.Drawing.Point(169, 60);
+            this.bttnReset.Name = "bttnReset";
+            this.bttnReset.Size = new System.Drawing.Size(62, 30);
+            this.bttnReset.TabIndex = 169;
+            this.bttnReset.Text = "&Clear";
+            this.bttnReset.UseVisualStyleBackColor = false;
+            this.bttnReset.Click += new System.EventHandler(this.bttnReset_Click);
+            // 
+            // bttnSave
+            // 
+            this.bttnSave.BackColor = System.Drawing.Color.Green;
+            this.bttnSave.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bttnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bttnSave.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bttnSave.ForeColor = System.Drawing.Color.White;
+            this.bttnSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bttnSave.Location = new System.Drawing.Point(83, 60);
+            this.bttnSave.Margin = new System.Windows.Forms.Padding(4);
+            this.bttnSave.Name = "bttnSave";
+            this.bttnSave.Size = new System.Drawing.Size(86, 30);
+            this.bttnSave.TabIndex = 168;
+            this.bttnSave.Text = "&Save Item";
+            this.bttnSave.UseVisualStyleBackColor = false;
+            this.bttnSave.Click += new System.EventHandler(this.bttnSave_Click);
+            // 
+            // label1
+            // 
+            this.label1.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Navy;
+            this.label1.Location = new System.Drawing.Point(6, 32);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(46, 20);
+            this.label1.TabIndex = 167;
+            this.label1.Text = "Name:";
+            // 
+            // txtDeptName
+            // 
+            this.txtDeptName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtDeptName.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDeptName.ForeColor = System.Drawing.Color.Maroon;
+            this.txtDeptName.Location = new System.Drawing.Point(58, 32);
+            this.txtDeptName.Name = "txtDeptName";
+            this.txtDeptName.Size = new System.Drawing.Size(173, 22);
+            this.txtDeptName.TabIndex = 166;
+            // 
             // listView1
             // 
-            this.listView1.BackColor = System.Drawing.Color.White;
+            this.listView1.BackColor = System.Drawing.SystemColors.MenuBar;
             this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
             this.columnHeader2});
@@ -108,52 +161,14 @@
             this.txtSearch.TabIndex = 165;
             this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
-            // txtDeptName
-            // 
-            this.txtDeptName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtDeptName.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDeptName.ForeColor = System.Drawing.Color.Maroon;
-            this.txtDeptName.Location = new System.Drawing.Point(58, 32);
-            this.txtDeptName.Name = "txtDeptName";
-            this.txtDeptName.Size = new System.Drawing.Size(173, 22);
-            this.txtDeptName.TabIndex = 166;
-            // 
-            // label1
-            // 
-            this.label1.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Navy;
-            this.label1.Location = new System.Drawing.Point(6, 32);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(46, 20);
-            this.label1.TabIndex = 167;
-            this.label1.Text = "Name:";
-            // 
-            // bttnSave
-            // 
-            this.bttnSave.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.bttnSave.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bttnSave.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bttnSave.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.bttnSave.Image = ((System.Drawing.Image)(resources.GetObject("bttnSave.Image")));
-            this.bttnSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bttnSave.Location = new System.Drawing.Point(76, 60);
-            this.bttnSave.Margin = new System.Windows.Forms.Padding(4);
-            this.bttnSave.Name = "bttnSave";
-            this.bttnSave.Size = new System.Drawing.Size(86, 30);
-            this.bttnSave.TabIndex = 168;
-            this.bttnSave.Text = "&Save Item";
-            this.bttnSave.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.bttnSave.UseVisualStyleBackColor = false;
-            this.bttnSave.Click += new System.EventHandler(this.bttnSave_Click);
-            // 
             // bttnExit
             // 
-            this.bttnExit.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.bttnExit.BackColor = System.Drawing.Color.Red;
             this.bttnExit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bttnExit.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.bttnExit.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bttnExit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.bttnExit.Image = ((System.Drawing.Image)(resources.GetObject("bttnExit.Image")));
+            this.bttnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bttnExit.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bttnExit.ForeColor = System.Drawing.Color.White;
             this.bttnExit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bttnExit.Location = new System.Drawing.Point(188, 200);
             this.bttnExit.Margin = new System.Windows.Forms.Padding(4);
@@ -161,7 +176,6 @@
             this.bttnExit.Size = new System.Drawing.Size(69, 30);
             this.bttnExit.TabIndex = 169;
             this.bttnExit.Text = "&Close";
-            this.bttnExit.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.bttnExit.UseVisualStyleBackColor = false;
             this.bttnExit.Click += new System.EventHandler(this.bttnExit_Click);
             // 
@@ -176,27 +190,11 @@
             this.label2.TabIndex = 167;
             this.label2.Text = "Double click item to edit";
             // 
-            // bttnReset
-            // 
-            this.bttnReset.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.bttnReset.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bttnReset.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.bttnReset.Image = ((System.Drawing.Image)(resources.GetObject("bttnReset.Image")));
-            this.bttnReset.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bttnReset.Location = new System.Drawing.Point(169, 60);
-            this.bttnReset.Name = "bttnReset";
-            this.bttnReset.Size = new System.Drawing.Size(62, 30);
-            this.bttnReset.TabIndex = 169;
-            this.bttnReset.Text = "&Clear";
-            this.bttnReset.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.bttnReset.UseVisualStyleBackColor = false;
-            this.bttnReset.Click += new System.EventHandler(this.bttnReset_Click);
-            // 
             // frmDepartment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(266, 336);
+            this.ClientSize = new System.Drawing.Size(266, 348);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.bttnExit);
             this.Controls.Add(this.listView1);

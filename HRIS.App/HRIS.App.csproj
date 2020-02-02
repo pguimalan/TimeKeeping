@@ -67,6 +67,18 @@
     <Compile Include="frmDepartment.Designer.cs">
       <DependentUpon>frmDepartment.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmEmployees.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEmployees.Designer.cs">
+      <DependentUpon>frmEmployees.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEmployees_AE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEmployees_AE.Designer.cs">
+      <DependentUpon>frmEmployees_AE.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -80,6 +92,7 @@
       <DependentUpon>frmMain.cs</DependentUpon>
     </Compile>
     <Compile Include="Helpers\ShowMessage.cs" />
+    <Compile Include="Helpers\StringHelper.cs" />
     <Compile Include="Helpers\Validation.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -91,6 +104,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmDepartment.resx">
       <DependentUpon>frmDepartment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEmployees.resx">
+      <DependentUpon>frmEmployees.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEmployees_AE.resx">
+      <DependentUpon>frmEmployees_AE.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
