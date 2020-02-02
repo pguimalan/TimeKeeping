@@ -12,5 +12,6 @@ namespace HRIS.Services.Interface
         void Department_Insert(DepartmentForInsertModel ad);
         void Department_Update(DepartmentForEditModel ad);
         List<DepartmentForListModel> Department_Select(string search);
+        bool Department_CheckIfExists(string deptName);
     }
 }

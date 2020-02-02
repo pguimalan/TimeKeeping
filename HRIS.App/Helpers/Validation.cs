@@ -15,8 +15,6 @@ namespace HRIS.App.Helpers
             if (txt.Text == string.Empty)
                 return true;
 
-            txt.BackColor = Color.White;
-            txt.ForeColor = Color.Black;
             return false;
         }
 
@@ -25,8 +23,6 @@ namespace HRIS.App.Helpers
             if (txt.Text == string.Empty)
                 return true;
 
-            txt.BackColor = Color.White;
-            txt.ForeColor = Color.Black;
             return false;
         }
 
@@ -35,8 +31,6 @@ namespace HRIS.App.Helpers
             if (txt.Text == string.Empty)
                 return true;
 
-            txt.BackColor = Color.White;
-            txt.ForeColor = Color.Black;
             return false;
         }
 

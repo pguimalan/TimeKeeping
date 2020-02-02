@@ -69,5 +69,25 @@ namespace HRIS.Data
                 throw new Exception(ex.Message);
             }
         }
+
+        public bool Department_CheckIfExists(string deptName)
+        {
+            try
+            {
+                using (var con = GetDbConnection())
+                {
+                    var ret = con.ExecuteScalar<bool>("dbo.Usp_Department_CheckIfExist",
+                               new
+                               {
+                                   @iStrDeptName = deptName
+                               }, commandType: CommandType.StoredProcedure);
+                    return ret;
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
     }
 }

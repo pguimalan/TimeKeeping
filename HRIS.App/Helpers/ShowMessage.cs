@@ -27,6 +27,9 @@ namespace HRIS.App.Helpers
                 case 3:
                     MessageBox.Show("Something went wrong.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     break;
+                case 4:
+                    MessageBox.Show("Record already exist.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    break;
             }
         }
 

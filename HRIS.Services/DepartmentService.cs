@@ -28,5 +28,10 @@ namespace HRIS.Services
         {
             return _repo.Department_Select(search);
         }
+
+        public bool Department_CheckIfExists(string deptName)
+        {
+            return _repo.Department_CheckIfExists(deptName);
+        }
     }
 }

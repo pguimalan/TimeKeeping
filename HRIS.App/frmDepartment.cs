@@ -69,6 +69,12 @@ namespace HRIS.App
             {
                 if(deptId <= 0)
                 {
+                    if (svc.Department_CheckIfExists(txtDeptName.Text))
+                    {
+                        ShowMessage.ShowMessageBox(4);                        
+                        return;
+                    }
+
                     svc.Department_Insert(new DepartmentForInsertModel { DepartmentName = txtDeptName.Text });
                     ShowMessage.ShowMessageBox(1);
                     txtDeptName.Text = "";
