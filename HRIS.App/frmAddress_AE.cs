@@ -67,10 +67,12 @@ namespace HRIS.App
                         Province = txtProvince.Text,
                         ZipCode = txtZipCode.Text
                     });
-                    if (result > 1)
+                    if (result > 0)
                     {
                         ShowMessage.ShowMessageBox(1);
                     }
+                    else if(result == -1)
+                        ShowMessage.ShowMessageBox(4);
                     else
                         ShowMessage.ShowMessageBox(3);
                 }

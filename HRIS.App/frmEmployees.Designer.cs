@@ -30,20 +30,20 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmEmployees));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.listView1 = new System.Windows.Forms.ListView();
-            this.empno = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.EmpName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.Designation = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.ContactNumbers = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.Suffix = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.Department = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.EmployeeId = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.bttnRefresh = new System.Windows.Forms.Button();
-            this.lblDepartment = new System.Windows.Forms.Label();
-            this.txtSearch = new System.Windows.Forms.TextBox();
             this.bttnExit = new System.Windows.Forms.Button();
             this.bttnEdit = new System.Windows.Forms.Button();
             this.bttnAdd = new System.Windows.Forms.Button();
+            this.bttnRefresh = new System.Windows.Forms.Button();
+            this.lblDepartment = new System.Windows.Forms.Label();
+            this.txtSearch = new System.Windows.Forms.TextBox();
+            this.listView1 = new System.Windows.Forms.ListView();
+            this.empno = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.EmployeeId = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Suffix = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.EmpName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Designation = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.ContactNumbers = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Department = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -62,73 +62,52 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             // 
-            // listView1
+            // bttnExit
             // 
-            this.listView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.listView1.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.empno,
-            this.EmployeeId,
-            this.Suffix,
-            this.EmpName,
-            this.Designation,
-            this.ContactNumbers,
-            this.Department});
-            this.listView1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.listView1.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.listView1.ForeColor = System.Drawing.Color.Maroon;
-            this.listView1.FullRowSelect = true;
-            this.listView1.GridLines = true;
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(13, 51);
-            this.listView1.MultiSelect = false;
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(768, 366);
-            this.listView1.TabIndex = 53;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
+            this.bttnExit.BackColor = System.Drawing.Color.Red;
+            this.bttnExit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bttnExit.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.bttnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bttnExit.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bttnExit.ForeColor = System.Drawing.Color.White;
+            this.bttnExit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bttnExit.Location = new System.Drawing.Point(717, 431);
+            this.bttnExit.Name = "bttnExit";
+            this.bttnExit.Size = new System.Drawing.Size(64, 30);
+            this.bttnExit.TabIndex = 174;
+            this.bttnExit.Text = "&Close";
+            this.bttnExit.UseVisualStyleBackColor = false;
             // 
-            // empno
+            // bttnEdit
             // 
-            this.empno.Text = "empno";
-            this.empno.Width = 0;
+            this.bttnEdit.BackColor = System.Drawing.Color.Purple;
+            this.bttnEdit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bttnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bttnEdit.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bttnEdit.ForeColor = System.Drawing.Color.White;
+            this.bttnEdit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bttnEdit.Location = new System.Drawing.Point(644, 431);
+            this.bttnEdit.Name = "bttnEdit";
+            this.bttnEdit.Size = new System.Drawing.Size(71, 30);
+            this.bttnEdit.TabIndex = 173;
+            this.bttnEdit.Text = "&Update";
+            this.bttnEdit.UseVisualStyleBackColor = false;
             // 
-            // EmpName
+            // bttnAdd
             // 
-            this.EmpName.Text = "Employee Name";
-            this.EmpName.Width = 165;
-            // 
-            // Designation
-            // 
-            this.Designation.Text = "Designation";
-            this.Designation.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.Designation.Width = 135;
-            // 
-            // ContactNumbers
-            // 
-            this.ContactNumbers.Text = "Contact Numbers";
-            this.ContactNumbers.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.ContactNumbers.Width = 137;
-            // 
-            // Suffix
-            // 
-            this.Suffix.Text = "Suffix";
-            this.Suffix.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.Suffix.Width = 54;
-            // 
-            // Department
-            // 
-            this.Department.Text = "Department";
-            this.Department.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.Department.Width = 166;
-            // 
-            // EmployeeId
-            // 
-            this.EmployeeId.Text = "Employee ID#";
-            this.EmployeeId.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.EmployeeId.Width = 116;
+            this.bttnAdd.BackColor = System.Drawing.Color.DarkBlue;
+            this.bttnAdd.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bttnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bttnAdd.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bttnAdd.ForeColor = System.Drawing.Color.White;
+            this.bttnAdd.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bttnAdd.Location = new System.Drawing.Point(561, 431);
+            this.bttnAdd.Name = "bttnAdd";
+            this.bttnAdd.Size = new System.Drawing.Size(81, 30);
+            this.bttnAdd.TabIndex = 172;
+            this.bttnAdd.Text = "&Add New";
+            this.bttnAdd.UseVisualStyleBackColor = false;
+            this.bttnAdd.Click += new System.EventHandler(this.bttnAdd_Click);
             // 
             // bttnRefresh
             // 
@@ -165,52 +144,73 @@
             this.txtSearch.Size = new System.Drawing.Size(187, 22);
             this.txtSearch.TabIndex = 170;
             // 
-            // bttnExit
+            // listView1
             // 
-            this.bttnExit.BackColor = System.Drawing.Color.Red;
-            this.bttnExit.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bttnExit.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.bttnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bttnExit.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bttnExit.ForeColor = System.Drawing.Color.White;
-            this.bttnExit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bttnExit.Location = new System.Drawing.Point(717, 431);
-            this.bttnExit.Name = "bttnExit";
-            this.bttnExit.Size = new System.Drawing.Size(64, 30);
-            this.bttnExit.TabIndex = 174;
-            this.bttnExit.Text = "&Close";
-            this.bttnExit.UseVisualStyleBackColor = false;
+            this.listView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.listView1.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.empno,
+            this.EmployeeId,
+            this.Suffix,
+            this.EmpName,
+            this.Designation,
+            this.ContactNumbers,
+            this.Department});
+            this.listView1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.listView1.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listView1.ForeColor = System.Drawing.Color.Maroon;
+            this.listView1.FullRowSelect = true;
+            this.listView1.GridLines = true;
+            this.listView1.HideSelection = false;
+            this.listView1.Location = new System.Drawing.Point(13, 51);
+            this.listView1.MultiSelect = false;
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(768, 366);
+            this.listView1.TabIndex = 53;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listView1.View = System.Windows.Forms.View.Details;
             // 
-            // bttnEdit
+            // empno
             // 
-            this.bttnEdit.BackColor = System.Drawing.Color.Purple;
-            this.bttnEdit.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bttnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bttnEdit.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bttnEdit.ForeColor = System.Drawing.Color.White;
-            this.bttnEdit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bttnEdit.Location = new System.Drawing.Point(644, 431);
-            this.bttnEdit.Name = "bttnEdit";
-            this.bttnEdit.Size = new System.Drawing.Size(71, 30);
-            this.bttnEdit.TabIndex = 173;
-            this.bttnEdit.Text = "&Update";
-            this.bttnEdit.UseVisualStyleBackColor = false;
+            this.empno.Text = "empno";
+            this.empno.Width = 0;
             // 
-            // bttnAdd
+            // EmployeeId
             // 
-            this.bttnAdd.BackColor = System.Drawing.Color.RoyalBlue;
-            this.bttnAdd.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bttnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bttnAdd.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bttnAdd.ForeColor = System.Drawing.Color.White;
-            this.bttnAdd.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bttnAdd.Location = new System.Drawing.Point(561, 431);
-            this.bttnAdd.Name = "bttnAdd";
-            this.bttnAdd.Size = new System.Drawing.Size(81, 30);
-            this.bttnAdd.TabIndex = 172;
-            this.bttnAdd.Text = "&Add New";
-            this.bttnAdd.UseVisualStyleBackColor = false;
-            this.bttnAdd.Click += new System.EventHandler(this.bttnAdd_Click);
+            this.EmployeeId.Text = "Employee ID#";
+            this.EmployeeId.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.EmployeeId.Width = 116;
+            // 
+            // Suffix
+            // 
+            this.Suffix.Text = "Suffix";
+            this.Suffix.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Suffix.Width = 54;
+            // 
+            // EmpName
+            // 
+            this.EmpName.Text = "Employee Name";
+            this.EmpName.Width = 165;
+            // 
+            // Designation
+            // 
+            this.Designation.Text = "Designation";
+            this.Designation.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Designation.Width = 135;
+            // 
+            // ContactNumbers
+            // 
+            this.ContactNumbers.Text = "Contact Numbers";
+            this.ContactNumbers.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.ContactNumbers.Width = 137;
+            // 
+            // Department
+            // 
+            this.Department.Text = "Department";
+            this.Department.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Department.Width = 166;
             // 
             // frmEmployees
             // 

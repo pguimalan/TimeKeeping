@@ -133,7 +133,7 @@
             // 
             // bttnAdd
             // 
-            this.bttnAdd.BackColor = System.Drawing.SystemColors.Highlight;
+            this.bttnAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.bttnAdd.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bttnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bttnAdd.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

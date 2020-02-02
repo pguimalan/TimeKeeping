@@ -49,9 +49,11 @@
     <Compile Include="AuthRepository.cs" />
     <Compile Include="DataManager.cs" />
     <Compile Include="DepartmentRepository.cs" />
+    <Compile Include="EmployeeRepository.cs" />
     <Compile Include="Interface\IAddressRepository.cs" />
     <Compile Include="Interface\IAuthRepository.cs" />
     <Compile Include="Interface\IDepartmentRepository.cs" />
+    <Compile Include="Interface\IEmployeeRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
