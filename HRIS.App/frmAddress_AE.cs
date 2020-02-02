@@ -106,5 +106,25 @@ namespace HRIS.App
                 txtZipCode.Text = addressForEditModel.ZipCode;
             }
         }
+
+        private void txtBarangay_Leave(object sender, EventArgs e)
+        {
+            StringHelper.UppercaseFirst(txtBarangay);
+        }
+
+        private void txtCity_Leave(object sender, EventArgs e)
+        {
+            StringHelper.UppercaseFirst(txtCity);
+        }
+
+        private void txtProvince_Leave(object sender, EventArgs e)
+        {
+            StringHelper.UppercaseFirst(txtProvince);
+        }
+
+        private void txtCountry_Leave(object sender, EventArgs e)
+        {
+            StringHelper.UppercaseFirst(txtCountry);
+        }
     }
 }

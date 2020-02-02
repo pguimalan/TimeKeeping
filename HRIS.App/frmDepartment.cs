@@ -112,5 +112,10 @@ namespace HRIS.App
         {
             loadvars(txtSearch.Text);
         }
+
+        private void txtDeptName_Leave(object sender, EventArgs e)
+        {
+            StringHelper.UppercaseFirst(txtDeptName);
+        }
     }
 }

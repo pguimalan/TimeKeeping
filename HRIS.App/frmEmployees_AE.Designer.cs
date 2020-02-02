@@ -34,6 +34,7 @@
             this.bttnExit = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.label39 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.cmbReligion = new System.Windows.Forms.ComboBox();
             this.txtWeight = new System.Windows.Forms.TextBox();
@@ -103,8 +104,8 @@
             this.label40 = new System.Windows.Forms.Label();
             this.label38 = new System.Windows.Forms.Label();
             this.label37 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtContactPersonMobile = new System.Windows.Forms.TextBox();
+            this.txtContactPersonName = new System.Windows.Forms.TextBox();
             this.label36 = new System.Windows.Forms.Label();
             this.label35 = new System.Windows.Forms.Label();
             this.label34 = new System.Windows.Forms.Label();
@@ -139,6 +140,10 @@
             this.label28 = new System.Windows.Forms.Label();
             this.txtSpouseName = new System.Windows.Forms.TextBox();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.txtPagIbig = new System.Windows.Forms.MaskedTextBox();
+            this.txtPhilHealth = new System.Windows.Forms.MaskedTextBox();
+            this.txtSSS = new System.Windows.Forms.MaskedTextBox();
+            this.txtTIN = new System.Windows.Forms.MaskedTextBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label75 = new System.Windows.Forms.Label();
             this.label71 = new System.Windows.Forms.Label();
@@ -179,11 +184,6 @@
             this.linkLabel2 = new System.Windows.Forms.LinkLabel();
             this.linkLabel3 = new System.Windows.Forms.LinkLabel();
             this.linkLabel4 = new System.Windows.Forms.LinkLabel();
-            this.label39 = new System.Windows.Forms.Label();
-            this.txtTIN = new System.Windows.Forms.MaskedTextBox();
-            this.txtSSS = new System.Windows.Forms.MaskedTextBox();
-            this.txtPhilHealth = new System.Windows.Forms.MaskedTextBox();
-            this.txtPagIbig = new System.Windows.Forms.MaskedTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.picEmployee)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -300,6 +300,17 @@
             this.tabPage1.Text = "Basic Information";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // label39
+            // 
+            this.label39.AutoSize = true;
+            this.label39.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label39.ForeColor = System.Drawing.Color.DimGray;
+            this.label39.Location = new System.Drawing.Point(622, 57);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(35, 13);
+            this.label39.TabIndex = 259;
+            this.label39.Text = "Suffix";
+            // 
             // label20
             // 
             this.label20.AutoSize = true;
@@ -401,6 +412,7 @@
             this.txtPlaceOfBirth.Name = "txtPlaceOfBirth";
             this.txtPlaceOfBirth.Size = new System.Drawing.Size(194, 23);
             this.txtPlaceOfBirth.TabIndex = 6;
+            this.txtPlaceOfBirth.Leave += new System.EventHandler(this.txtPlaceOfBirth_Leave);
             // 
             // label17
             // 
@@ -755,6 +767,7 @@
             this.txtCurrentAddress1.Name = "txtCurrentAddress1";
             this.txtCurrentAddress1.Size = new System.Drawing.Size(194, 23);
             this.txtCurrentAddress1.TabIndex = 15;
+            this.txtCurrentAddress1.Leave += new System.EventHandler(this.txtCurrentAddress1_Leave);
             // 
             // label12
             // 
@@ -821,6 +834,7 @@
             this.txtResidentialAddress1.Name = "txtResidentialAddress1";
             this.txtResidentialAddress1.Size = new System.Drawing.Size(194, 23);
             this.txtResidentialAddress1.TabIndex = 13;
+            this.txtResidentialAddress1.Leave += new System.EventHandler(this.txtResidentialAddress1_Leave);
             // 
             // label6
             // 
@@ -874,6 +888,7 @@
             this.txtMiddleName.Name = "txtMiddleName";
             this.txtMiddleName.Size = new System.Drawing.Size(127, 23);
             this.txtMiddleName.TabIndex = 4;
+            this.txtMiddleName.Leave += new System.EventHandler(this.txtMiddleName_Leave);
             // 
             // txtFirstName
             // 
@@ -883,6 +898,7 @@
             this.txtFirstName.Name = "txtFirstName";
             this.txtFirstName.Size = new System.Drawing.Size(153, 23);
             this.txtFirstName.TabIndex = 3;
+            this.txtFirstName.Leave += new System.EventHandler(this.txtFirstName_Leave);
             // 
             // txtLastName
             // 
@@ -892,6 +908,7 @@
             this.txtLastName.Name = "txtLastName";
             this.txtLastName.Size = new System.Drawing.Size(145, 23);
             this.txtLastName.TabIndex = 2;
+            this.txtLastName.Leave += new System.EventHandler(this.txtLastName_Leave);
             // 
             // label1
             // 
@@ -1035,6 +1052,7 @@
             this.txtCollege.Name = "txtCollege";
             this.txtCollege.Size = new System.Drawing.Size(232, 23);
             this.txtCollege.TabIndex = 24;
+            this.txtCollege.Leave += new System.EventHandler(this.txtCollege_Leave);
             // 
             // dtVocGraduated
             // 
@@ -1096,6 +1114,7 @@
             this.txtVocational.Name = "txtVocational";
             this.txtVocational.Size = new System.Drawing.Size(232, 23);
             this.txtVocational.TabIndex = 21;
+            this.txtVocational.Leave += new System.EventHandler(this.txtVocational_Leave);
             // 
             // dtHSGraduated
             // 
@@ -1137,6 +1156,7 @@
             this.txtHighSchool.Name = "txtHighSchool";
             this.txtHighSchool.Size = new System.Drawing.Size(232, 23);
             this.txtHighSchool.TabIndex = 19;
+            this.txtHighSchool.Leave += new System.EventHandler(this.txtHighSchool_Leave);
             // 
             // dtElemGraduated
             // 
@@ -1178,6 +1198,7 @@
             this.txtElementary.Name = "txtElementary";
             this.txtElementary.Size = new System.Drawing.Size(232, 23);
             this.txtElementary.TabIndex = 17;
+            this.txtElementary.Leave += new System.EventHandler(this.txtElementary_Leave);
             // 
             // tabPage2
             // 
@@ -1190,8 +1211,8 @@
             this.tabPage2.Controls.Add(this.label40);
             this.tabPage2.Controls.Add(this.label38);
             this.tabPage2.Controls.Add(this.label37);
-            this.tabPage2.Controls.Add(this.textBox2);
-            this.tabPage2.Controls.Add(this.textBox1);
+            this.tabPage2.Controls.Add(this.txtContactPersonMobile);
+            this.tabPage2.Controls.Add(this.txtContactPersonName);
             this.tabPage2.Controls.Add(this.label36);
             this.tabPage2.Controls.Add(this.label35);
             this.tabPage2.Controls.Add(this.label34);
@@ -1289,6 +1310,7 @@
             this.txtContactPersonAddress1.Name = "txtContactPersonAddress1";
             this.txtContactPersonAddress1.Size = new System.Drawing.Size(194, 23);
             this.txtContactPersonAddress1.TabIndex = 45;
+            this.txtContactPersonAddress1.Leave += new System.EventHandler(this.txtContactPersonAddress1_Leave);
             // 
             // label40
             // 
@@ -1323,23 +1345,24 @@
             this.label37.TabIndex = 260;
             this.label37.Text = "Contact Person Name";
             // 
-            // textBox2
+            // txtContactPersonMobile
             // 
-            this.textBox2.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.textBox2.Location = new System.Drawing.Point(323, 255);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(145, 21);
-            this.textBox2.TabIndex = 44;
+            this.txtContactPersonMobile.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtContactPersonMobile.ForeColor = System.Drawing.Color.Maroon;
+            this.txtContactPersonMobile.Location = new System.Drawing.Point(323, 255);
+            this.txtContactPersonMobile.Name = "txtContactPersonMobile";
+            this.txtContactPersonMobile.Size = new System.Drawing.Size(145, 21);
+            this.txtContactPersonMobile.TabIndex = 44;
             // 
-            // textBox1
+            // txtContactPersonName
             // 
-            this.textBox1.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.textBox1.Location = new System.Drawing.Point(141, 255);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(176, 21);
-            this.textBox1.TabIndex = 43;
+            this.txtContactPersonName.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtContactPersonName.ForeColor = System.Drawing.Color.Maroon;
+            this.txtContactPersonName.Location = new System.Drawing.Point(141, 255);
+            this.txtContactPersonName.Name = "txtContactPersonName";
+            this.txtContactPersonName.Size = new System.Drawing.Size(176, 21);
+            this.txtContactPersonName.TabIndex = 43;
+            this.txtContactPersonName.Leave += new System.EventHandler(this.txtContactPersonName_Leave);
             // 
             // label36
             // 
@@ -1388,7 +1411,7 @@
             // txtContactNum3
             // 
             this.txtContactNum3.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtContactNum3.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.txtContactNum3.ForeColor = System.Drawing.Color.Maroon;
             this.txtContactNum3.Location = new System.Drawing.Point(444, 206);
             this.txtContactNum3.Name = "txtContactNum3";
             this.txtContactNum3.Size = new System.Drawing.Size(145, 21);
@@ -1397,7 +1420,7 @@
             // txtContactNum2
             // 
             this.txtContactNum2.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtContactNum2.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.txtContactNum2.ForeColor = System.Drawing.Color.Maroon;
             this.txtContactNum2.Location = new System.Drawing.Point(293, 206);
             this.txtContactNum2.Name = "txtContactNum2";
             this.txtContactNum2.Size = new System.Drawing.Size(145, 21);
@@ -1406,7 +1429,7 @@
             // txtContactNum1
             // 
             this.txtContactNum1.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtContactNum1.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.txtContactNum1.ForeColor = System.Drawing.Color.Maroon;
             this.txtContactNum1.Location = new System.Drawing.Point(142, 206);
             this.txtContactNum1.Name = "txtContactNum1";
             this.txtContactNum1.Size = new System.Drawing.Size(145, 21);
@@ -1489,6 +1512,7 @@
             this.txtParentAddress1.Name = "txtParentAddress1";
             this.txtParentAddress1.Size = new System.Drawing.Size(194, 23);
             this.txtParentAddress1.TabIndex = 37;
+            this.txtParentAddress1.Leave += new System.EventHandler(this.txtParentAddress1_Leave);
             // 
             // label32
             // 
@@ -1541,6 +1565,7 @@
             this.txtMotherOccupation.Name = "txtMotherOccupation";
             this.txtMotherOccupation.Size = new System.Drawing.Size(132, 23);
             this.txtMotherOccupation.TabIndex = 35;
+            this.txtMotherOccupation.Leave += new System.EventHandler(this.txtMotherOccupation_Leave);
             // 
             // label26
             // 
@@ -1561,6 +1586,7 @@
             this.txtMotherName.Name = "txtMotherName";
             this.txtMotherName.Size = new System.Drawing.Size(174, 23);
             this.txtMotherName.TabIndex = 34;
+            this.txtMotherName.Leave += new System.EventHandler(this.txtMotherName_Leave);
             // 
             // dtFatherBdate
             // 
@@ -1602,6 +1628,7 @@
             this.txtFatherOccupation.Name = "txtFatherOccupation";
             this.txtFatherOccupation.Size = new System.Drawing.Size(132, 23);
             this.txtFatherOccupation.TabIndex = 32;
+            this.txtFatherOccupation.Leave += new System.EventHandler(this.txtFatherOccupation_Leave);
             // 
             // label23
             // 
@@ -1622,6 +1649,7 @@
             this.txtFatherName.Name = "txtFatherName";
             this.txtFatherName.Size = new System.Drawing.Size(174, 23);
             this.txtFatherName.TabIndex = 31;
+            this.txtFatherName.Leave += new System.EventHandler(this.txtFatherName_Leave);
             // 
             // dtSpouseBdate
             // 
@@ -1666,6 +1694,7 @@
             this.txtSpouseOccupation.Size = new System.Drawing.Size(130, 23);
             this.txtSpouseOccupation.TabIndex = 29;
             this.txtSpouseOccupation.Text = "N/A";
+            this.txtSpouseOccupation.Leave += new System.EventHandler(this.txtSpouseOccupation_Leave);
             // 
             // label28
             // 
@@ -1688,6 +1717,7 @@
             this.txtSpouseName.Size = new System.Drawing.Size(174, 23);
             this.txtSpouseName.TabIndex = 28;
             this.txtSpouseName.Text = "N/A";
+            this.txtSpouseName.Leave += new System.EventHandler(this.txtSpouseName_Leave);
             // 
             // tabPage4
             // 
@@ -1738,6 +1768,46 @@
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Employment Information";
             this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // txtPagIbig
+            // 
+            this.txtPagIbig.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPagIbig.ForeColor = System.Drawing.Color.Maroon;
+            this.txtPagIbig.Location = new System.Drawing.Point(457, 115);
+            this.txtPagIbig.Mask = "0000-0000-0000";
+            this.txtPagIbig.Name = "txtPagIbig";
+            this.txtPagIbig.Size = new System.Drawing.Size(145, 22);
+            this.txtPagIbig.TabIndex = 54;
+            // 
+            // txtPhilHealth
+            // 
+            this.txtPhilHealth.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPhilHealth.ForeColor = System.Drawing.Color.Maroon;
+            this.txtPhilHealth.Location = new System.Drawing.Point(457, 84);
+            this.txtPhilHealth.Mask = "00-000000000-0";
+            this.txtPhilHealth.Name = "txtPhilHealth";
+            this.txtPhilHealth.Size = new System.Drawing.Size(145, 22);
+            this.txtPhilHealth.TabIndex = 52;
+            // 
+            // txtSSS
+            // 
+            this.txtSSS.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSSS.ForeColor = System.Drawing.Color.Maroon;
+            this.txtSSS.Location = new System.Drawing.Point(457, 57);
+            this.txtSSS.Mask = "00-0000000-0";
+            this.txtSSS.Name = "txtSSS";
+            this.txtSSS.Size = new System.Drawing.Size(145, 22);
+            this.txtSSS.TabIndex = 50;
+            // 
+            // txtTIN
+            // 
+            this.txtTIN.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTIN.ForeColor = System.Drawing.Color.Maroon;
+            this.txtTIN.Location = new System.Drawing.Point(457, 26);
+            this.txtTIN.Mask = "000-000-000";
+            this.txtTIN.Name = "txtTIN";
+            this.txtTIN.Size = new System.Drawing.Size(145, 22);
+            this.txtTIN.TabIndex = 48;
             // 
             // dateTimePicker1
             // 
@@ -1819,6 +1889,7 @@
             this.txtCharRefFullName3.Name = "txtCharRefFullName3";
             this.txtCharRefFullName3.Size = new System.Drawing.Size(198, 23);
             this.txtCharRefFullName3.TabIndex = 62;
+            this.txtCharRefFullName3.Leave += new System.EventHandler(this.txtCharRefFullName3_Leave);
             // 
             // label74
             // 
@@ -1890,6 +1961,7 @@
             this.txtCharRefFullName2.Name = "txtCharRefFullName2";
             this.txtCharRefFullName2.Size = new System.Drawing.Size(198, 23);
             this.txtCharRefFullName2.TabIndex = 59;
+            this.txtCharRefFullName2.Leave += new System.EventHandler(this.txtCharRefFullName2_Leave);
             // 
             // label70
             // 
@@ -1961,6 +2033,7 @@
             this.txtCharRefFullName1.Name = "txtCharRefFullName1";
             this.txtCharRefFullName1.Size = new System.Drawing.Size(198, 23);
             this.txtCharRefFullName1.TabIndex = 56;
+            this.txtCharRefFullName1.Leave += new System.EventHandler(this.txtCharRefFullName1_Leave);
             // 
             // label63
             // 
@@ -2172,57 +2245,6 @@
             this.linkLabel4.Text = "Employment Information";
             this.linkLabel4.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel4_LinkClicked);
             // 
-            // label39
-            // 
-            this.label39.AutoSize = true;
-            this.label39.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label39.ForeColor = System.Drawing.Color.DimGray;
-            this.label39.Location = new System.Drawing.Point(622, 57);
-            this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(35, 13);
-            this.label39.TabIndex = 259;
-            this.label39.Text = "Suffix";
-            // 
-            // txtTIN
-            // 
-            this.txtTIN.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTIN.ForeColor = System.Drawing.Color.Maroon;
-            this.txtTIN.Location = new System.Drawing.Point(457, 26);
-            this.txtTIN.Mask = "000-000-000";
-            this.txtTIN.Name = "txtTIN";
-            this.txtTIN.Size = new System.Drawing.Size(145, 22);
-            this.txtTIN.TabIndex = 48;
-            // 
-            // txtSSS
-            // 
-            this.txtSSS.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSSS.ForeColor = System.Drawing.Color.Maroon;
-            this.txtSSS.Location = new System.Drawing.Point(457, 57);
-            this.txtSSS.Mask = "00-0000000-0";
-            this.txtSSS.Name = "txtSSS";
-            this.txtSSS.Size = new System.Drawing.Size(145, 22);
-            this.txtSSS.TabIndex = 50;
-            // 
-            // txtPhilHealth
-            // 
-            this.txtPhilHealth.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPhilHealth.ForeColor = System.Drawing.Color.Maroon;
-            this.txtPhilHealth.Location = new System.Drawing.Point(457, 84);
-            this.txtPhilHealth.Mask = "00-000000000-0";
-            this.txtPhilHealth.Name = "txtPhilHealth";
-            this.txtPhilHealth.Size = new System.Drawing.Size(145, 22);
-            this.txtPhilHealth.TabIndex = 52;
-            // 
-            // txtPagIbig
-            // 
-            this.txtPagIbig.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPagIbig.ForeColor = System.Drawing.Color.Maroon;
-            this.txtPagIbig.Location = new System.Drawing.Point(457, 115);
-            this.txtPagIbig.Mask = "0000-0000-0000";
-            this.txtPagIbig.Name = "txtPagIbig";
-            this.txtPagIbig.Size = new System.Drawing.Size(145, 22);
-            this.txtPagIbig.TabIndex = 54;
-            // 
             // frmEmployees_AE
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2338,8 +2360,8 @@
         private System.Windows.Forms.Label label40;
         private System.Windows.Forms.Label label38;
         private System.Windows.Forms.Label label37;
-        public System.Windows.Forms.TextBox textBox2;
-        public System.Windows.Forms.TextBox textBox1;
+        public System.Windows.Forms.TextBox txtContactPersonMobile;
+        public System.Windows.Forms.TextBox txtContactPersonName;
         private System.Windows.Forms.Label label36;
         private System.Windows.Forms.Label label35;
         private System.Windows.Forms.Label label34;

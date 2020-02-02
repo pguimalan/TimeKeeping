@@ -82,6 +82,7 @@
             this.txtProvince.Name = "txtProvince";
             this.txtProvince.Size = new System.Drawing.Size(178, 22);
             this.txtProvince.TabIndex = 3;
+            this.txtProvince.Leave += new System.EventHandler(this.txtProvince_Leave);
             // 
             // label4
             // 
@@ -114,6 +115,7 @@
             this.txtCountry.Name = "txtCountry";
             this.txtCountry.Size = new System.Drawing.Size(178, 22);
             this.txtCountry.TabIndex = 4;
+            this.txtCountry.Leave += new System.EventHandler(this.txtCountry_Leave);
             // 
             // label2
             // 
@@ -135,6 +137,7 @@
             this.txtCity.Name = "txtCity";
             this.txtCity.Size = new System.Drawing.Size(178, 22);
             this.txtCity.TabIndex = 2;
+            this.txtCity.Leave += new System.EventHandler(this.txtCity_Leave);
             // 
             // label1
             // 
@@ -156,6 +159,7 @@
             this.txtBarangay.Name = "txtBarangay";
             this.txtBarangay.Size = new System.Drawing.Size(178, 22);
             this.txtBarangay.TabIndex = 1;
+            this.txtBarangay.Leave += new System.EventHandler(this.txtBarangay_Leave);
             // 
             // lblDepartment
             // 

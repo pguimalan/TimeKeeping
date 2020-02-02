@@ -111,6 +111,7 @@
             this.txtDeptName.Name = "txtDeptName";
             this.txtDeptName.Size = new System.Drawing.Size(173, 22);
             this.txtDeptName.TabIndex = 166;
+            this.txtDeptName.Leave += new System.EventHandler(this.txtDeptName_Leave);
             // 
             // listView1
             // 

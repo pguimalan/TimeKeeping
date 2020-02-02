@@ -115,8 +115,15 @@ namespace HRIS.App
         {
             if (listView1.Items.Count > 0)
             {
-                strAddressSelected = string.Concat(listView1.SelectedItems[0].SubItems[1].Text.ToString(), ", ", listView1.SelectedItems[0].SubItems[2].Text.ToString(), ", ", listView1.SelectedItems[0].SubItems[3].Text.ToString(), ", ", listView1.SelectedItems[0].SubItems[4].Text.ToString(), " ", listView1.SelectedItems[0].SubItems[5].Text.ToString());
-                this.Close();
+                if (IsSelectAddress)
+                {
+                    strAddressSelected = string.Concat(listView1.SelectedItems[0].SubItems[1].Text.ToString(), ", ", listView1.SelectedItems[0].SubItems[2].Text.ToString(), ", ", listView1.SelectedItems[0].SubItems[3].Text.ToString(), ", ", listView1.SelectedItems[0].SubItems[4].Text.ToString(), " ", listView1.SelectedItems[0].SubItems[5].Text.ToString());
+                    this.Close();
+                }
+                else
+                {
+                    bttnEdit.PerformClick();
+                }
             }
             else
             {
