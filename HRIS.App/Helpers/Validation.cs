@@ -61,7 +61,6 @@ namespace HRIS.App.Helpers
 
         public static void NormalTextbox(TextBox txt)
         {
-            txt.Text = "";
             txt.BackColor = Color.White;
             txt.ForeColor = Color.Maroon;
         }

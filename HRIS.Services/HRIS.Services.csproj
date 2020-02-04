@@ -44,9 +44,11 @@
     <Compile Include="AddressService.cs" />
     <Compile Include="AuthService.cs" />
     <Compile Include="DepartmentService.cs" />
+    <Compile Include="EmployeeService.cs" />
     <Compile Include="Interface\IAddressService.cs" />
     <Compile Include="Interface\IAuthService.cs" />
     <Compile Include="Interface\IDepartmentService.cs" />
+    <Compile Include="Interface\IEmployeeService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

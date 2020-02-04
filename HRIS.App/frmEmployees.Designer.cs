@@ -39,7 +39,6 @@
             this.listView1 = new System.Windows.Forms.ListView();
             this.empno = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.EmployeeId = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.Suffix = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.EmpName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Designation = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.ContactNumbers = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -92,6 +91,7 @@
             this.bttnEdit.TabIndex = 173;
             this.bttnEdit.Text = "&Update";
             this.bttnEdit.UseVisualStyleBackColor = false;
+            this.bttnEdit.Click += new System.EventHandler(this.bttnEdit_Click);
             // 
             // bttnAdd
             // 
@@ -123,6 +123,7 @@
             this.bttnRefresh.TabIndex = 171;
             this.bttnRefresh.Text = "&Refresh";
             this.bttnRefresh.UseVisualStyleBackColor = false;
+            this.bttnRefresh.Click += new System.EventHandler(this.bttnRefresh_Click);
             // 
             // lblDepartment
             // 
@@ -143,6 +144,7 @@
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(187, 22);
             this.txtSearch.TabIndex = 170;
+            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
             // listView1
             // 
@@ -153,7 +155,6 @@
             this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.empno,
             this.EmployeeId,
-            this.Suffix,
             this.EmpName,
             this.Designation,
             this.ContactNumbers,
@@ -183,12 +184,6 @@
             this.EmployeeId.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.EmployeeId.Width = 116;
             // 
-            // Suffix
-            // 
-            this.Suffix.Text = "Suffix";
-            this.Suffix.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.Suffix.Width = 54;
-            // 
             // EmpName
             // 
             this.EmpName.Text = "Employee Name";
@@ -204,7 +199,7 @@
             // 
             this.ContactNumbers.Text = "Contact Numbers";
             this.ContactNumbers.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.ContactNumbers.Width = 137;
+            this.ContactNumbers.Width = 183;
             // 
             // Department
             // 
@@ -216,7 +211,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 482);
+            this.ClientSize = new System.Drawing.Size(804, 483);
             this.Controls.Add(this.groupBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
@@ -224,6 +219,7 @@
             this.Name = "frmEmployees";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Employee Masterlist";
+            this.Load += new System.EventHandler(this.frmEmployees_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
@@ -236,7 +232,6 @@
         private System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.ColumnHeader empno;
         private System.Windows.Forms.ColumnHeader EmployeeId;
-        private System.Windows.Forms.ColumnHeader Suffix;
         private System.Windows.Forms.ColumnHeader EmpName;
         private System.Windows.Forms.ColumnHeader Designation;
         private System.Windows.Forms.ColumnHeader ContactNumbers;

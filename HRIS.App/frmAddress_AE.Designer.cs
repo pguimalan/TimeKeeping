@@ -100,7 +100,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Navy;
-            this.label3.Location = new System.Drawing.Point(48, 133);
+            this.label3.Location = new System.Drawing.Point(46, 133);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(59, 14);
             this.label3.TabIndex = 57;
@@ -122,7 +122,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Navy;
-            this.label2.Location = new System.Drawing.Point(58, 107);
+            this.label2.Location = new System.Drawing.Point(51, 107);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(54, 14);
             this.label2.TabIndex = 55;
@@ -144,7 +144,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Navy;
-            this.label1.Location = new System.Drawing.Point(4, 51);
+            this.label1.Location = new System.Drawing.Point(2, 51);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(103, 14);
             this.label1.TabIndex = 53;
@@ -166,7 +166,7 @@
             this.lblDepartment.AutoSize = true;
             this.lblDepartment.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDepartment.ForeColor = System.Drawing.Color.Navy;
-            this.lblDepartment.Location = new System.Drawing.Point(44, 25);
+            this.lblDepartment.Location = new System.Drawing.Point(45, 25);
             this.lblDepartment.Name = "lblDepartment";
             this.lblDepartment.Size = new System.Drawing.Size(60, 14);
             this.lblDepartment.TabIndex = 51;

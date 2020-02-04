@@ -2,20 +2,22 @@
 
 namespace HRIS.Models
 {
-    public class EmplyeeForInsertModel
+    public class EmployeeForInsertModel
     {
+        public int EmployeeId { get; set; }
         public EmployeeBasicInfoForInsertModel EmployeeBasicInfo { get; set; }
         public EmployeeContactInfoForInsertModel EmployeeContactInfo { get; set; }
         public EmployeeEducationForInsertModel EmployeeEducation { get; set; }
         public EmployeeEmpInfoForInsertModel EmployeeEmpInfo { get; set; }
     }
+        
     public class EmployeeBasicInfoForInsertModel
     {
         public string LastName { get; set; }
         public string FirstName { get; set; }
         public string MiddleName { get; set; }
         public string Suffix { get; set; }
-        public DateTime BirthDate { get; set; }
+        public string BirthDate { get; set; }
         public string PlaceOfBirth { get; set; }
         public string Citizenship { get; set; }
         public string Height { get; set; }
@@ -25,6 +27,8 @@ namespace HRIS.Models
         public string ResidentialAddress2 { get; set; }
         public string CurrentAddress1 { get; set; }
         public string CurrentAddress2 { get; set; }
+        public string Gender { get; set; }
+        public string CivilStatus { get; set; }
     }
 
     public class EmployeeContactInfoForInsertModel
@@ -63,6 +67,7 @@ namespace HRIS.Models
         public string College { get; set; }
         public string CollegeCourse { get; set; }
         public DateTime CollegeDateGraduated { get; set; }
+        public string HighestEducAttainment { get; set; }
         public string EducationalBackgroundRemarks { get; set; }
     }
 

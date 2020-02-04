@@ -71,7 +71,7 @@
             this.txtFirstName = new System.Windows.Forms.TextBox();
             this.txtLastName = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.cmbSalutation = new System.Windows.Forms.ComboBox();
+            this.cmbSuffix = new System.Windows.Forms.ComboBox();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.txtRemarks = new System.Windows.Forms.TextBox();
             this.label43 = new System.Windows.Forms.Label();
@@ -110,7 +110,7 @@
             this.label35 = new System.Windows.Forms.Label();
             this.label34 = new System.Windows.Forms.Label();
             this.label33 = new System.Windows.Forms.Label();
-            this.txtContactNum3 = new System.Windows.Forms.TextBox();
+            this.txtEmailAddress = new System.Windows.Forms.TextBox();
             this.txtContactNum2 = new System.Windows.Forms.TextBox();
             this.txtContactNum1 = new System.Windows.Forms.TextBox();
             this.label31 = new System.Windows.Forms.Label();
@@ -144,7 +144,7 @@
             this.txtPhilHealth = new System.Windows.Forms.MaskedTextBox();
             this.txtSSS = new System.Windows.Forms.MaskedTextBox();
             this.txtTIN = new System.Windows.Forms.MaskedTextBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dtDateHired = new System.Windows.Forms.DateTimePicker();
             this.label75 = new System.Windows.Forms.Label();
             this.label71 = new System.Windows.Forms.Label();
             this.label72 = new System.Windows.Forms.Label();
@@ -184,6 +184,11 @@
             this.linkLabel2 = new System.Windows.Forms.LinkLabel();
             this.linkLabel3 = new System.Windows.Forms.LinkLabel();
             this.linkLabel4 = new System.Windows.Forms.LinkLabel();
+            this.bttnSave = new System.Windows.Forms.Button();
+            this.bttnRefresh = new System.Windows.Forms.Button();
+            this.checkBox3 = new System.Windows.Forms.CheckBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtEdcuAttainment = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.picEmployee)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -204,6 +209,7 @@
             this.bttnPicture.TabIndex = 111;
             this.bttnPicture.Text = "Change";
             this.bttnPicture.UseVisualStyleBackColor = false;
+            this.bttnPicture.Click += new System.EventHandler(this.bttnPicture_Click);
             // 
             // picEmployee
             // 
@@ -288,7 +294,7 @@
             this.tabPage1.Controls.Add(this.txtFirstName);
             this.tabPage1.Controls.Add(this.txtLastName);
             this.tabPage1.Controls.Add(this.label1);
-            this.tabPage1.Controls.Add(this.cmbSalutation);
+            this.tabPage1.Controls.Add(this.cmbSuffix);
             this.tabPage1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.tabPage1.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabPage1.ForeColor = System.Drawing.Color.White;
@@ -329,6 +335,7 @@
             this.cmbReligion.ForeColor = System.Drawing.Color.Maroon;
             this.cmbReligion.FormattingEnabled = true;
             this.cmbReligion.Items.AddRange(new object[] {
+            "",
             "Roman Catholic",
             "Islam",
             "Evangelicals (PCEC)",
@@ -443,6 +450,7 @@
             this.cmbCitizen.ForeColor = System.Drawing.Color.Maroon;
             this.cmbCitizen.FormattingEnabled = true;
             this.cmbCitizen.Items.AddRange(new object[] {
+            "",
             "Afghan",
             "Albanian",
             "Algerian",
@@ -642,6 +650,7 @@
             this.cmbCivilStatus.ForeColor = System.Drawing.Color.Maroon;
             this.cmbCivilStatus.FormattingEnabled = true;
             this.cmbCivilStatus.Items.AddRange(new object[] {
+            "",
             "Single",
             "Married",
             "Separated",
@@ -671,6 +680,7 @@
             this.cmbGender.ForeColor = System.Drawing.Color.Maroon;
             this.cmbGender.FormattingEnabled = true;
             this.cmbGender.Items.AddRange(new object[] {
+            "",
             "Male",
             "Female\t"});
             this.cmbGender.Location = new System.Drawing.Point(160, 121);
@@ -887,7 +897,7 @@
             this.txtMiddleName.Location = new System.Drawing.Point(472, 31);
             this.txtMiddleName.Name = "txtMiddleName";
             this.txtMiddleName.Size = new System.Drawing.Size(127, 23);
-            this.txtMiddleName.TabIndex = 4;
+            this.txtMiddleName.TabIndex = 3;
             this.txtMiddleName.Leave += new System.EventHandler(this.txtMiddleName_Leave);
             // 
             // txtFirstName
@@ -897,7 +907,7 @@
             this.txtFirstName.Location = new System.Drawing.Point(313, 31);
             this.txtFirstName.Name = "txtFirstName";
             this.txtFirstName.Size = new System.Drawing.Size(153, 23);
-            this.txtFirstName.TabIndex = 3;
+            this.txtFirstName.TabIndex = 2;
             this.txtFirstName.Leave += new System.EventHandler(this.txtFirstName_Leave);
             // 
             // txtLastName
@@ -907,7 +917,7 @@
             this.txtLastName.Location = new System.Drawing.Point(162, 31);
             this.txtLastName.Name = "txtLastName";
             this.txtLastName.Size = new System.Drawing.Size(145, 23);
-            this.txtLastName.TabIndex = 2;
+            this.txtLastName.TabIndex = 1;
             this.txtLastName.Leave += new System.EventHandler(this.txtLastName_Leave);
             // 
             // label1
@@ -921,12 +931,12 @@
             this.label1.TabIndex = 223;
             this.label1.Text = "Employee Fullname:";
             // 
-            // cmbSalutation
+            // cmbSuffix
             // 
-            this.cmbSalutation.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbSalutation.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbSalutation.FormattingEnabled = true;
-            this.cmbSalutation.Items.AddRange(new object[] {
+            this.cmbSuffix.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbSuffix.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbSuffix.FormattingEnabled = true;
+            this.cmbSuffix.Items.AddRange(new object[] {
             "",
             "Sr.",
             "Jr.",
@@ -934,14 +944,17 @@
             "III",
             "IV",
             "V"});
-            this.cmbSalutation.Location = new System.Drawing.Point(605, 31);
-            this.cmbSalutation.Name = "cmbSalutation";
-            this.cmbSalutation.Size = new System.Drawing.Size(61, 24);
-            this.cmbSalutation.TabIndex = 1;
+            this.cmbSuffix.Location = new System.Drawing.Point(605, 31);
+            this.cmbSuffix.Name = "cmbSuffix";
+            this.cmbSuffix.Size = new System.Drawing.Size(61, 24);
+            this.cmbSuffix.TabIndex = 4;
             // 
             // tabPage3
             // 
             this.tabPage3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tabPage3.Controls.Add(this.label2);
+            this.tabPage3.Controls.Add(this.txtEdcuAttainment);
+            this.tabPage3.Controls.Add(this.checkBox3);
             this.tabPage3.Controls.Add(this.txtRemarks);
             this.tabPage3.Controls.Add(this.label43);
             this.tabPage3.Controls.Add(this.dtCollegeGraudated);
@@ -1217,7 +1230,7 @@
             this.tabPage2.Controls.Add(this.label35);
             this.tabPage2.Controls.Add(this.label34);
             this.tabPage2.Controls.Add(this.label33);
-            this.tabPage2.Controls.Add(this.txtContactNum3);
+            this.tabPage2.Controls.Add(this.txtEmailAddress);
             this.tabPage2.Controls.Add(this.txtContactNum2);
             this.tabPage2.Controls.Add(this.txtContactNum1);
             this.tabPage2.Controls.Add(this.label31);
@@ -1408,14 +1421,14 @@
             this.label33.TabIndex = 254;
             this.label33.Text = "Mobile Number";
             // 
-            // txtContactNum3
+            // txtEmailAddress
             // 
-            this.txtContactNum3.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtContactNum3.ForeColor = System.Drawing.Color.Maroon;
-            this.txtContactNum3.Location = new System.Drawing.Point(444, 206);
-            this.txtContactNum3.Name = "txtContactNum3";
-            this.txtContactNum3.Size = new System.Drawing.Size(145, 21);
-            this.txtContactNum3.TabIndex = 42;
+            this.txtEmailAddress.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmailAddress.ForeColor = System.Drawing.Color.Maroon;
+            this.txtEmailAddress.Location = new System.Drawing.Point(444, 206);
+            this.txtEmailAddress.Name = "txtEmailAddress";
+            this.txtEmailAddress.Size = new System.Drawing.Size(145, 21);
+            this.txtEmailAddress.TabIndex = 42;
             // 
             // txtContactNum2
             // 
@@ -1726,7 +1739,7 @@
             this.tabPage4.Controls.Add(this.txtPhilHealth);
             this.tabPage4.Controls.Add(this.txtSSS);
             this.tabPage4.Controls.Add(this.txtTIN);
-            this.tabPage4.Controls.Add(this.dateTimePicker1);
+            this.tabPage4.Controls.Add(this.dtDateHired);
             this.tabPage4.Controls.Add(this.label75);
             this.tabPage4.Controls.Add(this.label71);
             this.tabPage4.Controls.Add(this.label72);
@@ -1809,15 +1822,15 @@
             this.txtTIN.Size = new System.Drawing.Size(145, 22);
             this.txtTIN.TabIndex = 48;
             // 
-            // dateTimePicker1
+            // dtDateHired
             // 
-            this.dateTimePicker1.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(122, 143);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(144, 23);
-            this.dateTimePicker1.TabIndex = 55;
-            this.dateTimePicker1.Value = new System.DateTime(2016, 11, 19, 22, 46, 14, 0);
+            this.dtDateHired.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtDateHired.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtDateHired.Location = new System.Drawing.Point(122, 143);
+            this.dtDateHired.Name = "dtDateHired";
+            this.dtDateHired.Size = new System.Drawing.Size(144, 23);
+            this.dtDateHired.TabIndex = 55;
+            this.dtDateHired.Value = new System.DateTime(2016, 11, 19, 22, 46, 14, 0);
             // 
             // label75
             // 
@@ -2109,6 +2122,7 @@
             this.txtDesignation.Name = "txtDesignation";
             this.txtDesignation.Size = new System.Drawing.Size(211, 23);
             this.txtDesignation.TabIndex = 47;
+            this.txtDesignation.Leave += new System.EventHandler(this.txtDesignation_Leave);
             // 
             // label57
             // 
@@ -2155,6 +2169,7 @@
             this.txtBasicPay.Name = "txtBasicPay";
             this.txtBasicPay.Size = new System.Drawing.Size(146, 23);
             this.txtBasicPay.TabIndex = 53;
+            this.txtBasicPay.Text = "0.00";
             // 
             // label55
             // 
@@ -2174,6 +2189,7 @@
             this.cmbEmpStatus.ForeColor = System.Drawing.Color.Maroon;
             this.cmbEmpStatus.FormattingEnabled = true;
             this.cmbEmpStatus.Items.AddRange(new object[] {
+            "",
             "Probationary",
             "Regular",
             "Contract of Service"});
@@ -2245,11 +2261,79 @@
             this.linkLabel4.Text = "Employment Information";
             this.linkLabel4.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel4_LinkClicked);
             // 
+            // bttnSave
+            // 
+            this.bttnSave.BackColor = System.Drawing.Color.Green;
+            this.bttnSave.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bttnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bttnSave.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bttnSave.ForeColor = System.Drawing.Color.White;
+            this.bttnSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bttnSave.Location = new System.Drawing.Point(626, 412);
+            this.bttnSave.Margin = new System.Windows.Forms.Padding(4);
+            this.bttnSave.Name = "bttnSave";
+            this.bttnSave.Size = new System.Drawing.Size(86, 30);
+            this.bttnSave.TabIndex = 65;
+            this.bttnSave.Text = "&Save Item";
+            this.bttnSave.UseVisualStyleBackColor = false;
+            this.bttnSave.Click += new System.EventHandler(this.bttnSave_Click);
+            // 
+            // bttnRefresh
+            // 
+            this.bttnRefresh.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.bttnRefresh.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bttnRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bttnRefresh.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bttnRefresh.ForeColor = System.Drawing.Color.White;
+            this.bttnRefresh.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bttnRefresh.Location = new System.Drawing.Point(713, 411);
+            this.bttnRefresh.Name = "bttnRefresh";
+            this.bttnRefresh.Size = new System.Drawing.Size(72, 31);
+            this.bttnRefresh.TabIndex = 66;
+            this.bttnRefresh.Text = "&Refresh";
+            this.bttnRefresh.UseVisualStyleBackColor = false;
+            this.bttnRefresh.Click += new System.EventHandler(this.bttnRefresh_Click);
+            // 
+            // checkBox3
+            // 
+            this.checkBox3.Font = new System.Drawing.Font("Tahoma", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox3.ForeColor = System.Drawing.Color.DimGray;
+            this.checkBox3.Location = new System.Drawing.Point(236, 209);
+            this.checkBox3.Name = "checkBox3";
+            this.checkBox3.Size = new System.Drawing.Size(122, 34);
+            this.checkBox3.TabIndex = 243;
+            this.checkBox3.Text = "Undergraduate";
+            this.checkBox3.UseVisualStyleBackColor = true;
+            this.checkBox3.CheckedChanged += new System.EventHandler(this.checkBox3_CheckedChanged);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.label2.Location = new System.Drawing.Point(318, 214);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(110, 16);
+            this.label2.TabIndex = 245;
+            this.label2.Text = "Educ. Attainment:";
+            // 
+            // txtEdcuAttainment
+            // 
+            this.txtEdcuAttainment.Enabled = false;
+            this.txtEdcuAttainment.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEdcuAttainment.ForeColor = System.Drawing.Color.Maroon;
+            this.txtEdcuAttainment.Location = new System.Drawing.Point(434, 209);
+            this.txtEdcuAttainment.Name = "txtEdcuAttainment";
+            this.txtEdcuAttainment.Size = new System.Drawing.Size(157, 23);
+            this.txtEdcuAttainment.TabIndex = 244;
+            // 
             // frmEmployees_AE
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(869, 450);
+            this.Controls.Add(this.bttnRefresh);
+            this.Controls.Add(this.bttnSave);
             this.Controls.Add(this.linkLabel4);
             this.Controls.Add(this.linkLabel3);
             this.Controls.Add(this.linkLabel2);
@@ -2264,6 +2348,7 @@
             this.Name = "frmEmployees_AE";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Employee Information Set-up";
+            this.Load += new System.EventHandler(this.frmEmployees_AE_Load);
             ((System.ComponentModel.ISupportInitialize)(this.picEmployee)).EndInit();
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
@@ -2300,7 +2385,6 @@
         private System.Windows.Forms.ComboBox cmbCivilStatus;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.ComboBox cmbGender;
-        private System.Windows.Forms.DateTimePicker dtBdate;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.Label label9;
@@ -2322,7 +2406,7 @@
         public System.Windows.Forms.TextBox txtFirstName;
         public System.Windows.Forms.TextBox txtLastName;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox cmbSalutation;
+        private System.Windows.Forms.ComboBox cmbSuffix;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.LinkLabel linkLabel2;
@@ -2366,7 +2450,7 @@
         private System.Windows.Forms.Label label35;
         private System.Windows.Forms.Label label34;
         private System.Windows.Forms.Label label33;
-        public System.Windows.Forms.TextBox txtContactNum3;
+        public System.Windows.Forms.TextBox txtEmailAddress;
         public System.Windows.Forms.TextBox txtContactNum2;
         public System.Windows.Forms.TextBox txtContactNum1;
         private System.Windows.Forms.Label label31;
@@ -2429,12 +2513,18 @@
         public System.Windows.Forms.TextBox txtCharRefFullName1;
         private System.Windows.Forms.Label label63;
         private System.Windows.Forms.Label label62;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dtDateHired;
         private System.Windows.Forms.Label label75;
         private System.Windows.Forms.Label label39;
         private System.Windows.Forms.MaskedTextBox txtTIN;
         private System.Windows.Forms.MaskedTextBox txtPagIbig;
         private System.Windows.Forms.MaskedTextBox txtPhilHealth;
         private System.Windows.Forms.MaskedTextBox txtSSS;
+        private System.Windows.Forms.DateTimePicker dtBdate;
+        public System.Windows.Forms.Button bttnSave;
+        private System.Windows.Forms.Button bttnRefresh;
+        private System.Windows.Forms.Label label2;
+        public System.Windows.Forms.TextBox txtEdcuAttainment;
+        private System.Windows.Forms.CheckBox checkBox3;
     }
 }
