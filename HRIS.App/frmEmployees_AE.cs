@@ -326,7 +326,10 @@ namespace HRIS.App
             if (checkBox3.Checked)
                 txtEdcuAttainment.Enabled = true;
             else
+            {
                 txtEdcuAttainment.Enabled = false;
+                txtEdcuAttainment.Text = "";
+            }
         }
 
         private void frmEmployees_AE_Load(object sender, EventArgs e)
