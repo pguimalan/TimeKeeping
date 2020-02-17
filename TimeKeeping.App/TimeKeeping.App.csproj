@@ -283,6 +283,7 @@
     <EmbeddedResource Include="Reports\frmRptViewer.resx">
       <DependentUpon>frmRptViewer.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RptEmpProfile.rdlc" />
     <EmbeddedResource Include="Reports\RptEmpWorkloadBySemId.rdlc" />
     <EmbeddedResource Include="Reports\RptEmpWorkloadById.rdlc" />
     <EmbeddedResource Include="Reports\RptEmpMasterlist.rdlc" />

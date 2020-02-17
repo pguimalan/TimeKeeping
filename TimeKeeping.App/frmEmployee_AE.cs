@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Reporting.WinForms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -9,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using TimeKeeping.App.Helpers;
+using TimeKeeping.App.Reports;
 using TimeKeeping.Models;
 using TimeKeeping.Services;
 using TimeKeeping.Services.Interface;
@@ -217,7 +219,7 @@ namespace TimeKeeping.App
         private void bttnSave_Click(object sender, EventArgs e)
         {
             int result;
-            picName = (txtFirstName.Text + " " + txtLastName.Text + ".pic");
+            picName = (txtFirstName.Text + " " + txtLastName.Text + ".jpeg");
 
             if (Validation.IsTextEmpty(txtLastName))
             {
@@ -419,6 +421,8 @@ namespace TimeKeeping.App
                         ShowMessage.ShowMessageBox(4);
                     else
                         ShowMessage.ShowMessageBox(3);
+
+                    this.Close();
                 }
                 else
                 {
@@ -444,8 +448,7 @@ namespace TimeKeeping.App
 
                     em.EmployeeId = this.employeeId;
                     empSvc.Employee_Update(em);
-                    ShowMessage.ShowMessageBox(2);
-                    this.Close();
+                    ShowMessage.ShowMessageBox(2);                   
                 }
             }
         }
@@ -773,6 +776,33 @@ namespace TimeKeeping.App
             frmEnrollFinger f = new frmEnrollFinger();
             f.employeeId = employeeId;
             f.ShowDialog();
+        }
+
+        private void linkLabel5_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            frmRptViewer frm = new frmRptViewer();
+            string exeFolder = Path.GetDirectoryName(Application.StartupPath);
+            string reportPath = Path.Combine(exeFolder, "..\\Reports\\RptEmpProfile.rdlc");
+            frm.reportViewer1.LocalReport.ReportPath = reportPath;
+            ReportParameter generatedBy = new ReportParameter("UserFullName", GlobalSession.UserFullName);
+            ReportParameter imagePath = new ReportParameter("ImagePath", AppDomain.CurrentDomain.BaseDirectory + "EmpPics\\ProfilePic\\" + employeeId + "\\" + emp.EmployeeBasicInfo.PicName);
+            List<EmployeeBasicInfoForInsertModel> empBasicinfo = new List<EmployeeBasicInfoForInsertModel>();
+            List<EmployeeContactInfoForInsertModel> empContactInfo = new List<EmployeeContactInfoForInsertModel>();
+            List<EmployeeEducationForInsertModel> empEducation = new List<EmployeeEducationForInsertModel>();
+            empBasicinfo.Add(emp.EmployeeBasicInfo);
+            empContactInfo.Add(emp.EmployeeContactInfo);
+            empEducation.Add(emp.EmployeeEducation);
+            frm.reportViewer1.LocalReport.DataSources.Clear();
+            ReportDataSource rs = new ReportDataSource { Name = "ds_employee_basicinfo", Value = empBasicinfo };
+            ReportDataSource rs1 = new ReportDataSource { Name = "ds_employee_contactinfo", Value = empContactInfo };
+            ReportDataSource rs2 = new ReportDataSource { Name = "ds_employee_education", Value = empContactInfo };
+
+            frm.reportViewer1.LocalReport.DataSources.Add(rs);
+            frm.reportViewer1.LocalReport.DataSources.Add(rs1);
+            frm.reportViewer1.LocalReport.DataSources.Add(rs2);
+            frm.reportViewer1.LocalReport.EnableExternalImages = true;
+            frm.reportViewer1.LocalReport.SetParameters(new ReportParameter[] { generatedBy, imagePath });
+            frm.ShowDialog();
         }
     }
 }

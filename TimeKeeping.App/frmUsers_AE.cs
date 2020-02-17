@@ -103,6 +103,7 @@ namespace TimeKeeping.App
                 txtMiddleName.Text = u.MiddleName;
                 txtUserName.Text = u.UserName;
                 bttnSave.Text = "Edit Item";
+                button1.Visible = true;
             }
         }
 
@@ -119,6 +120,13 @@ namespace TimeKeeping.App
         private void txtLastName_Leave(object sender, EventArgs e)
         {
             StringHelper.UppercaseFirst(txtLastName);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            svc.SystemUser_ResetPassword(new UserForResetPassword { UserId = userId, strPassword = "12345678" });
+            MessageBox.Show("Password successfully reset to default password.","Reset", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            this.Close();
         }
     }
 }

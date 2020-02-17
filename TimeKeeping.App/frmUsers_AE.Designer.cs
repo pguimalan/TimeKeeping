@@ -40,6 +40,7 @@
             this.lblDepartment = new System.Windows.Forms.Label();
             this.bttnSave = new System.Windows.Forms.Button();
             this.bttnExit = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -181,11 +182,30 @@
             this.bttnExit.UseVisualStyleBackColor = false;
             this.bttnExit.Click += new System.EventHandler(this.bttnExit_Click);
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Navy;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(9, 160);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(126, 30);
+            this.button1.TabIndex = 14;
+            this.button1.Text = "&Reset Password";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Visible = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // frmUsers_AE
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(309, 198);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.bttnSave);
             this.Controls.Add(this.bttnExit);
@@ -216,5 +236,6 @@
         private System.Windows.Forms.Label lblDepartment;
         public System.Windows.Forms.Button bttnSave;
         private System.Windows.Forms.Button bttnExit;
+        public System.Windows.Forms.Button button1;
     }
 }

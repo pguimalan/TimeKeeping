@@ -42,6 +42,7 @@
     <Compile Include="AddressModel.cs" />
     <Compile Include="DeparmentModel.cs" />
     <Compile Include="DTRLogModel.cs" />
+    <Compile Include="EmployeeLeaveModel.cs" />
     <Compile Include="EmployeeModel.cs" />
     <Compile Include="FingerPrintModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
