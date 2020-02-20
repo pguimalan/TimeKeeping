@@ -41,9 +41,11 @@
   <ItemGroup>
     <Compile Include="AddressService.cs" />
     <Compile Include="DepartmentService.cs" />
+    <Compile Include="DropdownService.cs" />
     <Compile Include="DtrService.cs" />
     <Compile Include="EmployeeService.cs" />
     <Compile Include="FingerPrintService.cs" />
+    <Compile Include="Interface\IDropdownService.cs" />
     <Compile Include="Interface\IDtrService.cs" />
     <Compile Include="Interface\IAddressService.cs" />
     <Compile Include="Interface\IDepartmentService.cs" />

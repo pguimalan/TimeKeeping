@@ -46,11 +46,13 @@
     <Compile Include="AddressRepository.cs" />
     <Compile Include="DataManager.cs" />
     <Compile Include="DepartmentRepository.cs" />
+    <Compile Include="DropdownRepository.cs" />
     <Compile Include="DtrRepository.cs" />
     <Compile Include="EmployeeRepository.cs" />
     <Compile Include="FingerPrintRepository.cs" />
     <Compile Include="Interface\IAddressRepository.cs" />
     <Compile Include="Interface\IDepartmentRepository.cs" />
+    <Compile Include="Interface\IDropdownRepository.cs" />
     <Compile Include="Interface\IDtrRepository.cs" />
     <Compile Include="Interface\IEmployeeRepository.cs" />
     <Compile Include="Interface\IFingerPrintRepository.cs" />

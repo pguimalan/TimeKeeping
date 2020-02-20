@@ -65,6 +65,7 @@ namespace TimeKeeping.App
                     frm.tssUsername = txtusername.Text;
                     var model = svc.SystemUser_SelectById(hasAccess);
                     GlobalSession.UserFullName = model.UserFullName;
+                    GlobalSession.UserId = model.UserId;
                     frm.Show();
                     this.Hide();
                 }

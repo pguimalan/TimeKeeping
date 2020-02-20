@@ -146,6 +146,24 @@
     <Compile Include="frmEnrollFinger.Designer.cs">
       <DependentUpon>frmEnrollFinger.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmIndividualTimeLog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmIndividualTimeLog.Designer.cs">
+      <DependentUpon>frmIndividualTimeLog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmIndividualTimeLog_AE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmIndividualTimeLog_AE.Designer.cs">
+      <DependentUpon>frmIndividualTimeLog_AE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLeavesMgt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLeavesMgt.Designer.cs">
+      <DependentUpon>frmLeavesMgt.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -200,6 +218,9 @@
     <Compile Include="Helpers\Validation.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reports\DS\dsDTR.cs">
+      <DependentUpon>dsDTR.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Reports\DS\dsDTR.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -247,6 +268,15 @@
     <EmbeddedResource Include="frmEnrollFinger.resx">
       <DependentUpon>frmEnrollFinger.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmIndividualTimeLog.resx">
+      <DependentUpon>frmIndividualTimeLog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmIndividualTimeLog_AE.resx">
+      <DependentUpon>frmIndividualTimeLog_AE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLeavesMgt.resx">
+      <DependentUpon>frmLeavesMgt.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
@@ -283,6 +313,7 @@
     <EmbeddedResource Include="Reports\frmRptViewer.resx">
       <DependentUpon>frmRptViewer.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RptDTR_Individual.rdlc" />
     <EmbeddedResource Include="Reports\RptEmpProfile.rdlc" />
     <EmbeddedResource Include="Reports\RptEmpWorkloadBySemId.rdlc" />
     <EmbeddedResource Include="Reports\RptEmpWorkloadById.rdlc" />

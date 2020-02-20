@@ -44,12 +44,15 @@
             this.transactionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.employeeMasterlistToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.workloadManagementToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.dailyTimeRecordToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.dailyTimeRecordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.individualLogSheetToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.leaveMgtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.StatusStrip1 = new System.Windows.Forms.StatusStrip();
             this.ToolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.tsUser = new System.Windows.Forms.ToolStripStatusLabel();
             this.ToolStripStatusLabel3 = new System.Windows.Forms.ToolStripStatusLabel();
             this.tsDate = new System.Windows.Forms.ToolStripStatusLabel();
-            this.dailyTimeRecordToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.StatusStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -58,7 +61,8 @@
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem,
-            this.transactionsToolStripMenuItem});
+            this.transactionsToolStripMenuItem,
+            this.leaveMgtToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(800, 24);
@@ -182,6 +186,38 @@
             this.workloadManagementToolStripMenuItem.Text = "Workload Management";
             this.workloadManagementToolStripMenuItem.Click += new System.EventHandler(this.workloadManagementToolStripMenuItem_Click);
             // 
+            // dailyTimeRecordToolStripMenuItem1
+            // 
+            this.dailyTimeRecordToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.dailyTimeRecordToolStripMenuItem,
+            this.individualLogSheetToolStripMenuItem});
+            this.dailyTimeRecordToolStripMenuItem1.Image = ((System.Drawing.Image)(resources.GetObject("dailyTimeRecordToolStripMenuItem1.Image")));
+            this.dailyTimeRecordToolStripMenuItem1.Name = "dailyTimeRecordToolStripMenuItem1";
+            this.dailyTimeRecordToolStripMenuItem1.Size = new System.Drawing.Size(199, 22);
+            this.dailyTimeRecordToolStripMenuItem1.Text = "Attendance Mgt.";
+            // 
+            // dailyTimeRecordToolStripMenuItem
+            // 
+            this.dailyTimeRecordToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("dailyTimeRecordToolStripMenuItem.Image")));
+            this.dailyTimeRecordToolStripMenuItem.Name = "dailyTimeRecordToolStripMenuItem";
+            this.dailyTimeRecordToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
+            this.dailyTimeRecordToolStripMenuItem.Text = "Daily Time Record";
+            this.dailyTimeRecordToolStripMenuItem.Click += new System.EventHandler(this.dailyTimeRecordToolStripMenuItem_Click);
+            // 
+            // individualLogSheetToolStripMenuItem
+            // 
+            this.individualLogSheetToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("individualLogSheetToolStripMenuItem.Image")));
+            this.individualLogSheetToolStripMenuItem.Name = "individualLogSheetToolStripMenuItem";
+            this.individualLogSheetToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
+            this.individualLogSheetToolStripMenuItem.Text = "Individual Log Sheet";
+            this.individualLogSheetToolStripMenuItem.Click += new System.EventHandler(this.individualLogSheetToolStripMenuItem_Click);
+            // 
+            // leaveMgtToolStripMenuItem
+            // 
+            this.leaveMgtToolStripMenuItem.Name = "leaveMgtToolStripMenuItem";
+            this.leaveMgtToolStripMenuItem.Size = new System.Drawing.Size(77, 20);
+            this.leaveMgtToolStripMenuItem.Text = "Leave Mgt.";
+            // 
             // StatusStrip1
             // 
             this.StatusStrip1.BackColor = System.Drawing.SystemColors.Info;
@@ -229,14 +265,6 @@
             this.tsDate.Size = new System.Drawing.Size(121, 17);
             this.tsDate.Text = " mm/dd/yyyy";
             this.tsDate.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // dailyTimeRecordToolStripMenuItem1
-            // 
-            this.dailyTimeRecordToolStripMenuItem1.Image = ((System.Drawing.Image)(resources.GetObject("dailyTimeRecordToolStripMenuItem1.Image")));
-            this.dailyTimeRecordToolStripMenuItem1.Name = "dailyTimeRecordToolStripMenuItem1";
-            this.dailyTimeRecordToolStripMenuItem1.Size = new System.Drawing.Size(199, 22);
-            this.dailyTimeRecordToolStripMenuItem1.Text = "Daily Time Record";
-            this.dailyTimeRecordToolStripMenuItem1.Click += new System.EventHandler(this.dailyTimeRecordToolStripMenuItem1_Click);
             // 
             // frmMain
             // 
@@ -290,5 +318,8 @@
         private System.Windows.Forms.ToolStripMenuItem semesterToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem workloadManagementToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem dailyTimeRecordToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem leaveMgtToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem dailyTimeRecordToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem individualLogSheetToolStripMenuItem;
     }
 }

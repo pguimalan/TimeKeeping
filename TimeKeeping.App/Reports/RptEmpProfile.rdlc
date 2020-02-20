@@ -266,6 +266,102 @@
         <rd:TableAdapterName />
       </rd:DataSetInfo>
     </DataSet>
+    <DataSet Name="ds_employee_employment">
+      <Query>
+        <DataSourceName>dsEmployee</DataSourceName>
+        <CommandText>/* Local Query */</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="EmployeeId">
+          <DataField>EmployeeId</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Designation">
+          <DataField>Designation</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="DepartmentId">
+          <DataField>DepartmentId</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="EmploymentType">
+          <DataField>EmploymentType</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="BasicPay">
+          <DataField>BasicPay</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="DateHired">
+          <DataField>DateHired</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="TINNo">
+          <DataField>TINNo</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="SSSNo">
+          <DataField>SSSNo</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="PhilHealth">
+          <DataField>PhilHealth</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="PagIbigNo">
+          <DataField>PagIbigNo</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CharRefFullName1">
+          <DataField>CharRefFullName1</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CharRefOccupation1">
+          <DataField>CharRefOccupation1</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CharRefContactNum1">
+          <DataField>CharRefContactNum1</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CharRefFullName2">
+          <DataField>CharRefFullName2</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CharRefOccupation2">
+          <DataField>CharRefOccupation2</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CharRefContactNum2">
+          <DataField>CharRefContactNum2</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CharRefFullName3">
+          <DataField>CharRefFullName3</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CharRefOccupation3">
+          <DataField>CharRefOccupation3</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CharRefContactNum3">
+          <DataField>CharRefContactNum3</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="DepartmentName">
+          <DataField>DepartmentName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+      <rd:DataSetInfo>
+        <rd:DataSetName>dsEmployee</rd:DataSetName>
+        <rd:SchemaPath>E:\New_Projects\TimeKeeping\TimeKeeping.App\Reports\DS\dsEmployee.xsd</rd:SchemaPath>
+        <rd:TableName>EmployeeEmpInfo</rd:TableName>
+        <rd:TableAdapterFillMethod />
+        <rd:TableAdapterGetDataMethod />
+        <rd:TableAdapterName />
+      </rd:DataSetInfo>
+    </DataSet>
   </DataSets>
   <ReportSections>
     <ReportSection>
@@ -324,7 +420,7 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox5</rd:DefaultName>
-            <Top>2.92639in</Top>
+            <Top>2.91389in</Top>
             <Left>0.04443in</Left>
             <Height>0.23958in</Height>
             <Width>1in</Width>
@@ -356,7 +452,7 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>LastName</rd:DefaultName>
-            <Top>2.92639in</Top>
+            <Top>2.91389in</Top>
             <Left>1.11387in</Left>
             <Height>0.25in</Height>
             <Width>1.54583in</Width>
@@ -388,7 +484,7 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>FirstName</rd:DefaultName>
-            <Top>2.92639in</Top>
+            <Top>2.91389in</Top>
             <Left>2.72915in</Left>
             <Height>0.25in</Height>
             <Width>1.9375in</Width>
@@ -420,7 +516,7 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>MiddleName</rd:DefaultName>
-            <Top>2.92639in</Top>
+            <Top>2.91389in</Top>
             <Left>4.69443in</Left>
             <Height>0.25in</Height>
             <Width>1.75in</Width>
@@ -452,7 +548,7 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Suffix</rd:DefaultName>
-            <Top>2.92639in</Top>
+            <Top>2.91389in</Top>
             <Left>6.49999in</Left>
             <Height>0.25in</Height>
             <Width>0.94444in</Width>
@@ -468,7 +564,7 @@
             </Style>
           </Textbox>
           <Line Name="Line1">
-            <Top>3.13473in</Top>
+            <Top>3.12223in</Top>
             <Left>1.11387in</Left>
             <Height>0in</Height>
             <Width>6.33056in</Width>
@@ -497,10 +593,10 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox10</rd:DefaultName>
-            <Top>3.14861in</Top>
+            <Top>3.13611in</Top>
             <Left>1.09999in</Left>
             <Height>0.25in</Height>
-            <Width>0.59375in</Width>
+            <Width>1.01597in</Width>
             <ZIndex>7</ZIndex>
             <Style>
               <Border>
@@ -530,10 +626,10 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox10</rd:DefaultName>
-            <Top>3.15973in</Top>
+            <Top>3.12223in</Top>
             <Left>2.71249in</Left>
             <Height>0.25in</Height>
-            <Width>0.59375in</Width>
+            <Width>1.48122in</Width>
             <ZIndex>8</ZIndex>
             <Style>
               <Border>
@@ -563,7 +659,7 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox10</rd:DefaultName>
-            <Top>3.17778in</Top>
+            <Top>3.11528in</Top>
             <Left>4.69443in</Left>
             <Height>0.25in</Height>
             <Width>0.72917in</Width>
@@ -596,7 +692,7 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox10</rd:DefaultName>
-            <Top>3.18334in</Top>
+            <Top>3.14584in</Top>
             <Left>6.49999in</Left>
             <Height>0.25in</Height>
             <Width>0.72917in</Width>
@@ -706,9 +802,9 @@
             </Paragraphs>
             <rd:DefaultName>ResidentialAddress1</rd:DefaultName>
             <Top>3.44028in</Top>
-            <Left>1.05832in</Left>
+            <Left>1.09999in</Left>
             <Height>0.25in</Height>
-            <Width>6.38611in</Width>
+            <Width>6.34444in</Width>
             <ZIndex>14</ZIndex>
             <Style>
               <Border>
@@ -1025,7 +1121,7 @@
                     <Value>=First(Fields!BirthDate.Value, "ds_employee_basicinfo")</Value>
                     <Style>
                       <FontSize>9pt</FontSize>
-                      <Format>M/d/yyyy</Format>
+                      <Format>dd-MMM-yy</Format>
                     </Style>
                   </TextRun>
                 </TextRuns>
@@ -1621,7 +1717,9 @@
                     </Style>
                   </TextRun>
                 </TextRuns>
-                <Style />
+                <Style>
+                  <TextAlign>Left</TextAlign>
+                </Style>
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>BirthDate</rd:DefaultName>
@@ -1852,7 +1950,9 @@
                     </Style>
                   </TextRun>
                 </TextRuns>
-                <Style />
+                <Style>
+                  <TextAlign>Left</TextAlign>
+                </Style>
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>BirthDate</rd:DefaultName>
@@ -2083,7 +2183,9 @@
                     </Style>
                   </TextRun>
                 </TextRuns>
-                <Style />
+                <Style>
+                  <TextAlign>Left</TextAlign>
+                </Style>
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>BirthDate</rd:DefaultName>
@@ -2685,7 +2787,7 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox10</rd:DefaultName>
-            <Top>9.10764in</Top>
+            <Top>9.05764in</Top>
             <Left>1.12637in</Left>
             <Height>0.20277in</Height>
             <Width>1.85832in</Width>
@@ -2763,7 +2865,7 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox10</rd:DefaultName>
-            <Top>9.10695in</Top>
+            <Top>9.05695in</Top>
             <Left>5.54442in</Left>
             <Height>0.20277in</Height>
             <Width>0.98959in</Width>
@@ -3233,7 +3335,7 @@
             </Style>
           </Textbox>
           <Line Name="Line30">
-            <Top>11.12569in</Top>
+            <Top>11.08819in</Top>
             <Left>1.05556in</Left>
             <Height>0in</Height>
             <Width>2.34167in</Width>
@@ -3245,7 +3347,7 @@
             </Style>
           </Line>
           <Line Name="Line31">
-            <Top>11.12569in</Top>
+            <Top>11.10069in</Top>
             <Left>4.65693in</Left>
             <Height>0in</Height>
             <Width>2.76807in</Width>
@@ -3274,7 +3376,7 @@
             </Paragraphs>
             <rd:DefaultName>Textbox5</rd:DefaultName>
             <Top>11.13611in</Top>
-            <Left>0.04581in</Left>
+            <Left>0.05in</Left>
             <Height>0.23958in</Height>
             <Width>1in</Width>
             <ZIndex>111</ZIndex>
@@ -3307,7 +3409,7 @@
             </Paragraphs>
             <rd:DefaultName>BirthDate</rd:DefaultName>
             <Top>11.13611in</Top>
-            <Left>1.09582in</Left>
+            <Left>1.07082in</Left>
             <Height>0.25in</Height>
             <Width>2.29998in</Width>
             <ZIndex>112</ZIndex>
@@ -3339,7 +3441,7 @@
             </Paragraphs>
             <rd:DefaultName>Textbox5</rd:DefaultName>
             <Top>11.13611in</Top>
-            <Left>3.6458in</Left>
+            <Left>3.6333in</Left>
             <Height>0.23958in</Height>
             <Width>1in</Width>
             <ZIndex>113</ZIndex>
@@ -3372,7 +3474,7 @@
             </Paragraphs>
             <rd:DefaultName>BirthDate</rd:DefaultName>
             <Top>11.13611in</Top>
-            <Left>4.69581in</Left>
+            <Left>4.68331in</Left>
             <Height>0.25in</Height>
             <Width>2.29998in</Width>
             <ZIndex>114</ZIndex>
@@ -3387,8 +3489,8 @@
             </Style>
           </Textbox>
           <Line Name="Line32">
-            <Top>11.37569in</Top>
-            <Left>1.06525in</Left>
+            <Top>11.35069in</Top>
+            <Left>1.04025in</Left>
             <Height>0in</Height>
             <Width>2.34167in</Width>
             <ZIndex>115</ZIndex>
@@ -3399,8 +3501,8 @@
             </Style>
           </Line>
           <Line Name="Line33">
-            <Top>11.37569in</Top>
-            <Left>4.66662in</Left>
+            <Top>11.35069in</Top>
+            <Left>4.65412in</Left>
             <Height>0in</Height>
             <Width>2.76807in</Width>
             <ZIndex>116</ZIndex>
@@ -3410,8 +3512,1992 @@
               </Border>
             </Style>
           </Line>
+          <Textbox Name="Textbox48">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Vocational:</Value>
+                    <Style>
+                      <FontSize>9pt</FontSize>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox5</rd:DefaultName>
+            <Top>11.35069in</Top>
+            <Left>0.05in</Left>
+            <Height>0.23958in</Height>
+            <Width>1in</Width>
+            <ZIndex>117</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="BirthDate25">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=First(Fields!VocationalCourse.Value, "ds_employee_education")</Value>
+                    <Style>
+                      <FontSize>9pt</FontSize>
+                      <Format>M/d/yyyy</Format>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>BirthDate</rd:DefaultName>
+            <Top>11.35069in</Top>
+            <Left>1.08057in</Left>
+            <Height>0.25in</Height>
+            <Width>2.29998in</Width>
+            <ZIndex>118</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="Textbox49">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Course:</Value>
+                    <Style>
+                      <FontSize>9pt</FontSize>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox5</rd:DefaultName>
+            <Top>11.35069in</Top>
+            <Left>3.63055in</Left>
+            <Height>0.23958in</Height>
+            <Width>1in</Width>
+            <ZIndex>119</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="BirthDate26">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=First(Fields!HighSchoolDateGraduated.Value, "ds_employee_education")</Value>
+                    <Style>
+                      <FontSize>9pt</FontSize>
+                      <Format>MM/dd/yyyy</Format>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>BirthDate</rd:DefaultName>
+            <Top>11.35069in</Top>
+            <Left>4.68056in</Left>
+            <Height>0.25in</Height>
+            <Width>2.29998in</Width>
+            <ZIndex>120</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Line Name="Line34">
+            <Top>11.56527in</Top>
+            <Left>1.05in</Left>
+            <Height>0in</Height>
+            <Width>2.34167in</Width>
+            <ZIndex>121</ZIndex>
+            <Style>
+              <Border>
+                <Style>Solid</Style>
+              </Border>
+            </Style>
+          </Line>
+          <Line Name="Line35">
+            <Top>11.56527in</Top>
+            <Left>4.65137in</Left>
+            <Height>0in</Height>
+            <Width>2.76807in</Width>
+            <ZIndex>122</ZIndex>
+            <Style>
+              <Border>
+                <Style>Solid</Style>
+              </Border>
+            </Style>
+          </Line>
+          <Textbox Name="Textbox50">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Date Graduated:</Value>
+                    <Style>
+                      <FontSize>9pt</FontSize>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox5</rd:DefaultName>
+            <Top>11.61458in</Top>
+            <Left>0.03886in</Left>
+            <Height>0.23958in</Height>
+            <Width>1in</Width>
+            <ZIndex>123</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="BirthDate27">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=First(Fields!VocationalDateGraduated.Value, "ds_employee_education")</Value>
+                    <Style>
+                      <FontSize>9pt</FontSize>
+                      <Format>M/d/yyyy</Format>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>BirthDate</rd:DefaultName>
+            <Top>11.61458in</Top>
+            <Left>1.06943in</Left>
+            <Height>0.25in</Height>
+            <Width>2.29998in</Width>
+            <ZIndex>124</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Line Name="Line36">
+            <Top>11.82916in</Top>
+            <Left>1.03886in</Left>
+            <Height>0in</Height>
+            <Width>2.34167in</Width>
+            <ZIndex>125</ZIndex>
+            <Style>
+              <Border>
+                <Style>Solid</Style>
+              </Border>
+            </Style>
+          </Line>
+          <Textbox Name="Textbox51">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Collegel:</Value>
+                    <Style>
+                      <FontSize>9pt</FontSize>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox5</rd:DefaultName>
+            <Top>11.86805in</Top>
+            <Left>0.04024in</Left>
+            <Height>0.23958in</Height>
+            <Width>1in</Width>
+            <ZIndex>126</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="BirthDate28">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=First(Fields!College.Value, "ds_employee_education")</Value>
+                    <Style>
+                      <FontSize>9pt</FontSize>
+                      <Format>M/d/yyyy</Format>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>BirthDate</rd:DefaultName>
+            <Top>11.86805in</Top>
+            <Left>1.07081in</Left>
+            <Height>0.25in</Height>
+            <Width>2.29998in</Width>
+            <ZIndex>127</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="Textbox52">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Course:</Value>
+                    <Style>
+                      <FontSize>9pt</FontSize>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox5</rd:DefaultName>
+            <Top>11.86805in</Top>
+            <Left>3.62079in</Left>
+            <Height>0.23958in</Height>
+            <Width>1in</Width>
+            <ZIndex>128</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="BirthDate29">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=First(Fields!CollegeCourse.Value, "ds_employee_education")</Value>
+                    <Style>
+                      <FontSize>9pt</FontSize>
+                      <Format>MM/dd/yyyy</Format>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>BirthDate</rd:DefaultName>
+            <Top>11.86805in</Top>
+            <Left>4.6708in</Left>
+            <Height>0.25in</Height>
+            <Width>2.29998in</Width>
+            <ZIndex>129</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Line Name="Line37">
+            <Top>12.08263in</Top>
+            <Left>1.04024in</Left>
+            <Height>0in</Height>
+            <Width>2.34167in</Width>
+            <ZIndex>130</ZIndex>
+            <Style>
+              <Border>
+                <Style>Solid</Style>
+              </Border>
+            </Style>
+          </Line>
+          <Line Name="Line38">
+            <Top>12.08263in</Top>
+            <Left>4.64161in</Left>
+            <Height>0in</Height>
+            <Width>2.76807in</Width>
+            <ZIndex>131</ZIndex>
+            <Style>
+              <Border>
+                <Style>Solid</Style>
+              </Border>
+            </Style>
+          </Line>
+          <Textbox Name="Textbox53">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Date Graduated:</Value>
+                    <Style>
+                      <FontSize>9pt</FontSize>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox5</rd:DefaultName>
+            <Top>12.13194in</Top>
+            <Left>0.0291in</Left>
+            <Height>0.23958in</Height>
+            <Width>1in</Width>
+            <ZIndex>132</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="BirthDate30">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=First(Fields!CollegeDateGraduated.Value, "ds_employee_education")</Value>
+                    <Style>
+                      <FontSize>9pt</FontSize>
+                      <Format>M/d/yyyy</Format>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>BirthDate</rd:DefaultName>
+            <Top>12.13194in</Top>
+            <Left>1.05967in</Left>
+            <Height>0.25in</Height>
+            <Width>2.29998in</Width>
+            <ZIndex>133</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Line Name="Line39">
+            <Top>12.34652in</Top>
+            <Left>1.0291in</Left>
+            <Height>0in</Height>
+            <Width>2.34167in</Width>
+            <ZIndex>134</ZIndex>
+            <Style>
+              <Border>
+                <Style>Solid</Style>
+              </Border>
+            </Style>
+          </Line>
+          <Textbox Name="Textbox54">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Others:</Value>
+                    <Style>
+                      <FontSize>9pt</FontSize>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox5</rd:DefaultName>
+            <Top>12.13541in</Top>
+            <Left>3.61523in</Left>
+            <Height>0.23958in</Height>
+            <Width>1in</Width>
+            <ZIndex>135</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="BirthDate31">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=First(Fields!HighestEducAttainment.Value, "ds_employee_education")</Value>
+                    <Style>
+                      <FontSize>9pt</FontSize>
+                      <Format>MM/dd/yyyy</Format>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>BirthDate</rd:DefaultName>
+            <Top>12.13541in</Top>
+            <Left>4.66524in</Left>
+            <Height>0.25in</Height>
+            <Width>2.29998in</Width>
+            <ZIndex>136</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Line Name="Line40">
+            <Top>12.34999in</Top>
+            <Left>4.63605in</Left>
+            <Height>0in</Height>
+            <Width>2.76807in</Width>
+            <ZIndex>137</ZIndex>
+            <Style>
+              <Border>
+                <Style>Solid</Style>
+              </Border>
+            </Style>
+          </Line>
+          <Textbox Name="Textbox55">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Highest Educational Attainment</Value>
+                    <Style>
+                      <FontSize>8pt</FontSize>
+                      <Color>DimGray</Color>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox10</rd:DefaultName>
+            <Top>12.36387in</Top>
+            <Left>4.65412in</Left>
+            <Height>0.20277in</Height>
+            <Width>1.85832in</Width>
+            <ZIndex>138</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="Textbox56">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>EMPLOYMENT INFORMATION</Value>
+                    <Style>
+                      <FontWeight>Bold</FontWeight>
+                      <TextDecoration>None</TextDecoration>
+                      <Color>White</Color>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Center</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox3</rd:DefaultName>
+            <Top>12.76632in</Top>
+            <Left>0.0291in</Left>
+            <Height>0.25in</Height>
+            <Width>7.4in</Width>
+            <ZIndex>139</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <BackgroundColor>DimGray</BackgroundColor>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="Textbox57">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Designation:</Value>
+                    <Style>
+                      <FontSize>9pt</FontSize>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox5</rd:DefaultName>
+            <Top>13.08576in</Top>
+            <Left>0.00968in</Left>
+            <Height>0.25in</Height>
+            <Width>0.87118in</Width>
+            <ZIndex>140</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="BirthDate32">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=First(Fields!Designation.Value, "ds_employee_employment")</Value>
+                    <Style>
+                      <FontSize>9pt</FontSize>
+                      <Format>M/d/yyyy</Format>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>BirthDate</rd:DefaultName>
+            <Top>13.08576in</Top>
+            <Left>0.9503in</Left>
+            <Height>0.25in</Height>
+            <Width>1.42498in</Width>
+            <ZIndex>141</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="Textbox58">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Date Hired:</Value>
+                    <Style>
+                      <FontSize>9pt</FontSize>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox5</rd:DefaultName>
+            <Top>13.29965in</Top>
+            <Left>0.00968in</Left>
+            <Height>0.25in</Height>
+            <Width>0.87118in</Width>
+            <ZIndex>142</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="BirthDate33">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=First(Fields!DateHired.Value, "ds_employee_employment")</Value>
+                    <Style>
+                      <FontSize>9pt</FontSize>
+                      <Format>M/d/yyyy</Format>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Left</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>BirthDate</rd:DefaultName>
+            <Top>13.29965in</Top>
+            <Left>0.9503in</Left>
+            <Height>0.25in</Height>
+            <Width>1.42498in</Width>
+            <ZIndex>143</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="Textbox59">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Department:</Value>
+                    <Style>
+                      <FontSize>9pt</FontSize>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox5</rd:DefaultName>
+            <Top>13.07187in</Top>
+            <Left>2.44472in</Left>
+            <Height>0.25in</Height>
+            <Width>0.87118in</Width>
+            <ZIndex>144</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="BirthDate34">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=First(Fields!DepartmentName.Value, "ds_employee_employment")</Value>
+                    <Style>
+                      <FontSize>9pt</FontSize>
+                      <Format>M/d/yyyy</Format>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>BirthDate</rd:DefaultName>
+            <Top>13.05798in</Top>
+            <Left>3.37146in</Left>
+            <Height>0.25in</Height>
+            <Width>3.99097in</Width>
+            <ZIndex>145</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Line Name="Line41">
+            <Top>13.28298in</Top>
+            <Left>0.9503in</Left>
+            <Height>0in</Height>
+            <Width>1.46667in</Width>
+            <ZIndex>146</ZIndex>
+            <Style>
+              <Border>
+                <Style>Solid</Style>
+              </Border>
+            </Style>
+          </Line>
+          <Line Name="Line42">
+            <Top>13.49687in</Top>
+            <Left>0.9503in</Left>
+            <Height>0in</Height>
+            <Width>1.46667in</Width>
+            <ZIndex>147</ZIndex>
+            <Style>
+              <Border>
+                <Style>Solid</Style>
+              </Border>
+            </Style>
+          </Line>
+          <Line Name="Line43">
+            <Top>13.28298in</Top>
+            <Left>3.37146in</Left>
+            <Height>0in</Height>
+            <Width>3.99097in</Width>
+            <ZIndex>148</ZIndex>
+            <Style>
+              <Border>
+                <Style>Solid</Style>
+              </Border>
+            </Style>
+          </Line>
+          <Textbox Name="Textbox60">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Emp.Type:</Value>
+                    <Style>
+                      <FontSize>9pt</FontSize>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox5</rd:DefaultName>
+            <Top>13.32465in</Top>
+            <Left>2.44473in</Left>
+            <Height>0.25in</Height>
+            <Width>0.87118in</Width>
+            <ZIndex>149</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="BirthDate35">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=First(Fields!EmploymentType.Value, "ds_employee_employment")</Value>
+                    <Style>
+                      <FontSize>9pt</FontSize>
+                      <Format>M/d/yyyy</Format>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>BirthDate</rd:DefaultName>
+            <Top>13.32465in</Top>
+            <Left>3.38535in</Left>
+            <Height>0.25in</Height>
+            <Width>1.42498in</Width>
+            <ZIndex>150</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Line Name="Line44">
+            <Top>13.52187in</Top>
+            <Left>3.38535in</Left>
+            <Height>0in</Height>
+            <Width>1.46667in</Width>
+            <ZIndex>151</ZIndex>
+            <Style>
+              <Border>
+                <Style>Solid</Style>
+              </Border>
+            </Style>
+          </Line>
+          <Textbox Name="Textbox61">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>SSS No. :</Value>
+                    <Style>
+                      <FontSize>9pt</FontSize>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox5</rd:DefaultName>
+            <Top>13.57465in</Top>
+            <Left>4.87838in</Left>
+            <Height>0.26389in</Height>
+            <Width>0.87118in</Width>
+            <ZIndex>152</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="BirthDate36">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=First(Fields!SSSNo.Value, "ds_employee_employment")</Value>
+                    <Style>
+                      <FontSize>9pt</FontSize>
+                      <Format>M/d/yyyy</Format>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>BirthDate</rd:DefaultName>
+            <Top>13.56354in</Top>
+            <Left>5.83566in</Left>
+            <Height>0.25in</Height>
+            <Width>1.54998in</Width>
+            <ZIndex>153</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Line Name="Line45">
+            <Top>13.76076in</Top>
+            <Left>5.82039in</Left>
+            <Height>0in</Height>
+            <Width>1.58373in</Width>
+            <ZIndex>154</ZIndex>
+            <Style>
+              <Border>
+                <Style>Solid</Style>
+              </Border>
+            </Style>
+          </Line>
+          <Textbox Name="Textbox62">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>TIN No. :</Value>
+                    <Style>
+                      <FontSize>9pt</FontSize>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox5</rd:DefaultName>
+            <Top>13.32465in</Top>
+            <Left>4.87977in</Left>
+            <Height>0.25in</Height>
+            <Width>0.87118in</Width>
+            <ZIndex>155</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="BirthDate37">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=First(Fields!TINNo.Value, "ds_employee_employment")</Value>
+                    <Style>
+                      <FontSize>9pt</FontSize>
+                      <Format>M/d/yyyy</Format>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>BirthDate</rd:DefaultName>
+            <Top>13.32465in</Top>
+            <Left>5.82039in</Left>
+            <Height>0.25in</Height>
+            <Width>1.54204in</Width>
+            <ZIndex>156</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Line Name="Line46">
+            <Top>13.52187in</Top>
+            <Left>5.82039in</Left>
+            <Height>0in</Height>
+            <Width>1.58373in</Width>
+            <ZIndex>157</ZIndex>
+            <Style>
+              <Border>
+                <Style>Solid</Style>
+              </Border>
+            </Style>
+          </Line>
+          <Textbox Name="Textbox63">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Phil. Health #:</Value>
+                    <Style>
+                      <FontSize>9pt</FontSize>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox5</rd:DefaultName>
+            <Top>13.57743in</Top>
+            <Left>0.00969in</Left>
+            <Height>0.25in</Height>
+            <Width>0.87118in</Width>
+            <ZIndex>158</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="BirthDate38">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=First(Fields!PhilHealth.Value, "ds_employee_employment")</Value>
+                    <Style>
+                      <FontSize>9pt</FontSize>
+                      <Format>M/d/yyyy</Format>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>BirthDate</rd:DefaultName>
+            <Top>13.57743in</Top>
+            <Left>0.95031in</Left>
+            <Height>0.25in</Height>
+            <Width>1.42498in</Width>
+            <ZIndex>159</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Line Name="Line47">
+            <Top>13.77465in</Top>
+            <Left>0.95031in</Left>
+            <Height>0in</Height>
+            <Width>1.46667in</Width>
+            <ZIndex>160</ZIndex>
+            <Style>
+              <Border>
+                <Style>Solid</Style>
+              </Border>
+            </Style>
+          </Line>
+          <Textbox Name="Textbox64">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Pag-Ibig # :</Value>
+                    <Style>
+                      <FontSize>9pt</FontSize>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox5</rd:DefaultName>
+            <Top>13.57743in</Top>
+            <Left>2.44473in</Left>
+            <Height>0.25in</Height>
+            <Width>0.87118in</Width>
+            <ZIndex>161</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="BirthDate39">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=First(Fields!PagIbigNo.Value, "ds_employee_employment")</Value>
+                    <Style>
+                      <FontSize>9pt</FontSize>
+                      <Format>M/d/yyyy</Format>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>BirthDate</rd:DefaultName>
+            <Top>13.57743in</Top>
+            <Left>3.38535in</Left>
+            <Height>0.25in</Height>
+            <Width>1.42498in</Width>
+            <ZIndex>162</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Line Name="Line48">
+            <Top>13.77465in</Top>
+            <Left>3.38535in</Left>
+            <Height>0in</Height>
+            <Width>1.46667in</Width>
+            <ZIndex>163</ZIndex>
+            <Style>
+              <Border>
+                <Style>Solid</Style>
+              </Border>
+            </Style>
+          </Line>
+          <Textbox Name="BirthDate40">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=First(Fields!CharRefFullName1.Value, "ds_employee_employment")</Value>
+                    <Style>
+                      <FontSize>9pt</FontSize>
+                      <Format>M/d/yyyy</Format>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Center</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>BirthDate</rd:DefaultName>
+            <Top>14.46563in</Top>
+            <Left>0.1in</Left>
+            <Height>0.25in</Height>
+            <Width>2.1229in</Width>
+            <ZIndex>164</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="BirthDate41">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=First(Fields!CharRefOccupation1.Value, "ds_employee_employment")</Value>
+                    <Style>
+                      <FontSize>9pt</FontSize>
+                      <Format>MM/dd/yyyy</Format>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Center</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>BirthDate</rd:DefaultName>
+            <Top>14.46563in</Top>
+            <Left>2.29234in</Left>
+            <Height>0.25in</Height>
+            <Width>2.75627in</Width>
+            <ZIndex>165</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="BirthDate42">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=First(Fields!CharRefContactNum1.Value, "ds_employee_employment")</Value>
+                    <Style>
+                      <FontSize>9pt</FontSize>
+                      <Format>MM/dd/yyyy</Format>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Center</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>BirthDate</rd:DefaultName>
+            <Top>14.46563in</Top>
+            <Left>5.1187in</Left>
+            <Height>0.25in</Height>
+            <Width>2.26694in</Width>
+            <ZIndex>166</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Line Name="Line49">
+            <Top>14.66563in</Top>
+            <Left>0.1in</Left>
+            <Height>0in</Height>
+            <Width>2.1229in</Width>
+            <ZIndex>167</ZIndex>
+            <Style>
+              <Border>
+                <Style>Solid</Style>
+              </Border>
+            </Style>
+          </Line>
+          <Line Name="Line50">
+            <Top>14.66563in</Top>
+            <Left>2.29234in</Left>
+            <Height>0in</Height>
+            <Width>2.75627in</Width>
+            <ZIndex>168</ZIndex>
+            <Style>
+              <Border>
+                <Style>Solid</Style>
+              </Border>
+            </Style>
+          </Line>
+          <Line Name="Line51">
+            <Top>14.66563in</Top>
+            <Left>5.10626in</Left>
+            <Height>0in</Height>
+            <Width>2.25617in</Width>
+            <ZIndex>169</ZIndex>
+            <Style>
+              <Border>
+                <Style>Solid</Style>
+              </Border>
+            </Style>
+          </Line>
+          <Textbox Name="Textbox65">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Full Name</Value>
+                    <Style>
+                      <FontSize>8pt</FontSize>
+                      <Color>DimGray</Color>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox10</rd:DefaultName>
+            <Top>14.67813in</Top>
+            <Left>0.86735in</Left>
+            <Height>0.20277in</Height>
+            <Width>0.6104in</Width>
+            <ZIndex>170</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="Textbox66">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Occupation</Value>
+                    <Style>
+                      <FontSize>8pt</FontSize>
+                      <Color>DimGray</Color>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox10</rd:DefaultName>
+            <Top>14.67813in</Top>
+            <Left>3.37146in</Left>
+            <Height>0.20277in</Height>
+            <Width>0.69725in</Width>
+            <ZIndex>171</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="Textbox67">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Contact Number</Value>
+                    <Style>
+                      <FontSize>8pt</FontSize>
+                      <Color>DimGray</Color>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox10</rd:DefaultName>
+            <Top>14.68091in</Top>
+            <Left>5.84929in</Left>
+            <Height>0.20277in</Height>
+            <Width>1.02568in</Width>
+            <ZIndex>172</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="BirthDate43">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=First(Fields!CharRefFullName2.Value, "ds_employee_employment")</Value>
+                    <Style>
+                      <FontSize>9pt</FontSize>
+                      <Format>M/d/yyyy</Format>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Center</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>BirthDate</rd:DefaultName>
+            <Top>14.8809in</Top>
+            <Left>0.08637in</Left>
+            <Height>0.25in</Height>
+            <Width>2.1229in</Width>
+            <ZIndex>173</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="BirthDate44">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=First(Fields!CharRefOccupation2.Value, "ds_employee_employment")</Value>
+                    <Style>
+                      <FontSize>9pt</FontSize>
+                      <Format>MM/dd/yyyy</Format>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Center</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>BirthDate</rd:DefaultName>
+            <Top>14.8809in</Top>
+            <Left>2.27871in</Left>
+            <Height>0.25in</Height>
+            <Width>2.75627in</Width>
+            <ZIndex>174</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="BirthDate45">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=First(Fields!CharRefContactNum2.Value, "ds_employee_employment")</Value>
+                    <Style>
+                      <FontSize>9pt</FontSize>
+                      <Format>MM/dd/yyyy</Format>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Center</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>BirthDate</rd:DefaultName>
+            <Top>14.8809in</Top>
+            <Left>5.10507in</Left>
+            <Height>0.25in</Height>
+            <Width>2.26694in</Width>
+            <ZIndex>175</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Line Name="Line52">
+            <Top>15.0809in</Top>
+            <Left>0.08637in</Left>
+            <Height>0in</Height>
+            <Width>2.1229in</Width>
+            <ZIndex>176</ZIndex>
+            <Style>
+              <Border>
+                <Style>Solid</Style>
+              </Border>
+            </Style>
+          </Line>
+          <Line Name="Line53">
+            <Top>15.0809in</Top>
+            <Left>2.27871in</Left>
+            <Height>0in</Height>
+            <Width>2.75627in</Width>
+            <ZIndex>177</ZIndex>
+            <Style>
+              <Border>
+                <Style>Solid</Style>
+              </Border>
+            </Style>
+          </Line>
+          <Line Name="Line54">
+            <Top>15.0809in</Top>
+            <Left>5.09263in</Left>
+            <Height>0in</Height>
+            <Width>2.25617in</Width>
+            <ZIndex>178</ZIndex>
+            <Style>
+              <Border>
+                <Style>Solid</Style>
+              </Border>
+            </Style>
+          </Line>
+          <Textbox Name="Textbox68">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Full Name</Value>
+                    <Style>
+                      <FontSize>8pt</FontSize>
+                      <Color>DimGray</Color>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox10</rd:DefaultName>
+            <Top>15.0934in</Top>
+            <Left>0.85372in</Left>
+            <Height>0.20277in</Height>
+            <Width>0.6104in</Width>
+            <ZIndex>179</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="Textbox69">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Occupation</Value>
+                    <Style>
+                      <FontSize>8pt</FontSize>
+                      <Color>DimGray</Color>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox10</rd:DefaultName>
+            <Top>15.0934in</Top>
+            <Left>3.35783in</Left>
+            <Height>0.20277in</Height>
+            <Width>0.69725in</Width>
+            <ZIndex>180</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="Textbox70">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Contact Number</Value>
+                    <Style>
+                      <FontSize>8pt</FontSize>
+                      <Color>DimGray</Color>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox10</rd:DefaultName>
+            <Top>15.09618in</Top>
+            <Left>5.83566in</Left>
+            <Height>0.20277in</Height>
+            <Width>1.02568in</Width>
+            <ZIndex>181</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="BirthDate46">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=First(Fields!CharRefFullName3.Value, "ds_employee_employment")</Value>
+                    <Style>
+                      <FontSize>9pt</FontSize>
+                      <Format>M/d/yyyy</Format>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Center</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>BirthDate</rd:DefaultName>
+            <Top>15.29617in</Top>
+            <Left>0.07679in</Left>
+            <Height>0.25in</Height>
+            <Width>2.1229in</Width>
+            <ZIndex>182</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="BirthDate47">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=First(Fields!CharRefOccupation3.Value, "ds_employee_employment")</Value>
+                    <Style>
+                      <FontSize>9pt</FontSize>
+                      <Format>MM/dd/yyyy</Format>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Center</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>BirthDate</rd:DefaultName>
+            <Top>15.29617in</Top>
+            <Left>2.26913in</Left>
+            <Height>0.25in</Height>
+            <Width>2.75627in</Width>
+            <ZIndex>183</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="BirthDate48">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=First(Fields!CharRefContactNum3.Value, "ds_employee_employment")</Value>
+                    <Style>
+                      <FontSize>9pt</FontSize>
+                      <Format>MM/dd/yyyy</Format>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Center</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>BirthDate</rd:DefaultName>
+            <Top>15.29617in</Top>
+            <Left>5.09549in</Left>
+            <Height>0.25in</Height>
+            <Width>2.26694in</Width>
+            <ZIndex>184</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Line Name="Line55">
+            <Top>15.49617in</Top>
+            <Left>0.07679in</Left>
+            <Height>0in</Height>
+            <Width>2.1229in</Width>
+            <ZIndex>185</ZIndex>
+            <Style>
+              <Border>
+                <Style>Solid</Style>
+              </Border>
+            </Style>
+          </Line>
+          <Line Name="Line56">
+            <Top>15.49617in</Top>
+            <Left>2.26913in</Left>
+            <Height>0in</Height>
+            <Width>2.75627in</Width>
+            <ZIndex>186</ZIndex>
+            <Style>
+              <Border>
+                <Style>Solid</Style>
+              </Border>
+            </Style>
+          </Line>
+          <Line Name="Line57">
+            <Top>15.49617in</Top>
+            <Left>5.08305in</Left>
+            <Height>0in</Height>
+            <Width>2.25617in</Width>
+            <ZIndex>187</ZIndex>
+            <Style>
+              <Border>
+                <Style>Solid</Style>
+              </Border>
+            </Style>
+          </Line>
+          <Textbox Name="Textbox71">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Full Name</Value>
+                    <Style>
+                      <FontSize>8pt</FontSize>
+                      <Color>DimGray</Color>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox10</rd:DefaultName>
+            <Top>15.50867in</Top>
+            <Left>0.84414in</Left>
+            <Height>0.20277in</Height>
+            <Width>0.6104in</Width>
+            <ZIndex>188</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="Textbox72">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Occupation</Value>
+                    <Style>
+                      <FontSize>8pt</FontSize>
+                      <Color>DimGray</Color>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox10</rd:DefaultName>
+            <Top>15.50867in</Top>
+            <Left>3.34825in</Left>
+            <Height>0.20277in</Height>
+            <Width>0.69725in</Width>
+            <ZIndex>189</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="Textbox73">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Contact Number</Value>
+                    <Style>
+                      <FontSize>8pt</FontSize>
+                      <Color>DimGray</Color>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox10</rd:DefaultName>
+            <Top>15.51145in</Top>
+            <Left>5.82608in</Left>
+            <Height>0.20277in</Height>
+            <Width>1.02568in</Width>
+            <ZIndex>190</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="Textbox74">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>CHARACTER REFERENCES</Value>
+                    <Style>
+                      <FontWeight>Bold</FontWeight>
+                      <TextDecoration>None</TextDecoration>
+                      <Color>White</Color>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Center</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox3</rd:DefaultName>
+            <Top>14.06474in</Top>
+            <Left>0.04024in</Left>
+            <Height>0.25in</Height>
+            <Width>7.4in</Width>
+            <ZIndex>191</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <BackgroundColor>DimGray</BackgroundColor>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
         </ReportItems>
-        <Height>12.04305in</Height>
+        <Height>15.87949in</Height>
         <Style />
       </Body>
       <Width>7.5in</Width>

@@ -24,15 +24,17 @@ namespace TimeKeeping.App
         private readonly IEmployeeService empSvc;
         private readonly ISemesterService semSvc;
         private readonly IWorkloadService wsvc;
+        private readonly IDropdownService drp;
         private List<WorkloadOfEmployeeModel> list;
-        public frmEmployeeWorkload(IEmployeeService empSvc, ISemesterService semSvc, IWorkloadService wsvc)
+        public frmEmployeeWorkload(IEmployeeService empSvc, ISemesterService semSvc, IWorkloadService wsvc, IDropdownService drp)
         {
             this.empSvc = empSvc;
             this.semSvc = semSvc;
             this.wsvc = wsvc;
+            this.drp = drp;
         }
 
-        public frmEmployeeWorkload() : this(new EmployeeService(), new SemesterService(), new WorkloadService())
+        public frmEmployeeWorkload() : this(new EmployeeService(), new SemesterService(), new WorkloadService(), new DropdownService())
         {
             InitializeComponent();
             employeeId = 0;
@@ -41,7 +43,7 @@ namespace TimeKeeping.App
         private void frmEmployeeWorkload_Load(object sender, EventArgs e)
         {
             empList = empSvc.Employee_Select("");
-            PrepareAutoComplete();
+            loadEmployee();
             loadSemester();
             linkLabel1.Text = "Print workload for selected employee and " + cmbSemester.Text;
             linkLabel2.Text = "Print workload for all employees and " + cmbSemester.Text;
@@ -57,32 +59,14 @@ namespace TimeKeeping.App
             cmbSemester.ValueMember = "SemesterId";            
         }
 
-        void PrepareAutoComplete()
+        void loadEmployee()
         {
-            AutoCompleteStringCollection col = new AutoCompleteStringCollection();
-            foreach (var i in empList)
-            {
-                col.Add(i.EmployeeFullName);
-            }
-
-            txtSearch.AutoCompleteMode = AutoCompleteMode.Suggest;
-            txtSearch.AutoCompleteSource = AutoCompleteSource.CustomSource;
-            txtSearch.AutoCompleteCustomSource = col;
-        }
-
-        private void txtSearch_TextChanged(object sender, EventArgs e)
-        {
-            if (empList.Any(c => c.EmployeeFullName == txtSearch.Text))
-            {
-                var x = empList.Where(c => c.EmployeeFullName == txtSearch.Text);
-                foreach (var data in x)
-                {
-                    employeeId = data.EmployeeId;
-                }
-
-                LoadWorkload(employeeId, (int)cmbSemester.SelectedValue);
-            }
-            else employeeId = 0;
+            cmbEmployeeName.DataSource = null;
+            cmbEmployeeName.Items.Clear();
+            List<EmployeeForDropdown> list = drp.Employee_SelectDropdown();
+            cmbEmployeeName.DataSource = list;
+            cmbEmployeeName.DisplayMember = "EmployeeFullName";
+            cmbEmployeeName.ValueMember = "EmployeeId";
         }
 
         void LoadWorkload(int empId, int semId)
@@ -114,10 +98,8 @@ namespace TimeKeeping.App
         {
             employeeId = 0;
             loadSemester();
-            txtSearch.Text = "";
-            listView1.Items.Clear();
-            txtSearch.Focus();
-            Validation.NormalTextbox(txtSearch);
+            loadEmployee();
+            listView1.Items.Clear();            
         }
 
         private void bttnExit_Click(object sender, EventArgs e)
@@ -127,9 +109,9 @@ namespace TimeKeeping.App
 
         private void bttnAdd_Click(object sender, EventArgs e)
         {
-            if (Validation.IsTextEmpty(txtSearch) && employeeId < 1)
+            if ((int)cmbEmployeeName.SelectedValue < 1)
             {
-                Validation.FocusTextBox(txtSearch, "Employee");
+                ShowMessage.CustomErrorMessage("Select Employee.");
             }
             else if((int)cmbSemester.SelectedValue < 1)
             {
@@ -152,17 +134,6 @@ namespace TimeKeeping.App
                 LoadWorkload(employeeId, (int)cmbSemester.SelectedValue);
             }
         }            
-
-        private void txtSearch_Leave(object sender, EventArgs e)
-        {
-            if (employeeId <= 0 && txtSearch.Text.Length > 0)
-            {
-                ShowMessage.CustomErrorMessage("Employee not found.");
-                bttnRefresh.PerformClick();
-            }
-            else
-                Validation.NormalTextbox(txtSearch);
-        }
 
         private void cmbSemester_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -231,6 +202,19 @@ namespace TimeKeeping.App
             frm.reportViewer1.LocalReport.DataSources.Add(rs);
             frm.reportViewer1.LocalReport.SetParameters(new ReportParameter[] { generatedBy });
             frm.ShowDialog();
+        }
+
+        private void cmbEmployeeName_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                employeeId = (int)cmbEmployeeName.SelectedValue;
+                LoadWorkload(employeeId, (int)cmbSemester.SelectedValue);
+            }
+            catch
+            {
+                employeeId = 0;
+            }
         }
     }
 }

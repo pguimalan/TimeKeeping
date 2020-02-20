@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDTR));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.bttnEdit = new System.Windows.Forms.Button();
             this.bttnExit = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
@@ -59,7 +60,6 @@
             this.bttnRefresh = new System.Windows.Forms.Button();
             this.dtDate = new System.Windows.Forms.DateTimePicker();
             this.label13 = new System.Windows.Forms.Label();
-            this.bttnEdit = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -90,6 +90,22 @@
             this.groupBox1.Size = new System.Drawing.Size(979, 501);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
+            // 
+            // bttnEdit
+            // 
+            this.bttnEdit.BackColor = System.Drawing.Color.Green;
+            this.bttnEdit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bttnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bttnEdit.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bttnEdit.ForeColor = System.Drawing.Color.White;
+            this.bttnEdit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bttnEdit.Location = new System.Drawing.Point(767, 19);
+            this.bttnEdit.Name = "bttnEdit";
+            this.bttnEdit.Size = new System.Drawing.Size(71, 25);
+            this.bttnEdit.TabIndex = 289;
+            this.bttnEdit.Text = "&Print";
+            this.bttnEdit.UseVisualStyleBackColor = false;
+            this.bttnEdit.Click += new System.EventHandler(this.bttnEdit_Click);
             // 
             // bttnExit
             // 
@@ -246,7 +262,7 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(123, 23);
             this.label2.TabIndex = 254;
-            this.label2.Text = "Evening";
+            this.label2.Text = "OVERTIME";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label1
@@ -425,22 +441,6 @@
             this.label13.Size = new System.Drawing.Size(74, 16);
             this.label13.TabIndex = 245;
             this.label13.Text = "Tran. Date:";
-            // 
-            // bttnEdit
-            // 
-            this.bttnEdit.BackColor = System.Drawing.Color.Green;
-            this.bttnEdit.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bttnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bttnEdit.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bttnEdit.ForeColor = System.Drawing.Color.White;
-            this.bttnEdit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bttnEdit.Location = new System.Drawing.Point(767, 19);
-            this.bttnEdit.Name = "bttnEdit";
-            this.bttnEdit.Size = new System.Drawing.Size(71, 25);
-            this.bttnEdit.TabIndex = 289;
-            this.bttnEdit.Text = "&Print";
-            this.bttnEdit.UseVisualStyleBackColor = false;
-            this.bttnEdit.Click += new System.EventHandler(this.bttnEdit_Click);
             // 
             // frmDTR
             // 

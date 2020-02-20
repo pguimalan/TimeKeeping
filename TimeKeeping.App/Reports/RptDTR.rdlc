@@ -136,7 +136,6 @@
                                   <Value />
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
-                                    <Color>White</Color>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -148,10 +147,10 @@
                           <rd:DefaultName>Textbox60</rd:DefaultName>
                           <Style>
                             <Border>
-                              <Color>DimGray</Color>
+                              <Color>LightGrey</Color>
                               <Style>Solid</Style>
                             </Border>
-                            <BackgroundColor>DimGray</BackgroundColor>
+                            <BackgroundColor>White</BackgroundColor>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -172,7 +171,6 @@
                                   <Value />
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
-                                    <Color>White</Color>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -182,10 +180,10 @@
                           <rd:DefaultName>Textbox61</rd:DefaultName>
                           <Style>
                             <Border>
-                              <Color>DimGray</Color>
+                              <Color>LightGrey</Color>
                               <Style>Solid</Style>
                             </Border>
-                            <BackgroundColor>DimGray</BackgroundColor>
+                            <BackgroundColor>White</BackgroundColor>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -203,10 +201,9 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>MORNING Session</Value>
+                                  <Value>A.M.</Value>
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
-                                    <Color>White</Color>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -218,10 +215,10 @@
                           <rd:DefaultName>Textbox62</rd:DefaultName>
                           <Style>
                             <Border>
-                              <Color>DimGray</Color>
+                              <Color>LightGrey</Color>
                               <Style>Solid</Style>
                             </Border>
-                            <BackgroundColor>DimGray</BackgroundColor>
+                            <BackgroundColor>White</BackgroundColor>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -241,10 +238,9 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>AFTERNOON Session</Value>
+                                  <Value>P.M.</Value>
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
-                                    <Color>White</Color>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -256,10 +252,10 @@
                           <rd:DefaultName>Textbox64</rd:DefaultName>
                           <Style>
                             <Border>
-                              <Color>DimGray</Color>
+                              <Color>LightGrey</Color>
                               <Style>Solid</Style>
                             </Border>
-                            <BackgroundColor>DimGray</BackgroundColor>
+                            <BackgroundColor>White</BackgroundColor>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -279,10 +275,9 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>EVENING Session</Value>
+                                  <Value>OVERTIME</Value>
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
-                                    <Color>White</Color>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -294,10 +289,10 @@
                           <rd:DefaultName>Textbox66</rd:DefaultName>
                           <Style>
                             <Border>
-                              <Color>DimGray</Color>
+                              <Color>LightGrey</Color>
                               <Style>Solid</Style>
                             </Border>
-                            <BackgroundColor>DimGray</BackgroundColor>
+                            <BackgroundColor>White</BackgroundColor>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -325,7 +320,6 @@
                                   <Value>EMP. ID NO.</Value>
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
-                                    <Color>White</Color>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -337,10 +331,10 @@
                           <rd:DefaultName>Textbox37</rd:DefaultName>
                           <Style>
                             <Border>
-                              <Color>DimGray</Color>
+                              <Color>LightGrey</Color>
                               <Style>Solid</Style>
                             </Border>
-                            <BackgroundColor>DimGray</BackgroundColor>
+                            <BackgroundColor>White</BackgroundColor>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -361,7 +355,6 @@
                                   <Value>EMPLOYEE NAME</Value>
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
-                                    <Color>White</Color>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -371,10 +364,10 @@
                           <rd:DefaultName>Textbox40</rd:DefaultName>
                           <Style>
                             <Border>
-                              <Color>DimGray</Color>
+                              <Color>LightGrey</Color>
                               <Style>Solid</Style>
                             </Border>
-                            <BackgroundColor>DimGray</BackgroundColor>
+                            <BackgroundColor>White</BackgroundColor>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -395,7 +388,6 @@
                                   <Value>IN</Value>
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
-                                    <Color>White</Color>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -407,10 +399,10 @@
                           <rd:DefaultName>Textbox26</rd:DefaultName>
                           <Style>
                             <Border>
-                              <Color>DimGray</Color>
+                              <Color>LightGrey</Color>
                               <Style>Solid</Style>
                             </Border>
-                            <BackgroundColor>DimGray</BackgroundColor>
+                            <BackgroundColor>White</BackgroundColor>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -431,7 +423,6 @@
                                   <Value>OUT</Value>
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
-                                    <Color>White</Color>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -443,10 +434,10 @@
                           <rd:DefaultName>Textbox45</rd:DefaultName>
                           <Style>
                             <Border>
-                              <Color>DimGray</Color>
+                              <Color>LightGrey</Color>
                               <Style>Solid</Style>
                             </Border>
-                            <BackgroundColor>DimGray</BackgroundColor>
+                            <BackgroundColor>White</BackgroundColor>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -467,7 +458,6 @@
                                   <Value>IN</Value>
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
-                                    <Color>White</Color>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -479,10 +469,10 @@
                           <rd:DefaultName>Textbox48</rd:DefaultName>
                           <Style>
                             <Border>
-                              <Color>DimGray</Color>
+                              <Color>LightGrey</Color>
                               <Style>Solid</Style>
                             </Border>
-                            <BackgroundColor>DimGray</BackgroundColor>
+                            <BackgroundColor>White</BackgroundColor>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -503,7 +493,6 @@
                                   <Value>OUT</Value>
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
-                                    <Color>White</Color>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -515,10 +504,10 @@
                           <rd:DefaultName>Textbox51</rd:DefaultName>
                           <Style>
                             <Border>
-                              <Color>DimGray</Color>
+                              <Color>LightGrey</Color>
                               <Style>Solid</Style>
                             </Border>
-                            <BackgroundColor>DimGray</BackgroundColor>
+                            <BackgroundColor>White</BackgroundColor>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -539,7 +528,6 @@
                                   <Value>IN</Value>
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
-                                    <Color>White</Color>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -551,10 +539,10 @@
                           <rd:DefaultName>Textbox54</rd:DefaultName>
                           <Style>
                             <Border>
-                              <Color>DimGray</Color>
+                              <Color>LightGrey</Color>
                               <Style>Solid</Style>
                             </Border>
-                            <BackgroundColor>DimGray</BackgroundColor>
+                            <BackgroundColor>White</BackgroundColor>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -575,7 +563,6 @@
                                   <Value>OUT</Value>
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
-                                    <Color>White</Color>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -587,10 +574,10 @@
                           <rd:DefaultName>Textbox57</rd:DefaultName>
                           <Style>
                             <Border>
-                              <Color>DimGray</Color>
+                              <Color>LightGrey</Color>
                               <Style>Solid</Style>
                             </Border>
-                            <BackgroundColor>DimGray</BackgroundColor>
+                            <BackgroundColor>White</BackgroundColor>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -628,13 +615,10 @@
                           <rd:DefaultName>Department</rd:DefaultName>
                           <Style>
                             <Border>
-                              <Color>White</Color>
-                              <Style>None</Style>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
                             </Border>
-                            <BottomBorder>
-                              <Color>DimGray</Color>
-                              <Style>Dotted</Style>
-                            </BottomBorder>
+                            <BackgroundColor>White</BackgroundColor>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -667,6 +651,7 @@
                                 <TextRun>
                                   <Value>=Fields!EmployeeId.Value</Value>
                                   <Style>
+                                    <FontWeight>Bold</FontWeight>
                                     <Format>0000</Format>
                                   </Style>
                                 </TextRun>
@@ -679,7 +664,7 @@
                           <rd:DefaultName>EmployeeId</rd:DefaultName>
                           <Style>
                             <Border>
-                              <Color>White</Color>
+                              <Color>LightGrey</Color>
                               <Style>Solid</Style>
                             </Border>
                             <PaddingLeft>2pt</PaddingLeft>
@@ -700,7 +685,9 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>=Fields!EmployeeName.Value</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style />
@@ -709,7 +696,7 @@
                           <rd:DefaultName>EmployeeName</rd:DefaultName>
                           <Style>
                             <Border>
-                              <Color>White</Color>
+                              <Color>LightGrey</Color>
                               <Style>Solid</Style>
                             </Border>
                             <PaddingLeft>2pt</PaddingLeft>
@@ -741,7 +728,7 @@
                           <rd:DefaultName>Morning_TimeIn</rd:DefaultName>
                           <Style>
                             <Border>
-                              <Color>White</Color>
+                              <Color>LightGrey</Color>
                               <Style>Solid</Style>
                             </Border>
                             <PaddingLeft>2pt</PaddingLeft>
@@ -773,7 +760,7 @@
                           <rd:DefaultName>Morning_TimeOut</rd:DefaultName>
                           <Style>
                             <Border>
-                              <Color>White</Color>
+                              <Color>LightGrey</Color>
                               <Style>Solid</Style>
                             </Border>
                             <PaddingLeft>2pt</PaddingLeft>
@@ -805,7 +792,7 @@
                           <rd:DefaultName>Afternoon_TimeIn</rd:DefaultName>
                           <Style>
                             <Border>
-                              <Color>White</Color>
+                              <Color>LightGrey</Color>
                               <Style>Solid</Style>
                             </Border>
                             <PaddingLeft>2pt</PaddingLeft>
@@ -837,7 +824,7 @@
                           <rd:DefaultName>Afternoon_TimeOut</rd:DefaultName>
                           <Style>
                             <Border>
-                              <Color>White</Color>
+                              <Color>LightGrey</Color>
                               <Style>Solid</Style>
                             </Border>
                             <PaddingLeft>2pt</PaddingLeft>
@@ -869,7 +856,7 @@
                           <rd:DefaultName>Evening_TimeIn</rd:DefaultName>
                           <Style>
                             <Border>
-                              <Color>White</Color>
+                              <Color>LightGrey</Color>
                               <Style>Solid</Style>
                             </Border>
                             <PaddingLeft>2pt</PaddingLeft>
@@ -901,7 +888,7 @@
                           <rd:DefaultName>Evening_TimeOut</rd:DefaultName>
                           <Style>
                             <Border>
-                              <Color>White</Color>
+                              <Color>LightGrey</Color>
                               <Style>Solid</Style>
                             </Border>
                             <PaddingLeft>2pt</PaddingLeft>
@@ -955,7 +942,8 @@
               </TablixMembers>
             </TablixRowHierarchy>
             <DataSetName>ds_DTRLog</DataSetName>
-            <Top>0.01042in</Top>
+            <Top>0.12084in</Top>
+            <Left>0.025in</Left>
             <Height>1in</Height>
             <Width>7.41165in</Width>
             <Style>
@@ -965,13 +953,13 @@
             </Style>
           </Tablix>
         </ReportItems>
-        <Height>2in</Height>
+        <Height>1.51041in</Height>
         <Style />
       </Body>
       <Width>7.5in</Width>
       <Page>
         <PageHeader>
-          <Height>1.80083in</Height>
+          <Height>1.99875in</Height>
           <PrintOnFirstPage>true</PrintOnFirstPage>
           <PrintOnLastPage>true</PrintOnLastPage>
           <ReportItems>
@@ -1083,7 +1071,7 @@
               <ZIndex>2</ZIndex>
               <Style>
                 <Border>
-                  <Style>None</Style>
+                  <Style>Solid</Style>
                 </Border>
                 <PaddingLeft>2pt</PaddingLeft>
                 <PaddingRight>2pt</PaddingRight>
@@ -1100,7 +1088,7 @@
                     <TextRun>
                       <Value>=Fields!CurrentDate.Value</Value>
                       <Style>
-                        <FontSize>8pt</FontSize>
+                        <FontSize>9pt</FontSize>
                         <Format>D</Format>
                       </Style>
                     </TextRun>
@@ -1111,7 +1099,7 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox33</rd:DefaultName>
-              <Top>1.46122in</Top>
+              <Top>1.63344in</Top>
               <Left>0.025in</Left>
               <Height>0.25in</Height>
               <Width>7.475in</Width>

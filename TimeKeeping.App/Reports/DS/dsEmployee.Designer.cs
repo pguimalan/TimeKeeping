@@ -2660,6 +2660,8 @@ namespace TimeKeeping.App.Reports.DS {
             
             private global::System.Data.DataColumn columnCharRefContactNum3;
             
+            private global::System.Data.DataColumn columnDepartmentName;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public EmployeeEmpInfoDataTable() {
@@ -2847,6 +2849,14 @@ namespace TimeKeeping.App.Reports.DS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn DepartmentNameColumn {
+                get {
+                    return this.columnDepartmentName;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -2901,7 +2911,8 @@ namespace TimeKeeping.App.Reports.DS {
                         string CharRefContactNum2, 
                         string CharRefFullName3, 
                         string CharRefOccupation3, 
-                        string CharRefContactNum3) {
+                        string CharRefContactNum3, 
+                        string DepartmentName) {
                 EmployeeEmpInfoRow rowEmployeeEmpInfoRow = ((EmployeeEmpInfoRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         EmployeeId,
@@ -2922,7 +2933,8 @@ namespace TimeKeeping.App.Reports.DS {
                         CharRefContactNum2,
                         CharRefFullName3,
                         CharRefOccupation3,
-                        CharRefContactNum3};
+                        CharRefContactNum3,
+                        DepartmentName};
                 rowEmployeeEmpInfoRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowEmployeeEmpInfoRow);
                 return rowEmployeeEmpInfoRow;
@@ -2964,6 +2976,7 @@ namespace TimeKeeping.App.Reports.DS {
                 this.columnCharRefFullName3 = base.Columns["CharRefFullName3"];
                 this.columnCharRefOccupation3 = base.Columns["CharRefOccupation3"];
                 this.columnCharRefContactNum3 = base.Columns["CharRefContactNum3"];
+                this.columnDepartmentName = base.Columns["DepartmentName"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3007,6 +3020,8 @@ namespace TimeKeeping.App.Reports.DS {
                 base.Columns.Add(this.columnCharRefOccupation3);
                 this.columnCharRefContactNum3 = new global::System.Data.DataColumn("CharRefContactNum3", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnCharRefContactNum3);
+                this.columnDepartmentName = new global::System.Data.DataColumn("DepartmentName", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDepartmentName);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5474,6 +5489,22 @@ namespace TimeKeeping.App.Reports.DS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string DepartmentName {
+                get {
+                    try {
+                        return ((string)(this[this.tableEmployeeEmpInfo.DepartmentNameColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'DepartmentName\' in table \'EmployeeEmpInfo\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableEmployeeEmpInfo.DepartmentNameColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsEmployeeIdNull() {
                 return this.IsNull(this.tableEmployeeEmpInfo.EmployeeIdColumn);
             }
@@ -5698,6 +5729,18 @@ namespace TimeKeeping.App.Reports.DS {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetCharRefContactNum3Null() {
                 this[this.tableEmployeeEmpInfo.CharRefContactNum3Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsDepartmentNameNull() {
+                return this.IsNull(this.tableEmployeeEmpInfo.DepartmentNameColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetDepartmentNameNull() {
+                this[this.tableEmployeeEmpInfo.DepartmentNameColumn] = global::System.Convert.DBNull;
             }
         }
         

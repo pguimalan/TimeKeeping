@@ -89,9 +89,15 @@ namespace TimeKeeping.App
             frm.ShowDialog();
         }
 
-        private void dailyTimeRecordToolStripMenuItem1_Click(object sender, EventArgs e)
+        private void dailyTimeRecordToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmDTR f = new frmDTR();
+            f.ShowDialog();
+        }
+
+        private void individualLogSheetToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmIndividualTimeLog f = new frmIndividualTimeLog();
             f.ShowDialog();
         }
     }

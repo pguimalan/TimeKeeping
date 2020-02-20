@@ -41,6 +41,7 @@
   <ItemGroup>
     <Compile Include="AddressModel.cs" />
     <Compile Include="DeparmentModel.cs" />
+    <Compile Include="DropdownModel.cs" />
     <Compile Include="DTRLogModel.cs" />
     <Compile Include="EmployeeLeaveModel.cs" />
     <Compile Include="EmployeeModel.cs" />

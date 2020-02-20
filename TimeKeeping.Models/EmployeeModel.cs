@@ -95,6 +95,7 @@ namespace TimeKeeping.Models
         public string CharRefContactNum3 { get; set; }
         public string EmpStatus { get; set; }
         public string BasicRateOption { get; set; }
+        public string DepartmentName { get; set; }
     }
 
     public class EmployeeForSelectModel
@@ -122,4 +123,6 @@ namespace TimeKeeping.Models
         public string PicName { get; set; }
         public string EmploymentType { get; set; }
     }
+
+    
 }

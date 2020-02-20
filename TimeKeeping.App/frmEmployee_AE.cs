@@ -777,32 +777,5 @@ namespace TimeKeeping.App
             f.employeeId = employeeId;
             f.ShowDialog();
         }
-
-        private void linkLabel5_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            frmRptViewer frm = new frmRptViewer();
-            string exeFolder = Path.GetDirectoryName(Application.StartupPath);
-            string reportPath = Path.Combine(exeFolder, "..\\Reports\\RptEmpProfile.rdlc");
-            frm.reportViewer1.LocalReport.ReportPath = reportPath;
-            ReportParameter generatedBy = new ReportParameter("UserFullName", GlobalSession.UserFullName);
-            ReportParameter imagePath = new ReportParameter("ImagePath", AppDomain.CurrentDomain.BaseDirectory + "EmpPics\\ProfilePic\\" + employeeId + "\\" + emp.EmployeeBasicInfo.PicName);
-            List<EmployeeBasicInfoForInsertModel> empBasicinfo = new List<EmployeeBasicInfoForInsertModel>();
-            List<EmployeeContactInfoForInsertModel> empContactInfo = new List<EmployeeContactInfoForInsertModel>();
-            List<EmployeeEducationForInsertModel> empEducation = new List<EmployeeEducationForInsertModel>();
-            empBasicinfo.Add(emp.EmployeeBasicInfo);
-            empContactInfo.Add(emp.EmployeeContactInfo);
-            empEducation.Add(emp.EmployeeEducation);
-            frm.reportViewer1.LocalReport.DataSources.Clear();
-            ReportDataSource rs = new ReportDataSource { Name = "ds_employee_basicinfo", Value = empBasicinfo };
-            ReportDataSource rs1 = new ReportDataSource { Name = "ds_employee_contactinfo", Value = empContactInfo };
-            ReportDataSource rs2 = new ReportDataSource { Name = "ds_employee_education", Value = empContactInfo };
-
-            frm.reportViewer1.LocalReport.DataSources.Add(rs);
-            frm.reportViewer1.LocalReport.DataSources.Add(rs1);
-            frm.reportViewer1.LocalReport.DataSources.Add(rs2);
-            frm.reportViewer1.LocalReport.EnableExternalImages = true;
-            frm.reportViewer1.LocalReport.SetParameters(new ReportParameter[] { generatedBy, imagePath });
-            frm.ShowDialog();
-        }
     }
 }

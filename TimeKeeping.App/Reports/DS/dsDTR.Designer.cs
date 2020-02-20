@@ -26,6 +26,8 @@ namespace TimeKeeping.App.Reports.DS {
         
         private DTRLogDataTable tableDTRLog;
         
+        private IndividualDTRDataTable tableIndividualDTR;
+        
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -57,6 +59,9 @@ namespace TimeKeeping.App.Reports.DS {
                 if ((ds.Tables["DTRLog"] != null)) {
                     base.Tables.Add(new DTRLogDataTable(ds.Tables["DTRLog"]));
                 }
+                if ((ds.Tables["IndividualDTR"] != null)) {
+                    base.Tables.Add(new IndividualDTRDataTable(ds.Tables["IndividualDTR"]));
+                }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
                 this.Namespace = ds.Namespace;
@@ -82,6 +87,16 @@ namespace TimeKeeping.App.Reports.DS {
         public DTRLogDataTable DTRLog {
             get {
                 return this.tableDTRLog;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public IndividualDTRDataTable IndividualDTR {
+            get {
+                return this.tableIndividualDTR;
             }
         }
         
@@ -155,6 +170,9 @@ namespace TimeKeeping.App.Reports.DS {
                 if ((ds.Tables["DTRLog"] != null)) {
                     base.Tables.Add(new DTRLogDataTable(ds.Tables["DTRLog"]));
                 }
+                if ((ds.Tables["IndividualDTR"] != null)) {
+                    base.Tables.Add(new IndividualDTRDataTable(ds.Tables["IndividualDTR"]));
+                }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
                 this.Namespace = ds.Namespace;
@@ -194,6 +212,12 @@ namespace TimeKeeping.App.Reports.DS {
                     this.tableDTRLog.InitVars();
                 }
             }
+            this.tableIndividualDTR = ((IndividualDTRDataTable)(base.Tables["IndividualDTR"]));
+            if ((initTable == true)) {
+                if ((this.tableIndividualDTR != null)) {
+                    this.tableIndividualDTR.InitVars();
+                }
+            }
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -206,11 +230,19 @@ namespace TimeKeeping.App.Reports.DS {
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
             this.tableDTRLog = new DTRLogDataTable();
             base.Tables.Add(this.tableDTRLog);
+            this.tableIndividualDTR = new IndividualDTRDataTable();
+            base.Tables.Add(this.tableIndividualDTR);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private bool ShouldSerializeDTRLog() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private bool ShouldSerializeIndividualDTR() {
             return false;
         }
         
@@ -271,6 +303,9 @@ namespace TimeKeeping.App.Reports.DS {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public delegate void DTRLogRowChangeEventHandler(object sender, DTRLogRowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public delegate void IndividualDTRRowChangeEventHandler(object sender, IndividualDTRRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
@@ -675,6 +710,407 @@ namespace TimeKeeping.App.Reports.DS {
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
                 attribute2.FixedValue = "DTRLogDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class IndividualDTRDataTable : global::System.Data.TypedTableBase<IndividualDTRRow> {
+            
+            private global::System.Data.DataColumn columnLogId;
+            
+            private global::System.Data.DataColumn columnDayOfWeekName;
+            
+            private global::System.Data.DataColumn columnTimeIn_AM;
+            
+            private global::System.Data.DataColumn columnTimeOut_AM;
+            
+            private global::System.Data.DataColumn columnTimeIn_PM;
+            
+            private global::System.Data.DataColumn columnTimeOut_PM;
+            
+            private global::System.Data.DataColumn columnTimeIn_Evening;
+            
+            private global::System.Data.DataColumn columnTimeOut_Evening;
+            
+            private global::System.Data.DataColumn columnEmployeeFullName;
+            
+            private global::System.Data.DataColumn columnDesignation;
+            
+            private global::System.Data.DataColumn columnDateStart;
+            
+            private global::System.Data.DataColumn columnDateEnd;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public IndividualDTRDataTable() {
+                this.TableName = "IndividualDTR";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            internal IndividualDTRDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected IndividualDTRDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn LogIdColumn {
+                get {
+                    return this.columnLogId;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn DayOfWeekNameColumn {
+                get {
+                    return this.columnDayOfWeekName;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn TimeIn_AMColumn {
+                get {
+                    return this.columnTimeIn_AM;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn TimeOut_AMColumn {
+                get {
+                    return this.columnTimeOut_AM;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn TimeIn_PMColumn {
+                get {
+                    return this.columnTimeIn_PM;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn TimeOut_PMColumn {
+                get {
+                    return this.columnTimeOut_PM;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn TimeIn_EveningColumn {
+                get {
+                    return this.columnTimeIn_Evening;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn TimeOut_EveningColumn {
+                get {
+                    return this.columnTimeOut_Evening;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn EmployeeFullNameColumn {
+                get {
+                    return this.columnEmployeeFullName;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn DesignationColumn {
+                get {
+                    return this.columnDesignation;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn DateStartColumn {
+                get {
+                    return this.columnDateStart;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn DateEndColumn {
+                get {
+                    return this.columnDateEnd;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public IndividualDTRRow this[int index] {
+                get {
+                    return ((IndividualDTRRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event IndividualDTRRowChangeEventHandler IndividualDTRRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event IndividualDTRRowChangeEventHandler IndividualDTRRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event IndividualDTRRowChangeEventHandler IndividualDTRRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event IndividualDTRRowChangeEventHandler IndividualDTRRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void AddIndividualDTRRow(IndividualDTRRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public IndividualDTRRow AddIndividualDTRRow(int LogId, string DayOfWeekName, string TimeIn_AM, string TimeOut_AM, string TimeIn_PM, string TimeOut_PM, string TimeIn_Evening, string TimeOut_Evening, string EmployeeFullName, string Designation, System.DateTime DateStart, System.DateTime DateEnd) {
+                IndividualDTRRow rowIndividualDTRRow = ((IndividualDTRRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        LogId,
+                        DayOfWeekName,
+                        TimeIn_AM,
+                        TimeOut_AM,
+                        TimeIn_PM,
+                        TimeOut_PM,
+                        TimeIn_Evening,
+                        TimeOut_Evening,
+                        EmployeeFullName,
+                        Designation,
+                        DateStart,
+                        DateEnd};
+                rowIndividualDTRRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowIndividualDTRRow);
+                return rowIndividualDTRRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                IndividualDTRDataTable cln = ((IndividualDTRDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new IndividualDTRDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            internal void InitVars() {
+                this.columnLogId = base.Columns["LogId"];
+                this.columnDayOfWeekName = base.Columns["DayOfWeekName"];
+                this.columnTimeIn_AM = base.Columns["TimeIn_AM"];
+                this.columnTimeOut_AM = base.Columns["TimeOut_AM"];
+                this.columnTimeIn_PM = base.Columns["TimeIn_PM"];
+                this.columnTimeOut_PM = base.Columns["TimeOut_PM"];
+                this.columnTimeIn_Evening = base.Columns["TimeIn_Evening"];
+                this.columnTimeOut_Evening = base.Columns["TimeOut_Evening"];
+                this.columnEmployeeFullName = base.Columns["EmployeeFullName"];
+                this.columnDesignation = base.Columns["Designation"];
+                this.columnDateStart = base.Columns["DateStart"];
+                this.columnDateEnd = base.Columns["DateEnd"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            private void InitClass() {
+                this.columnLogId = new global::System.Data.DataColumn("LogId", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnLogId);
+                this.columnDayOfWeekName = new global::System.Data.DataColumn("DayOfWeekName", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDayOfWeekName);
+                this.columnTimeIn_AM = new global::System.Data.DataColumn("TimeIn_AM", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTimeIn_AM);
+                this.columnTimeOut_AM = new global::System.Data.DataColumn("TimeOut_AM", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTimeOut_AM);
+                this.columnTimeIn_PM = new global::System.Data.DataColumn("TimeIn_PM", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTimeIn_PM);
+                this.columnTimeOut_PM = new global::System.Data.DataColumn("TimeOut_PM", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTimeOut_PM);
+                this.columnTimeIn_Evening = new global::System.Data.DataColumn("TimeIn_Evening", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTimeIn_Evening);
+                this.columnTimeOut_Evening = new global::System.Data.DataColumn("TimeOut_Evening", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTimeOut_Evening);
+                this.columnEmployeeFullName = new global::System.Data.DataColumn("EmployeeFullName", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnEmployeeFullName);
+                this.columnDesignation = new global::System.Data.DataColumn("Designation", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDesignation);
+                this.columnDateStart = new global::System.Data.DataColumn("DateStart", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDateStart);
+                this.columnDateEnd = new global::System.Data.DataColumn("DateEnd", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDateEnd);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public IndividualDTRRow NewIndividualDTRRow() {
+                return ((IndividualDTRRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new IndividualDTRRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(IndividualDTRRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.IndividualDTRRowChanged != null)) {
+                    this.IndividualDTRRowChanged(this, new IndividualDTRRowChangeEvent(((IndividualDTRRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.IndividualDTRRowChanging != null)) {
+                    this.IndividualDTRRowChanging(this, new IndividualDTRRowChangeEvent(((IndividualDTRRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.IndividualDTRRowDeleted != null)) {
+                    this.IndividualDTRRowDeleted(this, new IndividualDTRRowChangeEvent(((IndividualDTRRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.IndividualDTRRowDeleting != null)) {
+                    this.IndividualDTRRowDeleting(this, new IndividualDTRRowChangeEvent(((IndividualDTRRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void RemoveIndividualDTRRow(IndividualDTRRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                dsDTR ds = new dsDTR();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "IndividualDTRDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -1151,6 +1587,357 @@ namespace TimeKeeping.App.Reports.DS {
         }
         
         /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class IndividualDTRRow : global::System.Data.DataRow {
+            
+            private IndividualDTRDataTable tableIndividualDTR;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            internal IndividualDTRRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tableIndividualDTR = ((IndividualDTRDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int LogId {
+                get {
+                    try {
+                        return ((int)(this[this.tableIndividualDTR.LogIdColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'LogId\' in table \'IndividualDTR\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableIndividualDTR.LogIdColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string DayOfWeekName {
+                get {
+                    try {
+                        return ((string)(this[this.tableIndividualDTR.DayOfWeekNameColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'DayOfWeekName\' in table \'IndividualDTR\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableIndividualDTR.DayOfWeekNameColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string TimeIn_AM {
+                get {
+                    try {
+                        return ((string)(this[this.tableIndividualDTR.TimeIn_AMColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'TimeIn_AM\' in table \'IndividualDTR\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableIndividualDTR.TimeIn_AMColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string TimeOut_AM {
+                get {
+                    try {
+                        return ((string)(this[this.tableIndividualDTR.TimeOut_AMColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'TimeOut_AM\' in table \'IndividualDTR\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableIndividualDTR.TimeOut_AMColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string TimeIn_PM {
+                get {
+                    try {
+                        return ((string)(this[this.tableIndividualDTR.TimeIn_PMColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'TimeIn_PM\' in table \'IndividualDTR\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableIndividualDTR.TimeIn_PMColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string TimeOut_PM {
+                get {
+                    try {
+                        return ((string)(this[this.tableIndividualDTR.TimeOut_PMColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'TimeOut_PM\' in table \'IndividualDTR\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableIndividualDTR.TimeOut_PMColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string TimeIn_Evening {
+                get {
+                    try {
+                        return ((string)(this[this.tableIndividualDTR.TimeIn_EveningColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'TimeIn_Evening\' in table \'IndividualDTR\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableIndividualDTR.TimeIn_EveningColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string TimeOut_Evening {
+                get {
+                    try {
+                        return ((string)(this[this.tableIndividualDTR.TimeOut_EveningColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'TimeOut_Evening\' in table \'IndividualDTR\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableIndividualDTR.TimeOut_EveningColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string EmployeeFullName {
+                get {
+                    try {
+                        return ((string)(this[this.tableIndividualDTR.EmployeeFullNameColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'EmployeeFullName\' in table \'IndividualDTR\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableIndividualDTR.EmployeeFullNameColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Designation {
+                get {
+                    try {
+                        return ((string)(this[this.tableIndividualDTR.DesignationColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Designation\' in table \'IndividualDTR\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableIndividualDTR.DesignationColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public System.DateTime DateStart {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tableIndividualDTR.DateStartColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'DateStart\' in table \'IndividualDTR\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableIndividualDTR.DateStartColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public System.DateTime DateEnd {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tableIndividualDTR.DateEndColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'DateEnd\' in table \'IndividualDTR\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableIndividualDTR.DateEndColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsLogIdNull() {
+                return this.IsNull(this.tableIndividualDTR.LogIdColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetLogIdNull() {
+                this[this.tableIndividualDTR.LogIdColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsDayOfWeekNameNull() {
+                return this.IsNull(this.tableIndividualDTR.DayOfWeekNameColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetDayOfWeekNameNull() {
+                this[this.tableIndividualDTR.DayOfWeekNameColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsTimeIn_AMNull() {
+                return this.IsNull(this.tableIndividualDTR.TimeIn_AMColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetTimeIn_AMNull() {
+                this[this.tableIndividualDTR.TimeIn_AMColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsTimeOut_AMNull() {
+                return this.IsNull(this.tableIndividualDTR.TimeOut_AMColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetTimeOut_AMNull() {
+                this[this.tableIndividualDTR.TimeOut_AMColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsTimeIn_PMNull() {
+                return this.IsNull(this.tableIndividualDTR.TimeIn_PMColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetTimeIn_PMNull() {
+                this[this.tableIndividualDTR.TimeIn_PMColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsTimeOut_PMNull() {
+                return this.IsNull(this.tableIndividualDTR.TimeOut_PMColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetTimeOut_PMNull() {
+                this[this.tableIndividualDTR.TimeOut_PMColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsTimeIn_EveningNull() {
+                return this.IsNull(this.tableIndividualDTR.TimeIn_EveningColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetTimeIn_EveningNull() {
+                this[this.tableIndividualDTR.TimeIn_EveningColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsTimeOut_EveningNull() {
+                return this.IsNull(this.tableIndividualDTR.TimeOut_EveningColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetTimeOut_EveningNull() {
+                this[this.tableIndividualDTR.TimeOut_EveningColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsEmployeeFullNameNull() {
+                return this.IsNull(this.tableIndividualDTR.EmployeeFullNameColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetEmployeeFullNameNull() {
+                this[this.tableIndividualDTR.EmployeeFullNameColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsDesignationNull() {
+                return this.IsNull(this.tableIndividualDTR.DesignationColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetDesignationNull() {
+                this[this.tableIndividualDTR.DesignationColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsDateStartNull() {
+                return this.IsNull(this.tableIndividualDTR.DateStartColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetDateStartNull() {
+                this[this.tableIndividualDTR.DateStartColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsDateEndNull() {
+                return this.IsNull(this.tableIndividualDTR.DateEndColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetDateEndNull() {
+                this[this.tableIndividualDTR.DateEndColumn] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
@@ -1170,6 +1957,40 @@ namespace TimeKeeping.App.Reports.DS {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public DTRLogRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public class IndividualDTRRowChangeEvent : global::System.EventArgs {
+            
+            private IndividualDTRRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public IndividualDTRRowChangeEvent(IndividualDTRRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public IndividualDTRRow Row {
                 get {
                     return this.eventRow;
                 }
