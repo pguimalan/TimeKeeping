@@ -61,8 +61,10 @@ namespace TimeKeeping.App
                 else
                 {
                     MessageBox.Show("Welcome " + username + "!", "Access Granted", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    frmMain frm = new frmMain();
-                    frm.tssUsername = txtusername.Text;
+                    frmMain frm = new frmMain
+                    {
+                        tssUsername = txtusername.Text
+                    };
                     var model = svc.SystemUser_SelectById(hasAccess);
                     GlobalSession.UserFullName = model.UserFullName;
                     GlobalSession.UserId = model.UserId;

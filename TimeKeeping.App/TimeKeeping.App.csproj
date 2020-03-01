@@ -140,6 +140,18 @@
     <Compile Include="frmEmployee_AE.Designer.cs">
       <DependentUpon>frmEmployee_AE.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmEmployeeLeaves.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEmployeeLeaves.Designer.cs">
+      <DependentUpon>frmEmployeeLeaves.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEmployeeLeaves_AE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEmployeeLeaves_AE.Designer.cs">
+      <DependentUpon>frmEmployeeLeaves_AE.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmEnrollFinger.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -157,12 +169,6 @@
     </Compile>
     <Compile Include="frmIndividualTimeLog_AE.Designer.cs">
       <DependentUpon>frmIndividualTimeLog_AE.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmLeavesMgt.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmLeavesMgt.Designer.cs">
-      <DependentUpon>frmLeavesMgt.cs</DependentUpon>
     </Compile>
     <Compile Include="frmLogin.cs">
       <SubType>Form</SubType>
@@ -265,6 +271,12 @@
     <EmbeddedResource Include="frmEmployee_AE.resx">
       <DependentUpon>frmEmployee_AE.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmEmployeeLeaves.resx">
+      <DependentUpon>frmEmployeeLeaves.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEmployeeLeaves_AE.resx">
+      <DependentUpon>frmEmployeeLeaves_AE.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmEnrollFinger.resx">
       <DependentUpon>frmEnrollFinger.cs</DependentUpon>
     </EmbeddedResource>
@@ -273,9 +285,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmIndividualTimeLog_AE.resx">
       <DependentUpon>frmIndividualTimeLog_AE.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmLeavesMgt.resx">
-      <DependentUpon>frmLeavesMgt.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>

@@ -421,7 +421,7 @@
             this.lblDepartment.AutoSize = true;
             this.lblDepartment.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDepartment.ForeColor = System.Drawing.Color.Navy;
-            this.lblDepartment.Location = new System.Drawing.Point(13, 16);
+            this.lblDepartment.Location = new System.Drawing.Point(13, 23);
             this.lblDepartment.Name = "lblDepartment";
             this.lblDepartment.Size = new System.Drawing.Size(99, 14);
             this.lblDepartment.TabIndex = 293;

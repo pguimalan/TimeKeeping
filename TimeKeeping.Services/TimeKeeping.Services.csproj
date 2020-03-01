@@ -43,12 +43,14 @@
     <Compile Include="DepartmentService.cs" />
     <Compile Include="DropdownService.cs" />
     <Compile Include="DtrService.cs" />
+    <Compile Include="EmployeeLeaveService.cs" />
     <Compile Include="EmployeeService.cs" />
     <Compile Include="FingerPrintService.cs" />
     <Compile Include="Interface\IDropdownService.cs" />
     <Compile Include="Interface\IDtrService.cs" />
     <Compile Include="Interface\IAddressService.cs" />
     <Compile Include="Interface\IDepartmentService.cs" />
+    <Compile Include="Interface\IEmployeeLeaveService.cs" />
     <Compile Include="Interface\IEmployeeService.cs" />
     <Compile Include="Interface\IFingerPrintService.cs" />
     <Compile Include="Interface\ISemesterService.cs" />

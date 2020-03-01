@@ -100,5 +100,11 @@ namespace TimeKeeping.App
             frmIndividualTimeLog f = new frmIndividualTimeLog();
             f.ShowDialog();
         }
+
+        private void leaveMgtToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmEmployeeLeaves f = new frmEmployeeLeaves();
+            f.ShowDialog();
+        }
     }
 }

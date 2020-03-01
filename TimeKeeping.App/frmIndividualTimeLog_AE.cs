@@ -177,7 +177,7 @@ namespace TimeKeeping.App
             {
                 dtTimeOutEvening.Enabled = false;
             }
-            else dtTimeInEvening.Enabled = true;
+            else dtTimeOutEvening.Enabled = true;
         }
 
         private void bttnSave_Click(object sender, EventArgs e)
@@ -246,7 +246,16 @@ namespace TimeKeeping.App
                         ShowMessage.ShowMessageBox(2);
                         break;
                     case -1:
-                        ShowMessage.CustomErrorMessage("Semester has not been set - up.");
+                        ShowMessage.CustomErrorMessage("Semester has not been set-up.");
+                        break;
+                    case -2:
+                        ShowMessage.CustomErrorMessage("No morning shift for this employee.");
+                        break;
+                    case -3:
+                        ShowMessage.CustomErrorMessage("No afternoon shift for this employee.");
+                        break;
+                    case -4:
+                        ShowMessage.CustomErrorMessage("No evening shift for this employee.");
                         break;
                     case 0:
                         ShowMessage.CustomErrorMessage("Something went wrong.");
