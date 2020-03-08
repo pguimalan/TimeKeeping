@@ -71,11 +71,17 @@ namespace TimeKeeping.App
                     ListViewItem lv = new ListViewItem(li.LogId.ToString());
                     lv.SubItems.Add(li.DayOfWeekName);
                     lv.SubItems.Add(li.TimeIn_AM);
+                    lv.SubItems.Add(li.TimeIn_AM_MinsLate);
                     lv.SubItems.Add(li.TimeOut_AM);
+                    lv.SubItems.Add(li.UnderTime_AM);
                     lv.SubItems.Add(li.TimeIn_PM);
+                    lv.SubItems.Add(li.TimeIn_PM_MinsLate);
                     lv.SubItems.Add(li.TimeOut_PM);
+                    lv.SubItems.Add(li.UnderTime_PM);
                     lv.SubItems.Add(li.TimeIn_Evening);
+                    lv.SubItems.Add(li.TimeIn_Evening_MinsLate);
                     lv.SubItems.Add(li.TimeOut_Evening);
+                    lv.SubItems.Add(li.UnderTime_Evening);
                     lv.SubItems.Add(li.CurrDate.ToString());
                     lv.Font = new Font(lv.Font, FontStyle.Regular);
                     listView1.Items.AddRange(new ListViewItem[] { lv });
@@ -144,7 +150,7 @@ namespace TimeKeeping.App
             }
             else
             {
-                frmIndividualTimeLog_AE f = new frmIndividualTimeLog_AE(cmbEmployeeName.Text, (int)cmbEmployeeName.SelectedValue, DateTime.Parse(listView1.Items[listView1.FocusedItem.Index].SubItems[8].Text), int.Parse(listView1.SelectedItems[0].Text));
+                frmIndividualTimeLog_AE f = new frmIndividualTimeLog_AE(cmbEmployeeName.Text, (int)cmbEmployeeName.SelectedValue, DateTime.Parse(listView1.Items[listView1.FocusedItem.Index].SubItems[14].Text), int.Parse(listView1.SelectedItems[0].Text));
                 f.ShowDialog();
                 LoadDTR((int)cmbEmployeeName.SelectedValue, (int)cmbPayrollPeriod.SelectedValue);
             }            

@@ -48,6 +48,7 @@
             this.dailyTimeRecordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.individualLogSheetToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.leaveMgtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.payrollManagementToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.StatusStrip1 = new System.Windows.Forms.StatusStrip();
             this.ToolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.tsUser = new System.Windows.Forms.ToolStripStatusLabel();
@@ -62,7 +63,8 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem,
             this.transactionsToolStripMenuItem,
-            this.leaveMgtToolStripMenuItem});
+            this.leaveMgtToolStripMenuItem,
+            this.payrollManagementToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(800, 24);
@@ -219,6 +221,13 @@
             this.leaveMgtToolStripMenuItem.Text = "Leave Mgt.";
             this.leaveMgtToolStripMenuItem.Click += new System.EventHandler(this.leaveMgtToolStripMenuItem_Click);
             // 
+            // payrollManagementToolStripMenuItem
+            // 
+            this.payrollManagementToolStripMenuItem.Name = "payrollManagementToolStripMenuItem";
+            this.payrollManagementToolStripMenuItem.Size = new System.Drawing.Size(129, 20);
+            this.payrollManagementToolStripMenuItem.Text = "Payroll Management";
+            this.payrollManagementToolStripMenuItem.Click += new System.EventHandler(this.payrollManagementToolStripMenuItem_Click);
+            // 
             // StatusStrip1
             // 
             this.StatusStrip1.BackColor = System.Drawing.SystemColors.Info;
@@ -322,5 +331,6 @@
         private System.Windows.Forms.ToolStripMenuItem leaveMgtToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem dailyTimeRecordToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem individualLogSheetToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem payrollManagementToolStripMenuItem;
     }
 }

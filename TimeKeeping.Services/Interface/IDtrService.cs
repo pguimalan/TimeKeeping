@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using TimeKeeping.Models;
 
 namespace TimeKeeping.Services.Interface
@@ -14,5 +11,6 @@ namespace TimeKeeping.Services.Interface
         List<IndividualDTR> DTR_IndividualTimeLog(int employeeId, int payrollId);
         DTRByIdModel DTR_GetById(int id);
         int DTR_ForceUpdate(DTRForceUpdateModel log);
+        EmployeeDTRSummaryForPayroll DTR_GetDetailsForPayroll(int employeeId, int payrollId);
     }
 }

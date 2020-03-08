@@ -106,5 +106,11 @@ namespace TimeKeeping.App
             frmEmployeeLeaves f = new frmEmployeeLeaves();
             f.ShowDialog();
         }
+
+        private void payrollManagementToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmPayrollManagement f = new frmPayrollManagement();
+            f.ShowDialog();
+        }
     }
 }

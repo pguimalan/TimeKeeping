@@ -11,5 +11,6 @@ namespace TimeKeeping.Data.Interface
         List<IndividualDTR> DTR_IndividualTimeLog(int employeeId, int payrollId);
         DTRByIdModel DTR_GetById(int id);
         int DTR_ForceUpdate(DTRForceUpdateModel log);
+        EmployeeDTRSummaryForPayroll DTR_GetDetailsForPayroll(int employeeId, int payrollId);
     }
 }

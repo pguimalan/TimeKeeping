@@ -26,6 +26,11 @@ namespace TimeKeeping.Services
             return _repo.DTR_GetById(id);
         }
 
+        public EmployeeDTRSummaryForPayroll DTR_GetDetailsForPayroll(int employeeId, int payrollId)
+        {
+            return _repo.DTR_GetDetailsForPayroll(employeeId, payrollId);
+        }
+
         public List<IndividualDTR> DTR_IndividualTimeLog(int employeeId, int payrollId)
         {
             return _repo.DTR_IndividualTimeLog(employeeId, payrollId);

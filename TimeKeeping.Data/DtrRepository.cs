@@ -87,6 +87,29 @@ namespace TimeKeeping.Data
             }
         }
 
+        public EmployeeDTRSummaryForPayroll DTR_GetDetailsForPayroll(int employeeId, int payrollId)
+        {
+            try
+            {
+                using (var con = GetDbConnection())
+                {
+                    var result = con.QueryFirstOrDefault<EmployeeDTRSummaryForPayroll>("dbo.Usp_DTR_GetDetailsForPayroll",
+                                  new
+                                  {
+                                      @iIntEmployeeId = employeeId,
+                                      @iIntPayrollPeriod = payrollId
+                                  },
+                                  commandType: CommandType.StoredProcedure);
+
+                    return result;
+                }
+            }
+            catch(Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+
         public List<IndividualDTR> DTR_IndividualTimeLog(int employeeId, int payrollId)
         {
             try

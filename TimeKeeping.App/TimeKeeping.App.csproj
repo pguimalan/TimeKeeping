@@ -182,6 +182,12 @@
     <Compile Include="frmMain.Designer.cs">
       <DependentUpon>frmMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmPayrollManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPayrollManagement.Designer.cs">
+      <DependentUpon>frmPayrollManagement.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmResetPassword.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -291,6 +297,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPayrollManagement.resx">
+      <DependentUpon>frmPayrollManagement.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmResetPassword.resx">
       <DependentUpon>frmResetPassword.cs</DependentUpon>

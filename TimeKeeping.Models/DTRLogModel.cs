@@ -30,11 +30,17 @@ namespace TimeKeeping.Models
         public int LogId { get; set; }
         public string DayOfWeekName { get; set; }
         public string TimeIn_AM { get; set; }
+        public string TimeIn_AM_MinsLate { get; set; }
         public string TimeOut_AM { get; set; }
+        public string UnderTime_AM { get; set; }
         public string TimeIn_PM { get; set; }
+        public string TimeIn_PM_MinsLate { get; set; }
         public string TimeOut_PM { get; set; }
+        public string UnderTime_PM { get; set; }
         public string TimeIn_Evening { get; set; }
+        public string TimeIn_Evening_MinsLate { get; set; }
         public string TimeOut_Evening { get; set; }
+        public string UnderTime_Evening { get; set; }
         public string EmployeeFullName { get; set; }
         public string Designation { get; set; }
         public DateTime DateStart { get; set; }
@@ -49,11 +55,17 @@ namespace TimeKeeping.Models
         public string EmployeeFullName { get; set; }
         public string CurrentDate { get; set; }
         public string TimeIn_AM { get; set; }
+        public decimal TimeIn_AM_MinsLate { get; set; }
         public string TimeOut_AM { get; set; }
+        public decimal UnderTime_AM { get; set; }
         public string TimeIn_PM { get; set; }
+        public decimal TimeIn_PM_MinsLate { get; set; }
         public string TimeOut_PM { get; set; }
+        public decimal UnderTime_PM { get; set; }
         public string TimeIn_Evening { get; set; }
+        public decimal TimeIn_Evening_MinsLate { get; set; }
         public string TimeOut_Evening { get; set; }
+        public decimal UnderTime_Evening { get; set; }
     }
 
     public class DTRForceUpdateModel
@@ -68,6 +80,13 @@ namespace TimeKeeping.Models
         public TimeSpan? TimeIn_Evening { get; set; }
         public TimeSpan? TimeOut_Evening { get; set; }
         public int UserId { get; set; }
+    }
+
+    public class EmployeeDTRSummaryForPayroll
+    {
+        public decimal TotalDaysWork { get; set; }
+        public decimal TotalUndertime { get; set; }
+        public decimal TotalLate { get; set; }
     }
 }
 

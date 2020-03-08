@@ -10,14 +10,14 @@ namespace TimeKeeping.Data
 {
     public class DropdownRepository : DataManager, IDropdownRepository
     {
-        public List<EmployeeForDropdown> Employee_SelectDropdown()
+        public List<EmployeeForDropdown> Employee_SelectDropdown(string empType="")
         {
             try
             {
                 using (var con = GetDbConnection())
                 {
                     var result = con.Query<EmployeeForDropdown>("dbo.Usp_Employee_SelectDropdown",
-                                  null,
+                                  new { @iStrEmpType = empType },
                                   commandType: CommandType.StoredProcedure);
 
                     return result.ToList();

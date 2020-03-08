@@ -803,9 +803,11 @@
             this.cmbEmpType.ForeColor = System.Drawing.Color.Maroon;
             this.cmbEmpType.FormattingEnabled = true;
             this.cmbEmpType.Items.AddRange(new object[] {
-            "Probationary",
-            "Regular",
-            "Contract of Service (COS)"});
+            "(COS) Full-time",
+            "(COS) Part-time",
+            "Regular Faculty",
+            "Regular Staff",
+            "Staff Full-Time"});
             this.cmbEmpType.Location = new System.Drawing.Point(122, 84);
             this.cmbEmpType.Name = "cmbEmpType";
             this.cmbEmpType.Size = new System.Drawing.Size(159, 24);

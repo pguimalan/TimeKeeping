@@ -10,9 +10,9 @@ namespace TimeKeeping.Services
     {
         static readonly IDropdownRepository _repo = new DropdownRepository();
 
-        public List<EmployeeForDropdown> Employee_SelectDropdown()
+        public List<EmployeeForDropdown> Employee_SelectDropdown(string empType = "")
         {
-            return _repo.Employee_SelectDropdown();
+            return _repo.Employee_SelectDropdown(empType);
         }
 
         public List<PayrollPeriodDropdown> PayrollPeriod_SelectDropdown()

@@ -77,6 +77,7 @@ namespace TimeKeeping.App
         private void frmDTR_Load(object sender, EventArgs e)
         {
             loadDepartment();
+            dtDate.Value = DateTime.Now;
         }
 
         void loadDepartment()
