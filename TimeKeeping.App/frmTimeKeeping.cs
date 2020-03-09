@@ -12,6 +12,7 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TimeKeeping.App.Helpers;
 using TimeKeeping.Models;
 using TimeKeeping.Services;
 using TimeKeeping.Services.Interface;
@@ -332,6 +333,25 @@ namespace TimeKeeping.App
                 lblAction.Text = "Time Out:";
             }
             ClearProfile();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if(txtIDNum.Text.Length < 4)
+            {
+                return;
+            }
+            else
+            {
+                GetProfile(int.Parse(txtIDNum.Text));
+                txtIDNum.Text = "";                
+            }
+
+        }
+
+        private void txtIDNum_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            StringHelper.NumbersOnly(txtIDNum.Text, e);
         }
     }
 }

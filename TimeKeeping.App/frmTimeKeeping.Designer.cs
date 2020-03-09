@@ -31,12 +31,12 @@
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.Label lblPrompt;
             System.Windows.Forms.Label label3;
+            System.Windows.Forms.Label label4;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmTimeKeeping));
             this.verifyControl = new DPFP.Gui.Verification.VerificationControl();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.lblEmployeeType = new System.Windows.Forms.Label();
-            this.btnGetTimeLogs = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtIDNum = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.lblDepartment = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
@@ -62,6 +62,7 @@
             this.logobox = new System.Windows.Forms.PictureBox();
             lblPrompt = new System.Windows.Forms.Label();
             label3 = new System.Windows.Forms.Label();
+            label4 = new System.Windows.Forms.Label();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -99,6 +100,20 @@
             label3.TabIndex = 11;
             label3.Text = "Select Session Time In / Time Out";
             // 
+            // label4
+            // 
+            label4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            label4.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            label4.ForeColor = System.Drawing.Color.Red;
+            label4.Location = new System.Drawing.Point(283, 98);
+            label4.Name = "label4";
+            label4.Size = new System.Drawing.Size(185, 47);
+            label4.TabIndex = 12;
+            label4.Text = "Input ID Number then click login. Use only if biometric device is not functioning" +
+    ".";
+            // 
             // verifyControl
             // 
             this.verifyControl.Active = true;
@@ -113,9 +128,9 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(label4);
             this.groupBox3.Controls.Add(this.lblEmployeeType);
-            this.groupBox3.Controls.Add(this.btnGetTimeLogs);
-            this.groupBox3.Controls.Add(this.textBox1);
+            this.groupBox3.Controls.Add(this.txtIDNum);
             this.groupBox3.Controls.Add(this.button1);
             this.groupBox3.Controls.Add(this.lblDepartment);
             this.groupBox3.Controls.Add(this.lblName);
@@ -137,34 +152,23 @@
             this.lblEmployeeType.Size = new System.Drawing.Size(0, 23);
             this.lblEmployeeType.TabIndex = 11;
             // 
-            // btnGetTimeLogs
+            // txtIDNum
             // 
-            this.btnGetTimeLogs.BackColor = System.Drawing.Color.White;
-            this.btnGetTimeLogs.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGetTimeLogs.Location = new System.Drawing.Point(300, 19);
-            this.btnGetTimeLogs.Name = "btnGetTimeLogs";
-            this.btnGetTimeLogs.Size = new System.Drawing.Size(160, 53);
-            this.btnGetTimeLogs.TabIndex = 10;
-            this.btnGetTimeLogs.Text = "Get Time Logs";
-            this.btnGetTimeLogs.UseVisualStyleBackColor = false;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(385, 78);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(75, 20);
-            this.textBox1.TabIndex = 9;
-            this.textBox1.Visible = false;
+            this.txtIDNum.Location = new System.Drawing.Point(283, 71);
+            this.txtIDNum.Name = "txtIDNum";
+            this.txtIDNum.Size = new System.Drawing.Size(109, 20);
+            this.txtIDNum.TabIndex = 9;
+            this.txtIDNum.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtIDNum_KeyPress);
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(385, 107);
+            this.button1.Location = new System.Drawing.Point(393, 69);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 8;
-            this.button1.Text = "button1";
+            this.button1.Text = "Log-in";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Visible = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // lblDepartment
             // 
@@ -464,9 +468,7 @@
 
         private DPFP.Gui.Verification.VerificationControl verifyControl;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.Button btnGetTimeLogs;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox txtIDNum;
         private System.Windows.Forms.Label lblDepartment;
         private System.Windows.Forms.Label lblName;
         private System.Windows.Forms.PictureBox pictureBox2;
@@ -490,5 +492,6 @@
         private System.Windows.Forms.CheckBox chkTimeInPM;
         private System.Windows.Forms.CheckBox chkTimeOutEvening;
         private System.Windows.Forms.CheckBox chkTimeInEvening;
+        private System.Windows.Forms.Button button1;
     }
 }
