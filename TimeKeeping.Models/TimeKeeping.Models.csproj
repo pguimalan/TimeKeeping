@@ -46,6 +46,7 @@
     <Compile Include="EmployeeLeaveModel.cs" />
     <Compile Include="EmployeeModel.cs" />
     <Compile Include="FingerPrintModel.cs" />
+    <Compile Include="PayrollModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SemesterModel.cs" />
     <Compile Include="UserModel.cs" />

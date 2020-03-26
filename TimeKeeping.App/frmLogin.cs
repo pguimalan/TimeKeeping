@@ -63,11 +63,12 @@ namespace TimeKeeping.App
                     MessageBox.Show("Welcome " + username + "!", "Access Granted", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     frmMain frm = new frmMain
                     {
-                        tssUsername = txtusername.Text
+                        tssUsername = username
                     };
                     var model = svc.SystemUser_SelectById(hasAccess);
                     GlobalSession.UserFullName = model.UserFullName;
                     GlobalSession.UserId = model.UserId;
+                    GlobalSession.Username = username;
                     frm.Show();
                     this.Hide();
                 }

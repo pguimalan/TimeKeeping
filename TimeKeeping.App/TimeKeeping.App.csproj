@@ -246,6 +246,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>dsEmployee.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Reports\DS\dsPayroll.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsPayroll.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Reports\frmRptViewer.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -331,6 +336,7 @@
     <EmbeddedResource Include="Reports\frmRptViewer.resx">
       <DependentUpon>frmRptViewer.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RptPayrollList.rdlc" />
     <EmbeddedResource Include="Reports\RptDTR_Individual.rdlc" />
     <EmbeddedResource Include="Reports\RptEmpProfile.rdlc" />
     <EmbeddedResource Include="Reports\RptEmpWorkloadBySemId.rdlc" />
@@ -368,6 +374,17 @@
     </None>
     <None Include="Reports\DS\dsEmployee.xss">
       <DependentUpon>dsEmployee.xsd</DependentUpon>
+    </None>
+    <None Include="Reports\DS\dsPayroll.xsc">
+      <DependentUpon>dsPayroll.xsd</DependentUpon>
+    </None>
+    <None Include="Reports\DS\dsPayroll.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsPayroll.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Reports\DS\dsPayroll.xss">
+      <DependentUpon>dsPayroll.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>

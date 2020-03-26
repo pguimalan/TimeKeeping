@@ -15,5 +15,6 @@ namespace TimeKeeping.App.Helpers
 
         public static string UserFullName;
         public static int UserId;
+        public static string Username;
     }
 }

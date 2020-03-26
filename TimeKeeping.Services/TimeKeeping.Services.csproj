@@ -53,9 +53,11 @@
     <Compile Include="Interface\IEmployeeLeaveService.cs" />
     <Compile Include="Interface\IEmployeeService.cs" />
     <Compile Include="Interface\IFingerPrintService.cs" />
+    <Compile Include="Interface\IPayrollService.cs" />
     <Compile Include="Interface\ISemesterService.cs" />
     <Compile Include="Interface\IUsersService.cs" />
     <Compile Include="Interface\IWorkloadService.cs" />
+    <Compile Include="PayrollService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SemesterService.cs" />
     <Compile Include="UsersService.cs" />

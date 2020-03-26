@@ -58,9 +58,11 @@
     <Compile Include="Interface\IEmployeeLeaveRepository.cs" />
     <Compile Include="Interface\IEmployeeRepository.cs" />
     <Compile Include="Interface\IFingerPrintRepository.cs" />
+    <Compile Include="Interface\IPayrollRepository.cs" />
     <Compile Include="Interface\ISemesterRepository.cs" />
     <Compile Include="Interface\IUsersRepository.cs" />
     <Compile Include="Interface\IWorkloadRepository.cs" />
+    <Compile Include="PayrollRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SemesterRepository.cs" />
     <Compile Include="UsersRepository.cs" />
