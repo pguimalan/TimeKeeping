@@ -31,12 +31,13 @@ namespace TimeKeeping.App
         public frmIndividualTimeLog() : this(new DropdownService(), new DtrService())
         {
             InitializeComponent();
+            loadSemester();
+            loadEmployee();
         }
 
         private void frmIndividualTimeLog_Load(object sender, EventArgs e)
         {
-            loadSemester();
-            loadEmployee();
+            
         }
 
         void loadSemester()
@@ -61,39 +62,36 @@ namespace TimeKeeping.App
 
         void LoadDTR(int empId, int payrollId)
         {
-            try
-            {
-                list = dtr.DTR_IndividualTimeLog(empId, payrollId);
-                listView1.Items.Clear();
+            list = dtr.DTR_IndividualTimeLog(empId, payrollId);
+            listView1.Items.Clear();
 
-                foreach (var li in list)
-                {
-                    ListViewItem lv = new ListViewItem(li.LogId.ToString());
-                    lv.SubItems.Add(li.DayOfWeekName);
-                    lv.SubItems.Add(li.TimeIn_AM);
-                    lv.SubItems.Add(li.TimeIn_AM_MinsLate);
-                    lv.SubItems.Add(li.TimeOut_AM);
-                    lv.SubItems.Add(li.UnderTime_AM);
-                    lv.SubItems.Add(li.TimeIn_PM);
-                    lv.SubItems.Add(li.TimeIn_PM_MinsLate);
-                    lv.SubItems.Add(li.TimeOut_PM);
-                    lv.SubItems.Add(li.UnderTime_PM);
-                    lv.SubItems.Add(li.TimeIn_Evening);
-                    lv.SubItems.Add(li.TimeIn_Evening_MinsLate);
-                    lv.SubItems.Add(li.TimeOut_Evening);
-                    lv.SubItems.Add(li.UnderTime_Evening);
-                    lv.SubItems.Add(li.CurrDate.ToString());
-                    lv.Font = new Font(lv.Font, FontStyle.Regular);
-                    listView1.Items.AddRange(new ListViewItem[] { lv });
-                }
+            foreach (var li in list)
+            {
+                ListViewItem lv = new ListViewItem(li.LogId.ToString());
+                lv.SubItems.Add(li.DayOfWeekName);
+                lv.SubItems.Add(li.TimeIn_AM);
+                lv.SubItems.Add(li.TimeIn_AM_MinsLate);
+                lv.SubItems.Add(li.TimeOut_AM);
+                lv.SubItems.Add(li.UnderTime_AM);
+                lv.SubItems.Add(li.TimeIn_PM);
+                lv.SubItems.Add(li.TimeIn_PM_MinsLate);
+                lv.SubItems.Add(li.TimeOut_PM);
+                lv.SubItems.Add(li.UnderTime_PM);
+                lv.SubItems.Add(li.TimeIn_Evening);
+                lv.SubItems.Add(li.TimeIn_Evening_MinsLate);
+                lv.SubItems.Add(li.TimeOut_Evening);
+                lv.SubItems.Add(li.UnderTime_Evening);
+                lv.SubItems.Add(li.CurrDate.ToString());
+                lv.Font = new Font(lv.Font, FontStyle.Regular);
+                listView1.Items.AddRange(new ListViewItem[] { lv });
             }
-            catch (Exception ex) { MessageBox.Show(ex.Message, "Error"); }
         }
 
         private void bttnRefresh_Click(object sender, EventArgs e)
         {
             loadSemester();
             loadEmployee();
+           
         }
 
         private void bttnExit_Click(object sender, EventArgs e)
@@ -105,11 +103,18 @@ namespace TimeKeeping.App
         {
             try
             {
+                if (cmbEmployeeName.SelectedValue == null)
+                {
+                    LoadDTR(0, 0);
+                    return;
+                }
+
+
                 LoadDTR((int)cmbEmployeeName.SelectedValue, (int)cmbPayrollPeriod.SelectedValue);
             }
             catch
             {
-                LoadDTR(0,0);
+                LoadDTR(0, 0);
             }
         }
 
@@ -117,11 +122,17 @@ namespace TimeKeeping.App
         {
             try
             {
+                if (cmbEmployeeName.SelectedValue == null)
+                {
+                    LoadDTR(0, 0);
+                    return;
+                }
+                    
                 LoadDTR((int)cmbEmployeeName.SelectedValue, (int)cmbPayrollPeriod.SelectedValue);
             }
             catch
             {
-                LoadDTR(0, 0);
+                LoadDTR(0,0);
             }
         }
 
