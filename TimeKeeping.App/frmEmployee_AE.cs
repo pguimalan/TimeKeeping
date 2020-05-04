@@ -87,6 +87,8 @@ namespace TimeKeeping.App
             label76.Text = "";
             txtBasicPay.Text = "0.00";
             button6.Enabled = false;
+            dtBdate.CustomFormat = " ";
+            dtBdate.Format = DateTimePickerFormat.Custom;
         }
 
         void loadDepartment()
@@ -110,7 +112,18 @@ namespace TimeKeeping.App
                 txtFirstName.Text = emp.EmployeeBasicInfo.FirstName;
                 txtMiddleName.Text = emp.EmployeeBasicInfo.MiddleName;
                 cmbSuffix.Text = emp.EmployeeBasicInfo.Suffix;
-                dtBdate.Value = DateTime.Parse(emp.EmployeeBasicInfo.BirthDate);
+
+                if (emp.EmployeeBasicInfo.BirthDate == "1/1/1900 12:00:00 AM")
+                {
+                    dtBdate.CustomFormat = " ";
+                    dtBdate.Format = DateTimePickerFormat.Custom;
+                }
+
+                else
+                {
+                    dtBdate.Value = DateTime.Parse(emp.EmployeeBasicInfo.BirthDate);
+                }
+
                 txtPlaceOfBirth.Text = emp.EmployeeBasicInfo.PlaceOfBirth;
                 cmbGender.Text = emp.EmployeeBasicInfo.Gender;
                 cmbCitizen.Text = emp.EmployeeBasicInfo.Citizenship;
@@ -197,9 +210,9 @@ namespace TimeKeeping.App
                 cmbRateOption.Text = emp.EmployeeEmpInfo.BasicRateOption;
 
                 bttnSave.Text = "&Edit Item";
-                if (File.Exists(AppDomain.CurrentDomain.BaseDirectory + "\\EmpPics\\ProfilePic\\"+ employeeId +"\\" + emp.EmployeeBasicInfo.PicName) == true)
+                if (File.Exists(AppDomain.CurrentDomain.BaseDirectory + "\\EmpPics\\ProfilePic\\" + employeeId + "\\" + emp.EmployeeBasicInfo.PicName) == true)
                 {
-                    picEmployee.Image = Image.FromFile(AppDomain.CurrentDomain.BaseDirectory + "\\EmpPics\\ProfilePic\\"+ employeeId +"\\" + emp.EmployeeBasicInfo.PicName, true);
+                    picEmployee.Image = Image.FromFile(AppDomain.CurrentDomain.BaseDirectory + "\\EmpPics\\ProfilePic\\" + employeeId + "\\" + emp.EmployeeBasicInfo.PicName, true);
                 }
 
                 gbLeaveCredits.Enabled = true;
@@ -207,6 +220,7 @@ namespace TimeKeeping.App
                 loadLeaveCredits();
                 button6.Enabled = true;
             }
+            else bttnRefresh.PerformClick();
         }
 
         void loadLeaveCredits()
@@ -218,103 +232,109 @@ namespace TimeKeeping.App
 
         private void bttnSave_Click(object sender, EventArgs e)
         {
-            int result;
+                int result;
             picName = (txtFirstName.Text + " " + txtLastName.Text + ".jpeg");
 
             if (Validation.IsTextEmpty(txtLastName))
             {
                 tabControl1.SelectedIndex = 0;
-                Validation.FocusTextBox(txtLastName, "Last Name");                
+                Validation.FocusTextBox(txtLastName, "Last Name");
                 return;
             }
             else if (Validation.IsTextEmpty(txtFirstName))
             {
                 tabControl1.SelectedIndex = 0;
-                Validation.FocusTextBox(txtFirstName, "First Name");                
+                Validation.FocusTextBox(txtFirstName, "First Name");
                 return;
             }
             else if (Validation.IsTextEmpty(txtMiddleName))
             {
                 tabControl1.SelectedIndex = 0;
-                Validation.FocusTextBox(txtMiddleName, "Middle Name");                
+                Validation.FocusTextBox(txtMiddleName, "Middle Name");
                 return;
             }
             else if (Validation.IsComboEmpty(cmbGender))
             {
                 tabControl1.SelectedIndex = 0;
-                Validation.FocusComboBox(cmbGender, "Gender");                
+                Validation.FocusComboBox(cmbGender, "Gender");
                 return;
             }
             else if (Validation.IsComboEmpty(cmbCivilStatus))
             {
                 tabControl1.SelectedIndex = 0;
-                Validation.FocusComboBox(cmbCivilStatus, "Marital Status");                
+                Validation.FocusComboBox(cmbCivilStatus, "Marital Status");
                 return;
             }
             else if (Validation.IsComboEmpty(cmbCitizen))
             {
                 tabControl1.SelectedIndex = 0;
-                Validation.FocusComboBox(cmbCitizen, "Citizenship");                
+                Validation.FocusComboBox(cmbCitizen, "Citizenship");
                 return;
             }
             else if (Validation.IsTextEmpty(txtResidentialAddress1))
             {
                 tabControl1.SelectedIndex = 0;
-                Validation.FocusTextBox(txtResidentialAddress1, "Residential street address");                
+                Validation.FocusTextBox(txtResidentialAddress1, "Residential street address");
                 return;
             }
             else if (txtResidentialAddress2.Text == string.Empty)
             {
                 tabControl1.SelectedIndex = 0;
-                ShowMessage.CustomErrorMessage("Residential Address2 is empty. Please check the field.");                
+                ShowMessage.CustomErrorMessage("Residential Address2 is empty. Please check the field.");
                 button2.PerformClick();
             }
             else if (cmbCivilStatus.Text == "Married" && Validation.IsTextEmpty(txtSpouseName))
             {
                 tabControl1.SelectedIndex = 2;
-                Validation.FocusTextBox(txtSpouseName, "Spouse Name");               
+                Validation.FocusTextBox(txtSpouseName, "Spouse Name");
 
                 return;
             }
             else if (Validation.IsTextEmpty(txtDesignation))
             {
                 tabControl1.SelectedIndex = 3;
-                Validation.FocusTextBox(txtDesignation, "Designation");                
+                Validation.FocusTextBox(txtDesignation, "Designation");
                 return;
             }
             else if (Validation.IsComboEmpty(cmbDepartment))
             {
                 tabControl1.SelectedIndex = 3;
-                Validation.FocusComboBox(cmbDepartment, "Department");                
+                Validation.FocusComboBox(cmbDepartment, "Department");
                 return;
             }
             else if (Validation.IsComboEmpty(cmbEmpType))
             {
                 tabControl1.SelectedIndex = 3;
-                Validation.FocusComboBox(cmbEmpType, "Employee Type");                
+                Validation.FocusComboBox(cmbEmpType, "Employee Type");
                 return;
             }
-            else if (double.Parse(txtBasicPay.Text) <= 0) 
+            else if (double.Parse(txtBasicPay.Text) <= 0)
             {
                 tabControl1.SelectedIndex = 3;
-                MessageBox.Show("Invalid basic pay value.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);                
-                txtBasicPay.Focus();                
+                MessageBox.Show("Invalid basic pay value.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtBasicPay.Focus();
                 return;
             }
             else if (Validation.IsComboEmpty(cmbRateOption))
             {
                 tabControl1.SelectedIndex = 3;
-                Validation.FocusComboBox(cmbRateOption, "Basic Rate Option");                
+                Validation.FocusComboBox(cmbRateOption, "Basic Rate Option");
                 return;
             }
             else if (Validation.IsComboEmpty(cmbEmpStatus))
             {
                 tabControl1.SelectedIndex = 3;
-                Validation.FocusComboBox(cmbEmpStatus, "Employee Status");                
+                Validation.FocusComboBox(cmbEmpStatus, "Employee Status");
                 return;
             }
             else
             {
+                string bdate = "";
+                if (dtBdate.Text == "")
+                    bdate = "";
+                else bdate = dtBdate.Value.ToString("yyyy-MM-dd");
+
+                dtBdate.Format = DateTimePickerFormat.Custom;
                 EmployeeForInsertModel em = new EmployeeForInsertModel
                 {
                     EmployeeBasicInfo = new EmployeeBasicInfoForInsertModel
@@ -323,7 +343,7 @@ namespace TimeKeeping.App
                         FirstName = txtFirstName.Text,
                         MiddleName = txtMiddleName.Text,
                         Suffix = cmbSuffix.Text,
-                        BirthDate = dtBdate.Value.ToString("yyyy-MM-dd"),
+                        BirthDate = bdate,
                         PlaceOfBirth = txtPlaceOfBirth.Text,
                         Gender = cmbGender.Text,
                         Citizenship = cmbCitizen.Text,
@@ -448,7 +468,7 @@ namespace TimeKeeping.App
 
                     em.EmployeeId = this.employeeId;
                     empSvc.Employee_Update(em);
-                    ShowMessage.ShowMessageBox(2);                   
+                    ShowMessage.ShowMessageBox(2);
                 }
             }
         }
@@ -776,6 +796,11 @@ namespace TimeKeeping.App
             frmEnrollFinger f = new frmEnrollFinger();
             f.employeeId = employeeId;
             f.ShowDialog();
+        }
+
+        private void dtBdate_ValueChanged(object sender, EventArgs e)
+        {
+            dtBdate.Format = DateTimePickerFormat.Short;
         }
     }
 }

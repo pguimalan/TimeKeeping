@@ -1446,6 +1446,7 @@
             // 
             this.dtBdate.CalendarForeColor = System.Drawing.Color.Maroon;
             this.dtBdate.CalendarTitleForeColor = System.Drawing.Color.Maroon;
+            this.dtBdate.CustomFormat = " ";
             this.dtBdate.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtBdate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtBdate.Location = new System.Drawing.Point(161, 92);
@@ -1453,6 +1454,7 @@
             this.dtBdate.Size = new System.Drawing.Size(103, 23);
             this.dtBdate.TabIndex = 5;
             this.dtBdate.Value = new System.DateTime(2020, 2, 9, 0, 0, 0, 0);
+            this.dtBdate.ValueChanged += new System.EventHandler(this.dtBdate_ValueChanged);
             // 
             // label13
             // 
