@@ -151,7 +151,7 @@
             this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(170, 21);
             this.txtPassword.TabIndex = 1;
-            this.txtPassword.Text = "abc123";
+            this.txtPassword.Text = "03201984";
             // 
             // txtusername
             // 

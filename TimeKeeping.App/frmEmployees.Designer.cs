@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmEmployees));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.linkLabel5 = new System.Windows.Forms.LinkLabel();
             this.button1 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -49,12 +50,14 @@
             this.bttnRefresh = new System.Windows.Forms.Button();
             this.lblDepartment = new System.Windows.Forms.Label();
             this.txtSearch = new System.Windows.Forms.TextBox();
-            this.linkLabel5 = new System.Windows.Forms.LinkLabel();
+            this.empstatus = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.label5 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.linkLabel5);
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.label4);
@@ -71,9 +74,20 @@
             this.groupBox1.Controls.Add(this.txtSearch);
             this.groupBox1.Location = new System.Drawing.Point(6, 1);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(793, 456);
+            this.groupBox1.Size = new System.Drawing.Size(895, 456);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
+            // 
+            // linkLabel5
+            // 
+            this.linkLabel5.AutoSize = true;
+            this.linkLabel5.Location = new System.Drawing.Point(9, 424);
+            this.linkLabel5.Name = "linkLabel5";
+            this.linkLabel5.Size = new System.Drawing.Size(109, 13);
+            this.linkLabel5.TabIndex = 296;
+            this.linkLabel5.TabStop = true;
+            this.linkLabel5.Text = "Print Employee Profile";
+            this.linkLabel5.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel5_LinkClicked);
             // 
             // button1
             // 
@@ -83,7 +97,7 @@
             this.button1.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(709, 19);
+            this.button1.Location = new System.Drawing.Point(810, 19);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(71, 25);
             this.button1.TabIndex = 290;
@@ -173,7 +187,8 @@
             this.EmpName,
             this.Designation,
             this.ContactNumbers,
-            this.Department});
+            this.Department,
+            this.empstatus});
             this.listView1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.listView1.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listView1.ForeColor = System.Drawing.Color.Maroon;
@@ -183,7 +198,7 @@
             this.listView1.Location = new System.Drawing.Point(12, 51);
             this.listView1.MultiSelect = false;
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(768, 358);
+            this.listView1.Size = new System.Drawing.Size(870, 358);
             this.listView1.TabIndex = 175;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -231,7 +246,7 @@
             this.bttnExit.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bttnExit.ForeColor = System.Drawing.Color.White;
             this.bttnExit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bttnExit.Location = new System.Drawing.Point(716, 415);
+            this.bttnExit.Location = new System.Drawing.Point(817, 415);
             this.bttnExit.Name = "bttnExit";
             this.bttnExit.Size = new System.Drawing.Size(64, 30);
             this.bttnExit.TabIndex = 174;
@@ -247,7 +262,7 @@
             this.bttnEdit.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bttnEdit.ForeColor = System.Drawing.Color.White;
             this.bttnEdit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bttnEdit.Location = new System.Drawing.Point(643, 415);
+            this.bttnEdit.Location = new System.Drawing.Point(744, 415);
             this.bttnEdit.Name = "bttnEdit";
             this.bttnEdit.Size = new System.Drawing.Size(71, 30);
             this.bttnEdit.TabIndex = 173;
@@ -262,7 +277,7 @@
             this.bttnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bttnAdd.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bttnAdd.ForeColor = System.Drawing.Color.White;
-            this.bttnAdd.Location = new System.Drawing.Point(564, 415);
+            this.bttnAdd.Location = new System.Drawing.Point(665, 415);
             this.bttnAdd.Name = "bttnAdd";
             this.bttnAdd.Size = new System.Drawing.Size(77, 30);
             this.bttnAdd.TabIndex = 172;
@@ -278,7 +293,7 @@
             this.bttnRefresh.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bttnRefresh.ForeColor = System.Drawing.Color.White;
             this.bttnRefresh.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bttnRefresh.Location = new System.Drawing.Point(635, 19);
+            this.bttnRefresh.Location = new System.Drawing.Point(736, 19);
             this.bttnRefresh.Name = "bttnRefresh";
             this.bttnRefresh.Size = new System.Drawing.Size(72, 25);
             this.bttnRefresh.TabIndex = 171;
@@ -290,7 +305,7 @@
             // 
             this.lblDepartment.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDepartment.ForeColor = System.Drawing.Color.Navy;
-            this.lblDepartment.Location = new System.Drawing.Point(380, 21);
+            this.lblDepartment.Location = new System.Drawing.Point(481, 21);
             this.lblDepartment.Name = "lblDepartment";
             this.lblDepartment.Size = new System.Drawing.Size(56, 20);
             this.lblDepartment.TabIndex = 169;
@@ -301,28 +316,36 @@
             this.txtSearch.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtSearch.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSearch.ForeColor = System.Drawing.Color.Maroon;
-            this.txtSearch.Location = new System.Drawing.Point(442, 19);
+            this.txtSearch.Location = new System.Drawing.Point(543, 19);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(187, 22);
             this.txtSearch.TabIndex = 170;
             this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
-            // linkLabel5
+            // empstatus
             // 
-            this.linkLabel5.AutoSize = true;
-            this.linkLabel5.Location = new System.Drawing.Point(9, 424);
-            this.linkLabel5.Name = "linkLabel5";
-            this.linkLabel5.Size = new System.Drawing.Size(109, 13);
-            this.linkLabel5.TabIndex = 296;
-            this.linkLabel5.TabStop = true;
-            this.linkLabel5.Text = "Print Employee Profile";
-            this.linkLabel5.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel5_LinkClicked);
+            this.empstatus.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.empstatus.Width = 101;
+            // 
+            // label5
+            // 
+            this.label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.label5.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(782, 51);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(99, 23);
+            this.label5.TabIndex = 297;
+            this.label5.Text = "STATUS";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // frmEmployees
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(812, 464);
+            this.ClientSize = new System.Drawing.Size(912, 464);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -361,5 +384,7 @@
         private System.Windows.Forms.Label txtResidentialAddress2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.LinkLabel linkLabel5;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ColumnHeader empstatus;
     }
 }

@@ -323,7 +323,7 @@ namespace TimeKeeping.App
                         FirstName = txtFirstName.Text,
                         MiddleName = txtMiddleName.Text,
                         Suffix = cmbSuffix.Text,
-                        BirthDate = dtBdate.Text,
+                        BirthDate = dtBdate.Value.ToString("yyyy-MM-dd"),
                         PlaceOfBirth = txtPlaceOfBirth.Text,
                         Gender = cmbGender.Text,
                         Citizenship = cmbCitizen.Text,

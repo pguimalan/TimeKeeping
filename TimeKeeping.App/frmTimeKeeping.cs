@@ -169,6 +169,9 @@ namespace TimeKeeping.App
                     case -14:
                         lblRemarks.Text = "Employee already logged out for evening shift.";
                         break;
+                    case -15:
+                        lblRemarks.Text = "Employmenst status is in-active.";
+                        break;
                 }
             }
             catch

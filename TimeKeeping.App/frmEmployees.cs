@@ -76,6 +76,7 @@ namespace TimeKeeping.App
                     lv.SubItems.Add(li.Designation);
                     lv.SubItems.Add(li.ContactNumbers);
                     lv.SubItems.Add(li.Department);
+                    lv.SubItems.Add(li.EmpStatus);
                     lv.Font = new Font(lv.Font, FontStyle.Regular);
                     listView1.Items.AddRange(new ListViewItem[] { lv });
                 }

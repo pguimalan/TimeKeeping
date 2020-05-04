@@ -107,6 +107,7 @@ namespace TimeKeeping.Models
         public string Designation { get; set; }
         public string ContactNumbers { get; set; }
         public string Department { get; set; }
+        public string EmpStatus { get; set; }
     }
 
     public class EmployeeLeaveCreditsModel
