@@ -48,7 +48,7 @@ namespace TimeKeeping.App
         {
             try
             {
-                list = dsvc.DTR_GenerateLog(dtDate.Value.ToString(), dtDate.Value.ToString(), cmbDepartment.Text);
+                list = dsvc.DTR_GenerateLog(dtDate.Value.ToString("yyyy-MM-dd"), dtDate.Value.ToString("yyyy-MM-dd"), cmbDepartment.Text);
                 listView1.Items.Clear();
                 foreach (var li in list)
                 {
