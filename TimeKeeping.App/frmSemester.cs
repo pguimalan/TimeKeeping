@@ -89,10 +89,5 @@ namespace TimeKeeping.App
                 loadvars("");
             }
         }
-
-        private void listView1_Leave(object sender, EventArgs e)
-        {
-            bttnEdit.PerformClick();
-        }
     }
 }

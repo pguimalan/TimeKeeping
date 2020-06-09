@@ -218,11 +218,11 @@ namespace TimeKeeping.App
                 dtTimeOutEvening.Focus();
                 return;
             }
-            else if (!chkTimeInAM.Checked && !chkTimeOutAM.Checked && !chkTimeInPM.Checked && !chkTimeOutPM.Checked && !chkTimeInEvening.Checked && !chkTimeOutEvening.Checked)
-            {
-                MessageBox.Show("Invalid Time-in/Time-out data. Pleae cheeck.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
+            //else if (!chkTimeInAM.Checked && !chkTimeOutAM.Checked && !chkTimeInPM.Checked && !chkTimeOutPM.Checked && !chkTimeInEvening.Checked && !chkTimeOutEvening.Checked)
+            //{
+            //    MessageBox.Show("Invalid Time-in/Time-out data. Pleae cheeck.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //    return;
+            //}
             else
             {
                 var log = new DTRForceUpdateModel

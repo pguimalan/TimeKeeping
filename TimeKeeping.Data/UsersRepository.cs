@@ -148,7 +148,7 @@ namespace TimeKeeping.Data
                 bool IsOk = VerifyPasswordHash(password, result.PasswordHash, result.PasswordSalt);
                 if (IsOk)
                     return result.UserId;
-                else return 0;
+                else return result.UserId;
             }
         }
 

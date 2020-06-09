@@ -79,7 +79,7 @@ namespace TimeKeeping.App
 
         private void semesterToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmSemester frm = new frmSemester();
+            frmSemester frm = new frmSemester();            
             frm.ShowDialog();
         }
 

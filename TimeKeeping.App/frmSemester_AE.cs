@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices.WindowsRuntime;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -106,36 +107,53 @@ namespace TimeKeeping.App
                 ShowMessage.CustomErrorMessage("New Semester set-up must be active by default.");
                 return;
             }
-            else
-            {
-                SemesterModel md = new SemesterModel
-                {
-                    SemesterDesc = cmbSemester.Text,
-                    StartDate = dtStart.Value,
-                    EndDate = dtEnd.Value,
-                    SchoolYear = txtSchoolYear.Text,
-                    IsActive = rdActive.Checked
-                };
 
-                if (ADD_STATE)
+            else if(txtSchoolYear.Text.Length< 9)
+            {
+                ShowMessage.CustomErrorMessage("Invalid school year value or format. must be 0000-0000");
+                txtSchoolYear.Focus();
+                return;
+            }
+            else if(txtSchoolYear.Text.Length > 8)
+            {
+                var y1 = int.Parse(txtSchoolYear.Text.Split('-')[0]);
+                var y2 = int.Parse(txtSchoolYear.Text.Split('-')[1]);
+                if(y1 > y2)
                 {
-                    result = svc.Semester_Insert(md);
-                    if (result > 0)
-                    {
-                        ShowMessage.ShowMessageBox(1);
-                        Close();
-                    }
-                    else if (result == -1)
-                        ShowMessage.ShowMessageBox(4);
-                    else
-                        ShowMessage.ShowMessageBox(3);
+                    ShowMessage.CustomErrorMessage("Invalid school year value or format. Start year must be equal or less than to end year");
+                    return;
                 }
                 else
                 {
-                    md.SemesterId = semesterId;
-                    svc.Semester_Update(md);
-                    ShowMessage.ShowMessageBox(2);
-                    Close(); 
+                    SemesterModel md = new SemesterModel
+                    {
+                        SemesterDesc = cmbSemester.Text,
+                        StartDate = dtStart.Value,
+                        EndDate = dtEnd.Value,
+                        SchoolYear = txtSchoolYear.Text,
+                        IsActive = rdActive.Checked
+                    };
+
+                    if (ADD_STATE)
+                    {
+                        result = svc.Semester_Insert(md);
+                        if (result > 0)
+                        {
+                            ShowMessage.ShowMessageBox(1);
+                            Close();
+                        }
+                        else if (result == -1)
+                            ShowMessage.ShowMessageBox(4);
+                        else
+                            ShowMessage.ShowMessageBox(3);
+                    }
+                    else
+                    {
+                        md.SemesterId = semesterId;
+                        svc.Semester_Update(md);
+                        ShowMessage.ShowMessageBox(2);
+                        Close();
+                    }
                 }
             }
         }

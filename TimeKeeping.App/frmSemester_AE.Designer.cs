@@ -30,30 +30,32 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSemester_AE));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.cmbSemester = new System.Windows.Forms.ComboBox();
-            this.label54 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.dtStart = new System.Windows.Forms.DateTimePicker();
+            this.rdInactive = new System.Windows.Forms.RadioButton();
+            this.rdActive = new System.Windows.Forms.RadioButton();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.dtEnd = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtSchoolYear = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.rdActive = new System.Windows.Forms.RadioButton();
-            this.rdInactive = new System.Windows.Forms.RadioButton();
+            this.dtStart = new System.Windows.Forms.DateTimePicker();
+            this.label1 = new System.Windows.Forms.Label();
+            this.cmbSemester = new System.Windows.Forms.ComboBox();
+            this.label54 = new System.Windows.Forms.Label();
             this.bttnExit = new System.Windows.Forms.Button();
             this.bttnRefresh = new System.Windows.Forms.Button();
             this.bttnSave = new System.Windows.Forms.Button();
+            this.txtSchoolYear = new System.Windows.Forms.MaskedTextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label5);
+            this.groupBox1.Controls.Add(this.txtSchoolYear);
             this.groupBox1.Controls.Add(this.rdInactive);
             this.groupBox1.Controls.Add(this.rdActive);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.txtSchoolYear);
             this.groupBox1.Controls.Add(this.dtEnd);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.dtStart);
@@ -65,6 +67,101 @@
             this.groupBox1.Size = new System.Drawing.Size(364, 178);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
+            // 
+            // rdInactive
+            // 
+            this.rdInactive.AutoSize = true;
+            this.rdInactive.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdInactive.ForeColor = System.Drawing.Color.Maroon;
+            this.rdInactive.Location = new System.Drawing.Point(187, 145);
+            this.rdInactive.Name = "rdInactive";
+            this.rdInactive.Size = new System.Drawing.Size(75, 20);
+            this.rdInactive.TabIndex = 6;
+            this.rdInactive.TabStop = true;
+            this.rdInactive.Text = "In-active";
+            this.rdInactive.UseVisualStyleBackColor = true;
+            this.rdInactive.CheckedChanged += new System.EventHandler(this.rdInactive_CheckedChanged);
+            // 
+            // rdActive
+            // 
+            this.rdActive.AutoSize = true;
+            this.rdActive.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdActive.ForeColor = System.Drawing.Color.Maroon;
+            this.rdActive.Location = new System.Drawing.Point(112, 145);
+            this.rdActive.Name = "rdActive";
+            this.rdActive.Size = new System.Drawing.Size(60, 20);
+            this.rdActive.TabIndex = 5;
+            this.rdActive.TabStop = true;
+            this.rdActive.Text = "Active";
+            this.rdActive.UseVisualStyleBackColor = true;
+            this.rdActive.CheckedChanged += new System.EventHandler(this.rdActive_CheckedChanged);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.label4.Location = new System.Drawing.Point(39, 145);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(49, 16);
+            this.label4.TabIndex = 277;
+            this.label4.Text = "Status:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.label3.Location = new System.Drawing.Point(8, 116);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(81, 16);
+            this.label3.TabIndex = 276;
+            this.label3.Text = "School Year:";
+            // 
+            // dtEnd
+            // 
+            this.dtEnd.CalendarForeColor = System.Drawing.Color.Maroon;
+            this.dtEnd.CalendarTitleForeColor = System.Drawing.Color.Maroon;
+            this.dtEnd.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtEnd.Location = new System.Drawing.Point(113, 86);
+            this.dtEnd.Name = "dtEnd";
+            this.dtEnd.Size = new System.Drawing.Size(230, 23);
+            this.dtEnd.TabIndex = 3;
+            this.dtEnd.Value = new System.DateTime(2020, 2, 7, 0, 0, 0, 0);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.label2.Location = new System.Drawing.Point(25, 86);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(64, 16);
+            this.label2.TabIndex = 273;
+            this.label2.Text = "End Date:";
+            // 
+            // dtStart
+            // 
+            this.dtStart.CalendarForeColor = System.Drawing.Color.Maroon;
+            this.dtStart.CalendarTitleForeColor = System.Drawing.Color.Maroon;
+            this.dtStart.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtStart.Location = new System.Drawing.Point(113, 57);
+            this.dtStart.Name = "dtStart";
+            this.dtStart.Size = new System.Drawing.Size(230, 23);
+            this.dtStart.TabIndex = 2;
+            this.dtStart.Value = new System.DateTime(2020, 2, 7, 0, 0, 0, 0);
+            this.dtStart.ValueChanged += new System.EventHandler(this.dtStart_ValueChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.label1.Location = new System.Drawing.Point(18, 57);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(71, 16);
+            this.label1.TabIndex = 271;
+            this.label1.Text = "Start Date:";
             // 
             // cmbSemester
             // 
@@ -92,112 +189,6 @@
             this.label54.Size = new System.Drawing.Size(68, 16);
             this.label54.TabIndex = 270;
             this.label54.Text = "Semester:";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.label1.Location = new System.Drawing.Point(18, 57);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(71, 16);
-            this.label1.TabIndex = 271;
-            this.label1.Text = "Start Date:";
-            // 
-            // dtStart
-            // 
-            this.dtStart.CalendarForeColor = System.Drawing.Color.Maroon;
-            this.dtStart.CalendarTitleForeColor = System.Drawing.Color.Maroon;
-            this.dtStart.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtStart.Location = new System.Drawing.Point(113, 57);
-            this.dtStart.Name = "dtStart";
-            this.dtStart.Size = new System.Drawing.Size(230, 23);
-            this.dtStart.TabIndex = 2;
-            this.dtStart.Value = new System.DateTime(2020, 2, 7, 0, 0, 0, 0);
-            this.dtStart.ValueChanged += new System.EventHandler(this.dtStart_ValueChanged);
-            // 
-            // dtEnd
-            // 
-            this.dtEnd.CalendarForeColor = System.Drawing.Color.Maroon;
-            this.dtEnd.CalendarTitleForeColor = System.Drawing.Color.Maroon;
-            this.dtEnd.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtEnd.Location = new System.Drawing.Point(113, 86);
-            this.dtEnd.Name = "dtEnd";
-            this.dtEnd.Size = new System.Drawing.Size(230, 23);
-            this.dtEnd.TabIndex = 3;
-            this.dtEnd.Value = new System.DateTime(2020, 2, 7, 0, 0, 0, 0);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.label2.Location = new System.Drawing.Point(25, 86);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(64, 16);
-            this.label2.TabIndex = 273;
-            this.label2.Text = "End Date:";
-            // 
-            // txtSchoolYear
-            // 
-            this.txtSchoolYear.BackColor = System.Drawing.Color.White;
-            this.txtSchoolYear.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtSchoolYear.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSchoolYear.ForeColor = System.Drawing.Color.Maroon;
-            this.txtSchoolYear.Location = new System.Drawing.Point(113, 116);
-            this.txtSchoolYear.Name = "txtSchoolYear";
-            this.txtSchoolYear.Size = new System.Drawing.Size(230, 23);
-            this.txtSchoolYear.TabIndex = 4;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.label3.Location = new System.Drawing.Point(8, 116);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(81, 16);
-            this.label3.TabIndex = 276;
-            this.label3.Text = "School Year:";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.label4.Location = new System.Drawing.Point(39, 145);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(49, 16);
-            this.label4.TabIndex = 277;
-            this.label4.Text = "Status:";
-            // 
-            // rdActive
-            // 
-            this.rdActive.AutoSize = true;
-            this.rdActive.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdActive.ForeColor = System.Drawing.Color.Maroon;
-            this.rdActive.Location = new System.Drawing.Point(112, 145);
-            this.rdActive.Name = "rdActive";
-            this.rdActive.Size = new System.Drawing.Size(60, 20);
-            this.rdActive.TabIndex = 5;
-            this.rdActive.TabStop = true;
-            this.rdActive.Text = "Active";
-            this.rdActive.UseVisualStyleBackColor = true;
-            this.rdActive.CheckedChanged += new System.EventHandler(this.rdActive_CheckedChanged);
-            // 
-            // rdInactive
-            // 
-            this.rdInactive.AutoSize = true;
-            this.rdInactive.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdInactive.ForeColor = System.Drawing.Color.Maroon;
-            this.rdInactive.Location = new System.Drawing.Point(187, 145);
-            this.rdInactive.Name = "rdInactive";
-            this.rdInactive.Size = new System.Drawing.Size(75, 20);
-            this.rdInactive.TabIndex = 6;
-            this.rdInactive.TabStop = true;
-            this.rdInactive.Text = "In-active";
-            this.rdInactive.UseVisualStyleBackColor = true;
-            this.rdInactive.CheckedChanged += new System.EventHandler(this.rdInactive_CheckedChanged);
             // 
             // bttnExit
             // 
@@ -249,11 +240,32 @@
             this.bttnSave.UseVisualStyleBackColor = false;
             this.bttnSave.Click += new System.EventHandler(this.bttnSave_Click);
             // 
+            // txtSchoolYear
+            // 
+            this.txtSchoolYear.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSchoolYear.ForeColor = System.Drawing.Color.Maroon;
+            this.txtSchoolYear.Location = new System.Drawing.Point(112, 115);
+            this.txtSchoolYear.Mask = "0000-0000";
+            this.txtSchoolYear.Name = "txtSchoolYear";
+            this.txtSchoolYear.Size = new System.Drawing.Size(71, 22);
+            this.txtSchoolYear.TabIndex = 278;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.label5.Location = new System.Drawing.Point(189, 118);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(140, 16);
+            this.label5.TabIndex = 279;
+            this.label5.Text = "Format: ex. 2020-2021";
+            // 
             // frmSemester_AE
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(388, 233);
+            this.ClientSize = new System.Drawing.Size(386, 233);
             this.Controls.Add(this.bttnExit);
             this.Controls.Add(this.bttnRefresh);
             this.Controls.Add(this.bttnSave);
@@ -285,9 +297,10 @@
         private System.Windows.Forms.RadioButton rdActive;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label txtSchoolYear;
         private System.Windows.Forms.Button bttnExit;
         private System.Windows.Forms.Button bttnRefresh;
         public System.Windows.Forms.Button bttnSave;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.MaskedTextBox txtSchoolYear;
     }
 }
