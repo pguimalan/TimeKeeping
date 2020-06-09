@@ -30,14 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmEmployee_AE));
             this.label41 = new System.Windows.Forms.Label();
-            this.txtSL = new System.Windows.Forms.Label();
-            this.label78 = new System.Windows.Forms.Label();
-            this.txtVL = new System.Windows.Forms.Label();
-            this.label79 = new System.Windows.Forms.Label();
-            this.button5 = new System.Windows.Forms.Button();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.cmbRateOption = new System.Windows.Forms.ComboBox();
-            this.gbLeaveCredits = new System.Windows.Forms.GroupBox();
             this.cmbEmpStatus = new System.Windows.Forms.ComboBox();
             this.label82 = new System.Windows.Forms.Label();
             this.txtPagIbig = new System.Windows.Forms.MaskedTextBox();
@@ -202,7 +196,6 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.button6 = new System.Windows.Forms.Button();
             this.tabPage4.SuspendLayout();
-            this.gbLeaveCredits.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -222,69 +215,10 @@
             this.label41.TabIndex = 266;
             this.label41.Text = "Blk./House No./Street Address";
             // 
-            // txtSL
-            // 
-            this.txtSL.BackColor = System.Drawing.Color.White;
-            this.txtSL.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtSL.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSL.ForeColor = System.Drawing.Color.Maroon;
-            this.txtSL.Location = new System.Drawing.Point(132, 65);
-            this.txtSL.Name = "txtSL";
-            this.txtSL.Size = new System.Drawing.Size(40, 23);
-            this.txtSL.TabIndex = 260;
-            // 
-            // label78
-            // 
-            this.label78.AutoSize = true;
-            this.label78.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label78.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.label78.Location = new System.Drawing.Point(8, 38);
-            this.label78.Name = "label78";
-            this.label78.Size = new System.Drawing.Size(110, 16);
-            this.label78.TabIndex = 256;
-            this.label78.Text = "Vacation Leave/s:";
-            // 
-            // txtVL
-            // 
-            this.txtVL.BackColor = System.Drawing.Color.White;
-            this.txtVL.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtVL.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtVL.ForeColor = System.Drawing.Color.Maroon;
-            this.txtVL.Location = new System.Drawing.Point(132, 35);
-            this.txtVL.Name = "txtVL";
-            this.txtVL.Size = new System.Drawing.Size(40, 23);
-            this.txtVL.TabIndex = 259;
-            // 
-            // label79
-            // 
-            this.label79.AutoSize = true;
-            this.label79.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label79.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.label79.Location = new System.Drawing.Point(34, 65);
-            this.label79.Name = "label79";
-            this.label79.Size = new System.Drawing.Size(84, 16);
-            this.label79.TabIndex = 257;
-            this.label79.Text = "Sick Leave/s:";
-            // 
-            // button5
-            // 
-            this.button5.BackColor = System.Drawing.Color.RoyalBlue;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.Location = new System.Drawing.Point(11, 93);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(161, 29);
-            this.button5.TabIndex = 258;
-            this.button5.Text = "Update Leave Credits";
-            this.button5.UseVisualStyleBackColor = false;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
-            // 
             // tabPage4
             // 
             this.tabPage4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tabPage4.Controls.Add(this.cmbRateOption);
-            this.tabPage4.Controls.Add(this.gbLeaveCredits);
             this.tabPage4.Controls.Add(this.cmbEmpStatus);
             this.tabPage4.Controls.Add(this.label82);
             this.tabPage4.Controls.Add(this.txtPagIbig);
@@ -344,27 +278,10 @@
             "Monthly",
             "Daily",
             "Hourly"});
-            this.cmbRateOption.Location = new System.Drawing.Point(210, 113);
+            this.cmbRateOption.Location = new System.Drawing.Point(253, 113);
             this.cmbRateOption.Name = "cmbRateOption";
-            this.cmbRateOption.Size = new System.Drawing.Size(69, 24);
+            this.cmbRateOption.Size = new System.Drawing.Size(105, 24);
             this.cmbRateOption.TabIndex = 284;
-            // 
-            // gbLeaveCredits
-            // 
-            this.gbLeaveCredits.Controls.Add(this.txtSL);
-            this.gbLeaveCredits.Controls.Add(this.label78);
-            this.gbLeaveCredits.Controls.Add(this.txtVL);
-            this.gbLeaveCredits.Controls.Add(this.label79);
-            this.gbLeaveCredits.Controls.Add(this.button5);
-            this.gbLeaveCredits.Enabled = false;
-            this.gbLeaveCredits.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbLeaveCredits.ForeColor = System.Drawing.Color.Maroon;
-            this.gbLeaveCredits.Location = new System.Drawing.Point(490, 22);
-            this.gbLeaveCredits.Name = "gbLeaveCredits";
-            this.gbLeaveCredits.Size = new System.Drawing.Size(185, 137);
-            this.gbLeaveCredits.TabIndex = 283;
-            this.gbLeaveCredits.TabStop = false;
-            this.gbLeaveCredits.Text = "Leave Credits";
             // 
             // cmbEmpStatus
             // 
@@ -375,9 +292,9 @@
             this.cmbEmpStatus.Items.AddRange(new object[] {
             "Active",
             "In-Active"});
-            this.cmbEmpStatus.Location = new System.Drawing.Point(375, 145);
+            this.cmbEmpStatus.Location = new System.Drawing.Point(476, 144);
             this.cmbEmpStatus.Name = "cmbEmpStatus";
-            this.cmbEmpStatus.Size = new System.Drawing.Size(106, 24);
+            this.cmbEmpStatus.Size = new System.Drawing.Size(199, 24);
             this.cmbEmpStatus.TabIndex = 261;
             // 
             // label82
@@ -385,7 +302,7 @@
             this.label82.AutoSize = true;
             this.label82.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label82.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.label82.Location = new System.Drawing.Point(287, 145);
+            this.label82.Location = new System.Drawing.Point(388, 144);
             this.label82.Name = "label82";
             this.label82.Size = new System.Drawing.Size(82, 16);
             this.label82.TabIndex = 262;
@@ -395,40 +312,40 @@
             // 
             this.txtPagIbig.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPagIbig.ForeColor = System.Drawing.Color.Maroon;
-            this.txtPagIbig.Location = new System.Drawing.Point(375, 112);
+            this.txtPagIbig.Location = new System.Drawing.Point(476, 111);
             this.txtPagIbig.Mask = "0000-0000-0000";
             this.txtPagIbig.Name = "txtPagIbig";
-            this.txtPagIbig.Size = new System.Drawing.Size(106, 22);
+            this.txtPagIbig.Size = new System.Drawing.Size(199, 22);
             this.txtPagIbig.TabIndex = 54;
             // 
             // txtPhilHealth
             // 
             this.txtPhilHealth.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPhilHealth.ForeColor = System.Drawing.Color.Maroon;
-            this.txtPhilHealth.Location = new System.Drawing.Point(375, 81);
+            this.txtPhilHealth.Location = new System.Drawing.Point(476, 80);
             this.txtPhilHealth.Mask = "00-000000000-0";
             this.txtPhilHealth.Name = "txtPhilHealth";
-            this.txtPhilHealth.Size = new System.Drawing.Size(106, 22);
+            this.txtPhilHealth.Size = new System.Drawing.Size(199, 22);
             this.txtPhilHealth.TabIndex = 52;
             // 
             // txtSSS
             // 
             this.txtSSS.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSSS.ForeColor = System.Drawing.Color.Maroon;
-            this.txtSSS.Location = new System.Drawing.Point(375, 54);
+            this.txtSSS.Location = new System.Drawing.Point(476, 53);
             this.txtSSS.Mask = "00-0000000-0";
             this.txtSSS.Name = "txtSSS";
-            this.txtSSS.Size = new System.Drawing.Size(106, 22);
+            this.txtSSS.Size = new System.Drawing.Size(199, 22);
             this.txtSSS.TabIndex = 50;
             // 
             // txtTIN
             // 
             this.txtTIN.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTIN.ForeColor = System.Drawing.Color.Maroon;
-            this.txtTIN.Location = new System.Drawing.Point(375, 23);
+            this.txtTIN.Location = new System.Drawing.Point(476, 22);
             this.txtTIN.Mask = "000-000-000";
             this.txtTIN.Name = "txtTIN";
-            this.txtTIN.Size = new System.Drawing.Size(106, 22);
+            this.txtTIN.Size = new System.Drawing.Size(199, 22);
             this.txtTIN.TabIndex = 48;
             // 
             // dtDateHired
@@ -437,7 +354,7 @@
             this.dtDateHired.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtDateHired.Location = new System.Drawing.Point(122, 143);
             this.dtDateHired.Name = "dtDateHired";
-            this.dtDateHired.Size = new System.Drawing.Size(157, 23);
+            this.dtDateHired.Size = new System.Drawing.Size(236, 23);
             this.dtDateHired.TabIndex = 55;
             this.dtDateHired.Value = new System.DateTime(2016, 11, 19, 22, 46, 14, 0);
             // 
@@ -687,7 +604,7 @@
             this.label61.AutoSize = true;
             this.label61.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label61.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.label61.Location = new System.Drawing.Point(296, 108);
+            this.label61.Location = new System.Drawing.Point(397, 107);
             this.label61.Name = "label61";
             this.label61.Size = new System.Drawing.Size(73, 16);
             this.label61.TabIndex = 224;
@@ -698,7 +615,7 @@
             this.label60.AutoSize = true;
             this.label60.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label60.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.label60.Location = new System.Drawing.Point(292, 79);
+            this.label60.Location = new System.Drawing.Point(393, 78);
             this.label60.Name = "label60";
             this.label60.Size = new System.Drawing.Size(77, 16);
             this.label60.TabIndex = 222;
@@ -709,7 +626,7 @@
             this.label59.AutoSize = true;
             this.label59.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label59.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.label59.Location = new System.Drawing.Point(319, 48);
+            this.label59.Location = new System.Drawing.Point(420, 47);
             this.label59.Name = "label59";
             this.label59.Size = new System.Drawing.Size(50, 16);
             this.label59.TabIndex = 220;
@@ -720,7 +637,7 @@
             this.label58.AutoSize = true;
             this.label58.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label58.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.label58.Location = new System.Drawing.Point(323, 19);
+            this.label58.Location = new System.Drawing.Point(424, 18);
             this.label58.Name = "label58";
             this.label58.Size = new System.Drawing.Size(46, 16);
             this.label58.TabIndex = 218;
@@ -732,7 +649,7 @@
             this.txtDesignation.ForeColor = System.Drawing.Color.Maroon;
             this.txtDesignation.Location = new System.Drawing.Point(122, 25);
             this.txtDesignation.Name = "txtDesignation";
-            this.txtDesignation.Size = new System.Drawing.Size(159, 23);
+            this.txtDesignation.Size = new System.Drawing.Size(238, 23);
             this.txtDesignation.TabIndex = 47;
             this.txtDesignation.Leave += new System.EventHandler(this.txtDesignation_Leave);
             // 
@@ -759,7 +676,7 @@
             "Contract of Service"});
             this.cmbDepartment.Location = new System.Drawing.Point(122, 54);
             this.cmbDepartment.Name = "cmbDepartment";
-            this.cmbDepartment.Size = new System.Drawing.Size(159, 24);
+            this.cmbDepartment.Size = new System.Drawing.Size(238, 24);
             this.cmbDepartment.TabIndex = 49;
             // 
             // label56
@@ -779,7 +696,7 @@
             this.txtBasicPay.ForeColor = System.Drawing.Color.Maroon;
             this.txtBasicPay.Location = new System.Drawing.Point(122, 114);
             this.txtBasicPay.Name = "txtBasicPay";
-            this.txtBasicPay.Size = new System.Drawing.Size(82, 23);
+            this.txtBasicPay.Size = new System.Drawing.Size(125, 23);
             this.txtBasicPay.TabIndex = 53;
             this.txtBasicPay.Text = "0.00";
             this.txtBasicPay.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBasicPay_KeyPress);
@@ -810,7 +727,7 @@
             "Staff Full-Time"});
             this.cmbEmpType.Location = new System.Drawing.Point(122, 84);
             this.cmbEmpType.Name = "cmbEmpType";
-            this.cmbEmpType.Size = new System.Drawing.Size(159, 24);
+            this.cmbEmpType.Size = new System.Drawing.Size(238, 24);
             this.cmbEmpType.TabIndex = 51;
             // 
             // label54
@@ -2526,8 +2443,6 @@
             this.Load += new System.EventHandler(this.frmEmployee_AE_Load);
             this.tabPage4.ResumeLayout(false);
             this.tabPage4.PerformLayout();
-            this.gbLeaveCredits.ResumeLayout(false);
-            this.gbLeaveCredits.PerformLayout();
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
             this.tabPage2.ResumeLayout(false);
@@ -2546,13 +2461,7 @@
         #endregion
 
         private System.Windows.Forms.Label label41;
-        private System.Windows.Forms.Label txtSL;
-        private System.Windows.Forms.Label label78;
-        private System.Windows.Forms.Label txtVL;
-        private System.Windows.Forms.Label label79;
-        private System.Windows.Forms.Button button5;
         private System.Windows.Forms.TabPage tabPage4;
-        private System.Windows.Forms.GroupBox gbLeaveCredits;
         private System.Windows.Forms.ComboBox cmbEmpStatus;
         private System.Windows.Forms.Label label82;
         private System.Windows.Forms.MaskedTextBox txtPagIbig;

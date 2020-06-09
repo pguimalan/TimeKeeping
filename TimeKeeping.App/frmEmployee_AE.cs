@@ -214,20 +214,9 @@ namespace TimeKeeping.App
                 {
                     picEmployee.Image = Image.FromFile(AppDomain.CurrentDomain.BaseDirectory + "\\EmpPics\\ProfilePic\\" + employeeId + "\\" + emp.EmployeeBasicInfo.PicName, true);
                 }
-
-                gbLeaveCredits.Enabled = true;
-
-                loadLeaveCredits();
                 button6.Enabled = true;
             }
             else bttnRefresh.PerformClick();
-        }
-
-        void loadLeaveCredits()
-        {
-            EmployeeLeaveCreditsModel md = empSvc.LeaveCredits_Select(employeeId);
-            txtVL.Text = md.VL.ToString();
-            txtSL.Text = md.SL.ToString();
         }
 
         private void bttnSave_Click(object sender, EventArgs e)
@@ -760,7 +749,6 @@ namespace TimeKeeping.App
 
             }
 
-            loadLeaveCredits();
         }
 
         private void txtBasicPay_KeyPress(object sender, KeyPressEventArgs e)

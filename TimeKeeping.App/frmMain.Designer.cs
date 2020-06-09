@@ -219,6 +219,7 @@
             this.leaveMgtToolStripMenuItem.Name = "leaveMgtToolStripMenuItem";
             this.leaveMgtToolStripMenuItem.Size = new System.Drawing.Size(77, 20);
             this.leaveMgtToolStripMenuItem.Text = "Leave Mgt.";
+            this.leaveMgtToolStripMenuItem.Visible = false;
             this.leaveMgtToolStripMenuItem.Click += new System.EventHandler(this.leaveMgtToolStripMenuItem_Click);
             // 
             // payrollManagementToolStripMenuItem
