@@ -124,56 +124,56 @@ namespace TimeKeeping.App
                     lblDepartment.Text = emp.EmployeeEmpInfo.DepartmentName;
                     lblRate.Text = emp.EmployeeEmpInfo.BasicPay.ToString("#,####.00");
                     lblPayOption.Text = emp.EmployeeEmpInfo.BasicRateOption;
+                }
 
-                    try
+
+                try
+                {
+                    var dtr = dsvc.DTR_GetDetailsForPayroll(emp.EmployeeId, (int)cmbPayrollPeriod.SelectedValue);
+                    if (dtr != null)
                     {
-                        var dtr = dsvc.DTR_GetDetailsForPayroll(emp.EmployeeId, (int)cmbPayrollPeriod.SelectedValue);
-                        if (dtr != null)
-                        {
-                            lblTotalLate.Text = dtr.TotalDaysWork.ToString(".00");
-                            lblTotalUndertime.Text = dtr.TotalUndertime.ToString(".00");
-                            lblTotDaysWork.Text = dtr.TotalDaysWork.ToString(".00");
-                            label2.Visible = false;
-                            HAS_DTR = true;
+                        lblTotalLate.Text = dtr.TotalDaysWork.ToString(".00");
+                        lblTotalUndertime.Text = dtr.TotalUndertime.ToString(".00");
+                        lblTotDaysWork.Text = dtr.TotalDaysWork.ToString(".00");
+                        label2.Visible = false;
+                        HAS_DTR = true;
 
-                            if(employeeId > 0 && (int)cmbPayrollPeriod.SelectedValue > 0)
-                            {
-                                var model = _payrollService.GetPayrollDetails(employeeId, (int)cmbPayrollPeriod.SelectedValue);
-                                if(model != null)
-                                {
-                                    lblTotDaysWork.Text = model.TotalDaysWork.ToString("0.00");
-                                    lblTotalLate.Text = model.MinsLate.ToString("0.00");
-                                    lblTotalUndertime.Text = model.UnderTime.ToString("0.00");
-                                    txtCottageRental.Text = model.Cottage_Rental.ToString("#,####.00");
-                                    lblGrossEarning.Text = model.GrossAmount.ToString("#,####.00");
-                                    //HDMF_Tax.Text = model.Tax.ToString("#,####.00");
-                                    txtHDMF.Text = model.HDMF_Premiums.ToString("#,####.00");
-                                    txtHDMF_Calamity.Text = model.HDMF_Calamity.ToString("#,####.00");
-                                    lblNetAmount.Text = model.NetAmount.ToString("#,####.00");
-                                    lblLateAmount.Text = model.LateAmtDeduction.ToString("#,####.00");
-                                    lblUnderTime.Text = model.UnderTimeAmtDeduction.ToString("#,####.00");
-                                }
-                            }
-                            
-                        }
-                        else
+                        if (employeeId > 0 && (int)cmbPayrollPeriod.SelectedValue > 0)
                         {
-                            label2.Visible = true;
-                            lblTotalLate.Text = "";
-                            lblTotalUndertime.Text = "";
-                            lblTotDaysWork.Text = "";
-                            HAS_DTR = false;
+                            var model = _payrollService.GetPayrollDetails(employeeId, (int)cmbPayrollPeriod.SelectedValue);
+                            if (model != null)
+                            {
+                                lblTotDaysWork.Text = model.TotalDaysWork.ToString("0.00");
+                                lblTotalLate.Text = model.MinsLate.ToString("0.00");
+                                lblTotalUndertime.Text = model.UnderTime.ToString("0.00");
+                                txtCottageRental.Text = model.Cottage_Rental.ToString("#,####.00");
+                                lblGrossEarning.Text = model.GrossAmount.ToString("#,####.00");
+                                //HDMF_Tax.Text = model.Tax.ToString("#,####.00");
+                                txtHDMF.Text = model.HDMF_Premiums.ToString("#,####.00");
+                                txtHDMF_Calamity.Text = model.HDMF_Calamity.ToString("#,####.00");
+                                lblNetAmount.Text = model.NetAmount.ToString("#,####.00");
+                                lblLateAmount.Text = model.LateAmtDeduction.ToString("#,####.00");
+                                lblUnderTime.Text = model.UnderTimeAmtDeduction.ToString("#,####.00");
+                            }
                         }
 
                     }
-                    catch(Exception ex)
+                    else
                     {
+                        label2.Visible = true;
                         lblTotalLate.Text = "";
                         lblTotalUndertime.Text = "";
                         lblTotDaysWork.Text = "";
                         HAS_DTR = false;
                     }
 
+                }
+                catch (Exception ex)
+                {
+                    lblTotalLate.Text = "";
+                    lblTotalUndertime.Text = "";
+                    lblTotDaysWork.Text = "";
+                    HAS_DTR = false;
                 }
             }
             else

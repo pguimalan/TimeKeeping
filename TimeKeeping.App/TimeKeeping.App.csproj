@@ -134,6 +134,12 @@
     <Compile Include="frmEmployeeWorkload_AE.Designer.cs">
       <DependentUpon>frmEmployeeWorkload_AE.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmEmployee_AddEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEmployee_AddEdit.Designer.cs">
+      <DependentUpon>frmEmployee_AddEdit.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmEmployee_AE.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -278,6 +284,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmEmployeeWorkload_AE.resx">
       <DependentUpon>frmEmployeeWorkload_AE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEmployee_AddEdit.resx">
+      <DependentUpon>frmEmployee_AddEdit.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmEmployee_AE.resx">
       <DependentUpon>frmEmployee_AE.cs</DependentUpon>
