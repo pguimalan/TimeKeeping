@@ -119,16 +119,17 @@ namespace TimeKeeping.App
 
                 if (File.Exists(AppDomain.CurrentDomain.BaseDirectory + "\\EmpPics\\ProfilePic\\" + employeeId + "\\" + emp.EmployeeBasicInfo.PicName) == true)
                 {
-                    picEmployee.Image = Image.FromFile(AppDomain.CurrentDomain.BaseDirectory + "\\EmpPics\\ProfilePic\\" + employeeId + "\\" + emp.EmployeeBasicInfo.PicName, true);
-                    lblDesignation.Text = emp.EmployeeEmpInfo.Designation;
-                    lblDepartment.Text = emp.EmployeeEmpInfo.DepartmentName;
-                    lblRate.Text = emp.EmployeeEmpInfo.BasicPay.ToString("#,####.00");
-                    lblPayOption.Text = emp.EmployeeEmpInfo.BasicRateOption;
+                    picEmployee.Image = Image.FromFile(AppDomain.CurrentDomain.BaseDirectory + "\\EmpPics\\ProfilePic\\" + employeeId + "\\" + emp.EmployeeBasicInfo.PicName, true);                  
                 }
 
 
                 try
                 {
+                    lblDesignation.Text = emp.EmployeeEmpInfo.Designation;
+                    lblDepartment.Text = emp.EmployeeEmpInfo.DepartmentName;
+                    lblRate.Text = emp.EmployeeEmpInfo.BasicPay.ToString("#,####.00");
+                    lblPayOption.Text = emp.EmployeeEmpInfo.BasicRateOption;
+
                     var dtr = dsvc.DTR_GetDetailsForPayroll(emp.EmployeeId, (int)cmbPayrollPeriod.SelectedValue);
                     if (dtr != null)
                     {
