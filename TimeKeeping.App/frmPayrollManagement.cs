@@ -122,7 +122,6 @@ namespace TimeKeeping.App
                     picEmployee.Image = Image.FromFile(AppDomain.CurrentDomain.BaseDirectory + "\\EmpPics\\ProfilePic\\" + employeeId + "\\" + emp.EmployeeBasicInfo.PicName, true);                  
                 }
 
-
                 try
                 {
                     lblDesignation.Text = emp.EmployeeEmpInfo.Designation;
@@ -133,7 +132,7 @@ namespace TimeKeeping.App
                     var dtr = dsvc.DTR_GetDetailsForPayroll(emp.EmployeeId, (int)cmbPayrollPeriod.SelectedValue);
                     if (dtr != null)
                     {
-                        lblTotalLate.Text = dtr.TotalDaysWork.ToString(".00");
+                        lblTotalLate.Text = dtr.TotalLate.ToString(".00");
                         lblTotalUndertime.Text = dtr.TotalUndertime.ToString(".00");
                         lblTotDaysWork.Text = dtr.TotalDaysWork.ToString(".00");
                         label2.Visible = false;
@@ -144,9 +143,9 @@ namespace TimeKeeping.App
                             var model = _payrollService.GetPayrollDetails(employeeId, (int)cmbPayrollPeriod.SelectedValue);
                             if (model != null)
                             {
-                                lblTotDaysWork.Text = model.TotalDaysWork.ToString("0.00");
-                                lblTotalLate.Text = model.MinsLate.ToString("0.00");
-                                lblTotalUndertime.Text = model.UnderTime.ToString("0.00");
+                                //lblTotDaysWork.Text = model.TotalDaysWork.ToString("0.00");
+                                //lblTotalLate.Text = model.MinsLate.ToString("0.00");
+                                //lblTotalUndertime.Text = model.UnderTime.ToString("0.00");
                                 txtCottageRental.Text = model.Cottage_Rental.ToString("#,####.00");
                                 lblGrossEarning.Text = model.GrossAmount.ToString("#,####.00");
                                 //HDMF_Tax.Text = model.Tax.ToString("#,####.00");
